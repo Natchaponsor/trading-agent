@@ -1,0 +1,278 @@
+{
+  "created": "2026-10-04T02:44-04:00",
+  "strategy_version": 1,
+  "how_to_read": "Positive numbers mean the sector beat the Nasdaq-100 (QQQ) by that many percentage points.",
+  "market_context": {
+    "QQQ": {
+      "name": "Nasdaq-100",
+      "last": 749.58,
+      "change_1m_pct": 5.8,
+      "change_3m_pct": 3.81,
+      "above_200day_avg": true
+    },
+    "SPY": {
+      "name": "S&P 500 (US large caps)",
+      "last": 769.64,
+      "change_1m_pct": 0.84,
+      "change_3m_pct": 2.7,
+      "above_200day_avg": true
+    },
+    "IWM": {
+      "name": "Russell 2000 (US small caps)",
+      "last": 281.52,
+      "change_1m_pct": -4.0,
+      "change_3m_pct": -5.57,
+      "above_200day_avg": true
+    },
+    "EFA": {
+      "name": "Developed markets outside the US",
+      "last": 103.96,
+      "change_1m_pct": -2.9,
+      "change_3m_pct": -1.42,
+      "above_200day_avg": true
+    },
+    "EEM": {
+      "name": "Emerging markets",
+      "last": 67.67,
+      "change_1m_pct": 0.77,
+      "change_3m_pct": 0.15,
+      "above_200day_avg": true
+    },
+    "TLT": {
+      "name": "Long-term US Treasury bonds",
+      "last": 77.48,
+      "change_1m_pct": -5.07,
+      "change_3m_pct": -8.24,
+      "above_200day_avg": false
+    },
+    "^VIX": {
+      "name": "Fear index (expected volatility)",
+      "last": 15.31,
+      "change_1m_pct": 6.91,
+      "change_3m_pct": -5.08,
+      "above_200day_avg": false
+    },
+    "^TNX": {
+      "name": "10-year US Treasury yield",
+      "last": 5.28,
+      "change_1m_pct": 10.03,
+      "change_3m_pct": 17.82,
+      "above_200day_avg": true
+    }
+  },
+  "sectors": [
+    {
+      "sector": "Technology",
+      "etf": "XLK",
+      "nasdaq100_members": 48,
+      "etf_above_50day_avg": true,
+      "etf_vs_qqq_pct": {
+        "1m": 3.16,
+        "3m": 5.16,
+        "6m": 18.86
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": 5.78,
+        "3m": -0.11,
+        "6m": 4.45
+      },
+      "score": 4.46,
+      "eligible": true,
+      "rank": 1
+    },
+    {
+      "sector": "Health Care",
+      "etf": "XLV",
+      "nasdaq100_members": 9,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -9.34,
+        "3m": -0.81,
+        "6m": -14.28
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -14.68,
+        "3m": -4.6,
+        "6m": -31.65
+      },
+      "score": -10.25,
+      "eligible": true,
+      "rank": 2
+    },
+    {
+      "sector": "Industrials",
+      "etf": "XLI",
+      "nasdaq100_members": 11,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -7.17,
+        "3m": -11.98,
+        "6m": -24.1
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -8.98,
+        "3m": -8.95,
+        "6m": -17.99
+      },
+      "score": -11.65,
+      "eligible": true,
+      "rank": 3
+    },
+    {
+      "sector": "Consumer Staples",
+      "etf": "XLP",
+      "nasdaq100_members": 6,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -11.02,
+        "3m": -7.43,
+        "6m": -28.74
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -11.98,
+        "3m": -11.16,
+        "6m": -21.75
+      },
+      "score": -13.22,
+      "eligible": true,
+      "rank": 4
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "etf": "XLY",
+      "nasdaq100_members": 17,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -9.78,
+        "3m": -10.36,
+        "6m": -26.24
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -10.09,
+        "3m": -9.61,
+        "6m": -28.25
+      },
+      "score": -13.43,
+      "eligible": true,
+      "rank": 5
+    },
+    {
+      "sector": "Telecommunications",
+      "etf": "XLC",
+      "nasdaq100_members": 3,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -7.34,
+        "3m": -3.38,
+        "6m": -29.06
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -18.43,
+        "3m": -11.55,
+        "6m": -46.25
+      },
+      "score": -16.22,
+      "eligible": true,
+      "rank": 6
+    },
+    {
+      "sector": "Utilities",
+      "etf": "XLU",
+      "nasdaq100_members": 4,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -11.77,
+        "3m": -15.24,
+        "6m": -41.28
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -11.38,
+        "3m": -14.73,
+        "6m": -37.77
+      },
+      "score": -18.76,
+      "eligible": true,
+      "rank": 7
+    },
+    {
+      "sector": "Energy",
+      "etf": "XLE",
+      "nasdaq100_members": 2,
+      "etf_above_50day_avg": true,
+      "etf_vs_qqq_pct": {
+        "1m": -8.73,
+        "3m": 15.13,
+        "6m": -20.99
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -17.07,
+        "3m": 2.42,
+        "6m": -33.55
+      },
+      "score": -6.07,
+      "eligible": false,
+      "rank": 8
+    },
+    {
+      "sector": "Financials",
+      "etf": "XLF",
+      "nasdaq100_members": 0,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -12.7,
+        "3m": -8.19,
+        "6m": -19.66
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": null,
+        "3m": null,
+        "6m": null
+      },
+      "score": -11.84,
+      "eligible": false,
+      "rank": 9
+    },
+    {
+      "sector": "Real Estate",
+      "etf": "XLRE",
+      "nasdaq100_members": 0,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -11.69,
+        "3m": -10.89,
+        "6m": -28.64
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": null,
+        "3m": null,
+        "6m": null
+      },
+      "score": -14.68,
+      "eligible": false,
+      "rank": 10
+    },
+    {
+      "sector": "Basic Materials",
+      "etf": "XLB",
+      "nasdaq100_members": 1,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -13.1,
+        "3m": -9.38,
+        "6m": -30.68
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -7.11,
+        "3m": -14.81,
+        "6m": -32.4
+      },
+      "score": -15.51,
+      "eligible": false,
+      "rank": 11
+    }
+  ],
+  "suggested_top_sectors": [
+    "Technology",
+    "Health Care"
+  ]
+}

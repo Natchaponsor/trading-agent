@@ -1,0 +1,27 @@
+{
+  "_note": "Maps the sector names used in the Nasdaq-100 list to a sector fund (ETF) used as a benchmark. Aliases cover the other naming system in case the source table changes.",
+  "benchmark": "QQQ",
+  "market_context": {
+    "QQQ": "Nasdaq-100",
+    "SPY": "S&P 500 (US large caps)",
+    "IWM": "Russell 2000 (US small caps)",
+    "EFA": "Developed markets outside the US",
+    "EEM": "Emerging markets",
+    "TLT": "Long-term US Treasury bonds",
+    "^VIX": "Fear index (expected volatility)",
+    "^TNX": "10-year US Treasury yield"
+  },
+  "sectors": {
+    "Technology": {"etf": "XLK", "aliases": ["Information Technology"]},
+    "Telecommunications": {"etf": "XLC", "aliases": ["Communication Services"]},
+    "Health Care": {"etf": "XLV", "aliases": ["Healthcare"]},
+    "Consumer Discretionary": {"etf": "XLY", "aliases": []},
+    "Consumer Staples": {"etf": "XLP", "aliases": []},
+    "Industrials": {"etf": "XLI", "aliases": []},
+    "Utilities": {"etf": "XLU", "aliases": []},
+    "Energy": {"etf": "XLE", "aliases": []},
+    "Basic Materials": {"etf": "XLB", "aliases": ["Materials"]},
+    "Financials": {"etf": "XLF", "aliases": ["Financial"]},
+    "Real Estate": {"etf": "XLRE", "aliases": []}
+  }
+}

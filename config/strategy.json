@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "last_changed": "2026-10-04",
+  "change_log": [
+    {"date": "2026-10-04", "version": 1, "change": "Starting settings", "reason": "Initial setup", "approved_by": "Top"}
+  ],
+  "sector_rotation": {
+    "lookback_days": {"1m": 21, "3m": 63, "6m": 126},
+    "weights": {"1m": 0.3, "3m": 0.5, "6m": 0.2},
+    "etf_vs_members_weight": {"etf": 0.4, "nasdaq_members": 0.6},
+    "min_nasdaq100_members": 3,
+    "num_sectors": 2
+  },
+  "technical": {
+    "weights": {"trend": 0.25, "rsi": 0.2, "macd": 0.2, "relative_strength": 0.2, "fib_pullback": 0.15},
+    "rsi_sweet_spot": [50, 70],
+    "fib_lookback_days": 126,
+    "fib_near_pct": 0.03,
+    "min_reward_risk": 2.0,
+    "top_n_per_sector": 5
+  },
+  "qualitative": {
+    "weights": {"revenue_growth": 0.3, "earnings_growth": 0.3, "analyst_upside": 0.2, "news": 0.2},
+    "avoid_earnings_within_days": 5,
+    "top_n_per_sector": 5
+  },
+  "picker": {
+    "technical_weight": 0.5,
+    "qualitative_weight": 0.5,
+    "picks_per_sector": 1,
+    "pick_valid_trading_days": 5,
+    "max_stop_distance_pct": 10
+  },
+  "alerts": {
+    "open_window_et": ["09:35", "10:30"],
+    "close_window_et": ["15:00", "15:59"],
+    "send_close_summary": true
+  },
+  "performance": {
+    "max_holding_trading_days": 20
+  }
+}
