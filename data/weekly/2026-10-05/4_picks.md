@@ -36,3 +36,13 @@ The two agents disagreed in both sectors. Neither pick passes the 2.0 reward to 
 
 ## If you want to trade anyway
 These setups fall outside the rules. The rules-based answer is no trade this week. If you still want to trade, the closest candidate is NVDA on the scan's own levels: buy 222.63-233.95, target 255.46, stop 211.06, R/R 1.58. Use a smaller position than usual.
+
+## Update: one-week exception (approved by Top, 2026-10-04)
+Top chose to watch NVDA this week even though it misses the 2.0 rule. The strategy file is unchanged (still version 1). Only this week's pick list changed.
+
+| Sector | Ticker | Buy zone | Target | Stop | R/R | Source |
+|---|---|---|---|---|---|---|
+| Technology | NVDA | 222.63-233.95 | 255.46 | 211.06 | 1.58 | technical |
+| Health Care | none | - | - | - | - | - |
+
+All levels are the scan's own suggested levels (data/technical_scan.json). The alerts watch it from Monday 2026-10-05 to Friday 2026-10-09. Use a smaller position than usual. The weekly review should judge this pick as an exception, not as evidence for or against the 2.0 rule.

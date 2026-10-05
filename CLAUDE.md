@@ -27,6 +27,7 @@ Daily (GitHub Actions, no AI): scripts/price_alert.py at ~9:45 AM and ~3:30 PM N
 - data/picks.json: this week's picks (what alerts watch); data/picks_history.jsonl: all past picks
 - data/performance.json, data/feedback/: results and coaching notes
 - data/my_trades.csv: my real trades, filled in by me
+- docs/: public dashboard (GitHub Pages), built by scripts/build_dashboard.py; never edit by hand
 
 ## Commands
 - Tests: `python -m pytest -q`

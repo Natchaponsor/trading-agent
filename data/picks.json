@@ -2,5 +2,21 @@
   "week_of": "2026-10-05",
   "valid_until": "2026-10-09",
   "created": "2026-10-04T13:43",
-  "picks": []
+  "picks": [
+    {
+      "ticker": "NVDA",
+      "company": "Nvidia",
+      "sector": "Technology",
+      "action": "buy",
+      "entry_low": 222.63,
+      "entry_high": 233.95,
+      "target": 255.46,
+      "stop": 211.06,
+      "source": "technical",
+      "technical_score": 89.1,
+      "qualitative_score": 100.0,
+      "reason": "One-week exception approved by Top: R/R 1.58 on scan levels, below the 2.0 rule. Clean uptrend and strong business numbers. Use a smaller position than usual.",
+      "exception": "below_min_reward_risk"
+    }
+  ]
 }
