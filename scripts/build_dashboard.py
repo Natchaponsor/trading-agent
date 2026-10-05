@@ -6,7 +6,12 @@ invented here, only arranged and compared):
   data/qualitative_data.json, data/picks.json, data/picks_history.jsonl,
   data/performance.json (if present), data/alert_log.csv (if present)
 
-Writes docs/index.html (this week) and docs/weeks/<week_of>.html (archive copy).
+Each build saves a trimmed copy of this week's inputs to
+data/weekly/<week_of>/dashboard_data.json, then rebuilds a page for every week
+that has one. That is what lets the dashboard look up past weeks after the
+main data files are overwritten by a new run.
+
+Writes docs/index.html (latest week) and docs/weeks/<week_of>.html (every week).
 Run:  python scripts/build_dashboard.py
 """
 from __future__ import annotations
@@ -185,7 +190,7 @@ def candidates_section(sector: str, tech: dict, qual: dict, pick_tickers: set, m
 </div>"""
 
 
-def history_section(history: list[dict], perf: dict | None) -> str:
+def history_section(history: list[dict], perf: dict | None, note: bool = True) -> str:
     if not history:
         return '<p class="empty">No past picks yet.</p>'
     results = {}
@@ -203,7 +208,7 @@ def history_section(history: list[dict], perf: dict | None) -> str:
     return f"""<div class="scroll"><table>
 <thead><tr><th>Week</th><th>Stock</th><th>Sector</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th>Result</th><th class="r">Return</th></tr></thead>
 <tbody>{"".join(rows)}</tbody></table></div>
-<p class="muted small">Results come from scripts/performance.py, which runs in the weekly review.</p>"""
+{'<p class="muted small">Results come from scripts/performance.py, which runs in the weekly review.</p>' if note else ""}"""
 
 
 def alerts_section(log: list[dict]) -> str:
@@ -215,14 +220,23 @@ def alerts_section(log: list[dict]) -> str:
     return f'<div class="scroll"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
-def weeks_nav(weeks: list[str], current: str, prefix: str) -> str:
-    links = []
-    for w in weeks:
-        if w == current:
-            links.append(f'<span class="cur">{esc(w)}</span>')
-        else:
-            links.append(f'<a href="{prefix}weeks/{esc(w)}.html">{esc(w)}</a>')
-    return " ".join(links)
+def week_picker(weeks: list[str], current: str, prefix: str) -> str:
+    """Dropdown plus older/newer links. weeks is newest first."""
+    opts = "".join(f'<option value="{prefix}weeks/{esc(w)}.html"{" selected" if w == current else ""}>Week of {esc(w)}</option>'
+                   for w in weeks)
+    i = weeks.index(current) if current in weeks else 0
+    older = f'<a href="{prefix}weeks/{esc(weeks[i + 1])}.html">&larr; Older</a>' if i + 1 < len(weeks) else '<span class="muted">&larr; Older</span>'
+    newer = f'<a href="{prefix}weeks/{esc(weeks[i - 1])}.html">Newer &rarr;</a>' if i > 0 else '<span class="muted">Newer &rarr;</span>'
+    return f"""<nav class="weeks" aria-label="Choose a week">{older}
+<select aria-label="Week" onchange="location.href=this.value">{opts}</select>{newer}</nav>"""
+
+
+def week_results_section(week: str, valid_until: str, history: list[dict], perf: dict | None, alerts: list[dict]) -> str:
+    rows = [p for p in history if p.get("week_of") == week]
+    week_alerts = [a for a in alerts if week <= (a.get("time_et") or "")[:10] <= (valid_until or "9999")]
+    hist = history_section(rows, perf, note=False) if rows else '<p class="empty">No picks were made this week.</p>'
+    return f"""<h3>Picks</h3>{hist}
+<h3>Alerts sent that week</h3>{alerts_section(week_alerts)}"""
 
 
 # ---------- page ----------
@@ -239,7 +253,7 @@ h3{font-size:17px;margin:24px 0 8px}h4{font-size:13px;margin:8px 0;color:var(--m
 a{color:var(--accent)}.muted{color:var(--muted)}.small{font-size:13px}.lead{font-size:16px;max-width:75ch}
 .pos{color:var(--pos)}.neg{color:var(--neg)}.r{text-align:right;white-space:nowrap}
 .top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px}
-.weeks{font-size:13px}.weeks a,.weeks .cur{margin-right:8px}.weeks .cur{font-weight:600}
+.weeks{display:flex;align-items:center;gap:10px;font-size:14px}.weeks select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}.past{margin:16px 0 0;padding:10px 14px;border-radius:10px;background:var(--warn-bg);color:var(--warn);font-size:14px}.past a{color:inherit;font-weight:600}
 .empty{padding:16px;background:var(--card);border:1px dashed var(--line);border-radius:10px;color:var(--muted)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 .pick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
@@ -262,24 +276,53 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
 """
 
 
-def build_page(prefix: str, weeks: list[str]) -> str:
-    strategy = load_strategy()
-    min_rr = float(strategy["technical"]["min_reward_risk"])
-    selected = load_json(DATA / "sectors_selected.json", {})
-    scan = load_json(DATA / "sector_scan.json", {})
-    tech = load_json(DATA / "technical_scan.json", {})
-    qual = load_json(DATA / "qualitative_data.json", {})
-    picks = load_json(DATA / "picks.json", {"picks": []})
-    perf = load_json(DATA / "performance.json")
-    history = read_jsonl(DATA / "picks_history.jsonl")
-    alerts = read_csv(DATA / "alert_log.csv")
+SNAPSHOT = "dashboard_data.json"
 
-    week = picks.get("week_of") or selected.get("week_of", "")
+
+def snapshot(data_dir: Path) -> dict | None:
+    """This week's inputs, trimmed to what the page shows."""
+    picks = load_json(data_dir / "picks.json", {}) or {}
+    selected = load_json(data_dir / "sectors_selected.json", {}) or {}
+    week = picks.get("week_of") or selected.get("week_of")
+    if not week:
+        return None
+    tech = load_json(data_dir / "technical_scan.json", {}) or {}
+    qual = load_json(data_dir / "qualitative_data.json", {}) or {}
+    chosen = selected.get("sectors", [])
+    return {
+        "week_of": week,
+        "strategy": load_strategy(),
+        "picks": picks,
+        "sectors_selected": selected,
+        "sector_scan": load_json(data_dir / "sector_scan.json", {}) or {},
+        "technical_scan": {
+            "sectors": {k: v for k, v in tech.get("sectors", {}).items() if k in chosen},
+            "all_stocks": {t: {"price": v.get("price")} for t, v in tech.get("all_stocks", {}).items()},
+        },
+        "qualitative_data": {"sectors": {k: {"ranked": v.get("ranked", [])[:5]}
+                                         for k, v in qual.get("sectors", {}).items() if k in chosen}},
+    }
+
+
+def build_page(snap: dict, prefix: str, weeks: list[str], data_dir: Path) -> str:
+    strategy = snap["strategy"]
+    min_rr = float(strategy["technical"]["min_reward_risk"])
+    selected, scan = snap["sectors_selected"], snap["sector_scan"]
+    tech, qual, picks = snap["technical_scan"], snap["qualitative_data"], snap["picks"]
+    perf = load_json(data_dir / "performance.json")
+    history = read_jsonl(data_dir / "picks_history.jsonl")
+    alerts = read_csv(data_dir / "alert_log.csv")
+
+    week = snap["week_of"]
+    latest = week == weeks[0]
     prices = {t: s.get("price") for t, s in tech.get("all_stocks", {}).items()}
     pick_tickers = {p["ticker"] for p in picks.get("picks", [])}
     candidates = "".join(candidates_section(s, tech, qual, pick_tickers, min_rr) for s in selected.get("sectors", []))
     reports = " ".join(f'<a href="{REPO_URL}/blob/main/data/weekly/{esc(week)}/{f}">{label}</a>'
-                       for f, label in REPORTS if (DATA / "weekly" / week / f).exists())
+                       for f, label in REPORTS if (data_dir / "weekly" / week / f).exists())
+    banner = "" if latest else (f'<p class="past">You are looking at a past week. '
+                                f'<a href="{prefix}index.html">Go to the latest week ({esc(weeks[0])})</a></p>')
+    record = f"<h2>Track record, all weeks</h2>\n{history_section(history, perf)}" if latest else ""
 
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -288,27 +331,27 @@ def build_page(prefix: str, weeks: list[str]) -> str:
 <div class="top">
   <div><h1>Trading Agent</h1>
   <div class="muted">Week of {esc(week)} to {esc(picks.get("valid_until"))} · strategy v{esc(strategy.get("version"))} · picks made {esc(picks.get("created"))} New York</div></div>
-  <div class="weeks muted">Weeks: {weeks_nav(weeks, week, prefix)}</div>
+  {week_picker(weeks, week, prefix)}
 </div>
+{banner}
 
 <h2>Final picks</h2>
 {picks_section(picks, prices, min_rr)}
 
-<h2>Sectors this week: {esc(", ".join(selected.get("sectors", [])))}</h2>
+<h2>Sectors: {esc(", ".join(selected.get("sectors", [])))}</h2>
 {sectors_section(scan, selected)}
 
 <h2>Candidates by factor</h2>
-<p class="muted small">Top 5 per sector from each scan. Final picks are highlighted. R/R is on the scan's own levels; the rule is at least {min_rr:g}.</p>
+<p class="muted small">Top 5 per sector from each scan. Final picks are highlighted. R/R is on the scan's own levels; the rule was at least {min_rr:g}.</p>
 {candidates}
 
 <h2>Market backdrop</h2>
 {market_section(scan)}
 
-<h2>Track record</h2>
-{history_section(history, perf)}
+<h2>How this week went</h2>
+{week_results_section(week, picks.get("valid_until"), history, perf, alerts)}
 
-<h2>Recent alerts</h2>
-{alerts_section(alerts)}
+{record}
 
 <h2>Full reports</h2>
 <p class="reports">{reports or '<span class="muted">None for this week.</span>'}</p>
@@ -319,16 +362,23 @@ Source: <a href="{REPO_URL}">{REPO_URL.replace("https://", "")}</a></footer>
 """
 
 
-def build(out_dir: Path | None = None) -> Path:
+def build(out_dir: Path | None = None, data_dir: Path = DATA) -> Path:
     out = Path(out_dir) if out_dir else ROOT / "docs"
     (out / "weeks").mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").touch()
-    week = (load_json(DATA / "picks.json", {}) or {}).get("week_of") or load_json(DATA / "sectors_selected.json", {}).get("week_of")
-    if not week:
+
+    current = snapshot(data_dir)
+    if current is None:
         raise SystemExit("No week_of in data/picks.json or data/sectors_selected.json")
-    weeks = sorted({p.stem for p in (out / "weeks").glob("*.html")} | {week}, reverse=True)
-    (out / "weeks" / f"{week}.html").write_text(build_page("../", weeks))
-    (out / "index.html").write_text(build_page("", weeks))
+    snap_file = data_dir / "weekly" / current["week_of"] / SNAPSHOT
+    snap_file.parent.mkdir(parents=True, exist_ok=True)
+    snap_file.write_text(json.dumps(current, indent=1) + "\n")
+
+    snaps = {p.parent.name: json.loads(p.read_text()) for p in (data_dir / "weekly").glob(f"*/{SNAPSHOT}")}
+    weeks = sorted(snaps, reverse=True)
+    for w in weeks:
+        (out / "weeks" / f"{w}.html").write_text(build_page(snaps[w], "../", weeks, data_dir))
+    (out / "index.html").write_text(build_page(snaps[weeks[0]], "", weeks, data_dir))
     return out / "index.html"
 
 

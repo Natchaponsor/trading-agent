@@ -13,7 +13,7 @@ h3{font-size:17px;margin:24px 0 8px}h4{font-size:13px;margin:8px 0;color:var(--m
 a{color:var(--accent)}.muted{color:var(--muted)}.small{font-size:13px}.lead{font-size:16px;max-width:75ch}
 .pos{color:var(--pos)}.neg{color:var(--neg)}.r{text-align:right;white-space:nowrap}
 .top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px}
-.weeks{font-size:13px}.weeks a,.weeks .cur{margin-right:8px}.weeks .cur{font-weight:600}
+.weeks{display:flex;align-items:center;gap:10px;font-size:14px}.weeks select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}.past{margin:16px 0 0;padding:10px 14px;border-radius:10px;background:var(--warn-bg);color:var(--warn);font-size:14px}.past a{color:inherit;font-weight:600}
 .empty{padding:16px;background:var(--card);border:1px dashed var(--line);border-radius:10px;color:var(--muted)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 .pick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
@@ -38,8 +38,10 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
 <div class="top">
   <div><h1>Trading Agent</h1>
   <div class="muted">Week of 2026-10-05 to 2026-10-09 · strategy v1 · picks made 2026-10-04T13:43 New York</div></div>
-  <div class="weeks muted">Weeks: <span class="cur">2026-10-05</span></div>
+  <nav class="weeks" aria-label="Choose a week"><span class="muted">&larr; Older</span>
+<select aria-label="Week" onchange="location.href=this.value"><option value="../weeks/2026-10-05.html" selected>Week of 2026-10-05</option></select><span class="muted">Newer &rarr;</span></nav>
 </div>
+
 
 <h2>Final picks</h2>
 <div class="cards">
@@ -59,7 +61,7 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
   <div><span class="badge">technical</span><span class="badge warn">exception: R/R below 2</span></div>
 </article></div>
 
-<h2>Sectors this week: Technology, Health Care</h2>
+<h2>Sectors: Technology, Health Care</h2>
 
 <p class="lead">Technology is the only eligible sector beating the Nasdaq-100 on every ETF timeframe, and Health Care is the next-best eligible score with a defensive profile that may hold up better if the Fed hikes again, though it is still lagging QQQ.</p>
 <div class="scroll"><table>
@@ -123,7 +125,7 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
 <p class="muted small">Positive numbers mean the sector beat the Nasdaq-100 (QQQ) by that many percentage points. Highlighted rows are this week's sectors.</p>
 
 <h2>Candidates by factor</h2>
-<p class="muted small">Top 5 per sector from each scan. Final picks are highlighted. R/R is on the scan's own levels; the rule is at least 2.</p>
+<p class="muted small">Top 5 per sector from each scan. Final picks are highlighted. R/R is on the scan's own levels; the rule was at least 2.</p>
 
 <h3>Technology</h3>
 <div class="grid2">
@@ -271,7 +273,17 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
 <td class="r pos">+17.82%</td>
 <td class="r">yes</td></tr></tbody></table></div>
 
-<h2>Track record</h2>
+<h2>How this week went</h2>
+<h3>Picks</h3><div class="scroll"><table>
+<thead><tr><th>Week</th><th>Stock</th><th>Sector</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th>Result</th><th class="r">Return</th></tr></thead>
+<tbody><tr><td>2026-10-05</td><td><b>NVDA</b></td><td>Technology</td>
+<td class="r">222.63 to 233.95</td><td class="r">255.46</td><td class="r">211.06</td>
+<td><span class="badge res-pending">pending</span></td>
+<td class="r "><span class="muted">-</span></td></tr></tbody></table></div>
+
+<h3>Alerts sent that week</h3><p class="empty">No alerts sent yet.</p>
+
+<h2>Track record, all weeks</h2>
 <div class="scroll"><table>
 <thead><tr><th>Week</th><th>Stock</th><th>Sector</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th>Result</th><th class="r">Return</th></tr></thead>
 <tbody><tr><td>2026-10-05</td><td><b>NVDA</b></td><td>Technology</td>
@@ -279,9 +291,6 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
 <td><span class="badge res-pending">pending</span></td>
 <td class="r "><span class="muted">-</span></td></tr></tbody></table></div>
 <p class="muted small">Results come from scripts/performance.py, which runs in the weekly review.</p>
-
-<h2>Recent alerts</h2>
-<p class="empty">No alerts sent yet.</p>
 
 <h2>Full reports</h2>
 <p class="reports"><a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-05/1_sectors.md">Sectors</a> <a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-05/2_technical.md">Technical</a> <a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-05/3_qualitative.md">Qualitative</a> <a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-05/4_picks.md">Final picks</a></p>

@@ -1,0 +1,1239 @@
+{
+ "week_of": "2026-10-05",
+ "strategy": {
+  "version": 1,
+  "last_changed": "2026-10-04",
+  "change_log": [
+   {
+    "date": "2026-10-04",
+    "version": 1,
+    "change": "Starting settings",
+    "reason": "Initial setup",
+    "approved_by": "Top"
+   }
+  ],
+  "sector_rotation": {
+   "lookback_days": {
+    "1m": 21,
+    "3m": 63,
+    "6m": 126
+   },
+   "weights": {
+    "1m": 0.3,
+    "3m": 0.5,
+    "6m": 0.2
+   },
+   "etf_vs_members_weight": {
+    "etf": 0.4,
+    "nasdaq_members": 0.6
+   },
+   "min_nasdaq100_members": 3,
+   "num_sectors": 2
+  },
+  "technical": {
+   "weights": {
+    "trend": 0.25,
+    "rsi": 0.2,
+    "macd": 0.2,
+    "relative_strength": 0.2,
+    "fib_pullback": 0.15
+   },
+   "rsi_sweet_spot": [
+    50,
+    70
+   ],
+   "fib_lookback_days": 126,
+   "fib_near_pct": 0.03,
+   "min_reward_risk": 2.0,
+   "top_n_per_sector": 5
+  },
+  "qualitative": {
+   "weights": {
+    "revenue_growth": 0.3,
+    "earnings_growth": 0.3,
+    "analyst_upside": 0.2,
+    "news": 0.2
+   },
+   "avoid_earnings_within_days": 5,
+   "top_n_per_sector": 5
+  },
+  "picker": {
+   "technical_weight": 0.5,
+   "qualitative_weight": 0.5,
+   "picks_per_sector": 1,
+   "pick_valid_trading_days": 5,
+   "max_stop_distance_pct": 10
+  },
+  "alerts": {
+   "open_window_et": [
+    "09:35",
+    "10:30"
+   ],
+   "close_window_et": [
+    "15:00",
+    "15:59"
+   ],
+   "send_close_summary": true
+  },
+  "performance": {
+   "max_holding_trading_days": 20
+  }
+ },
+ "picks": {
+  "week_of": "2026-10-05",
+  "valid_until": "2026-10-09",
+  "created": "2026-10-04T13:43",
+  "picks": [
+   {
+    "ticker": "NVDA",
+    "company": "Nvidia",
+    "sector": "Technology",
+    "action": "buy",
+    "entry_low": 222.63,
+    "entry_high": 233.95,
+    "target": 255.46,
+    "stop": 211.06,
+    "source": "technical",
+    "technical_score": 89.1,
+    "qualitative_score": 100.0,
+    "reason": "One-week exception approved by Top: R/R 1.58 on scan levels, below the 2.0 rule. Clean uptrend and strong business numbers. Use a smaller position than usual.",
+    "exception": "below_min_reward_risk"
+   }
+  ]
+ },
+ "sectors_selected": {
+  "week_of": "2026-10-05",
+  "sectors": [
+   "Technology",
+   "Health Care"
+  ],
+  "why": "Technology is the only eligible sector beating the Nasdaq-100 on every ETF timeframe, and Health Care is the next-best eligible score with a defensive profile that may hold up better if the Fed hikes again, though it is still lagging QQQ."
+ },
+ "sector_scan": {
+  "created": "2026-10-04T16:39-04:00",
+  "strategy_version": 1,
+  "how_to_read": "Positive numbers mean the sector beat the Nasdaq-100 (QQQ) by that many percentage points.",
+  "market_context": {
+   "QQQ": {
+    "name": "Nasdaq-100",
+    "last": 749.58,
+    "change_1m_pct": 5.8,
+    "change_3m_pct": 3.81,
+    "above_200day_avg": true
+   },
+   "SPY": {
+    "name": "S&P 500 (US large caps)",
+    "last": 769.64,
+    "change_1m_pct": 0.84,
+    "change_3m_pct": 2.7,
+    "above_200day_avg": true
+   },
+   "IWM": {
+    "name": "Russell 2000 (US small caps)",
+    "last": 281.52,
+    "change_1m_pct": -4.0,
+    "change_3m_pct": -5.57,
+    "above_200day_avg": true
+   },
+   "EFA": {
+    "name": "Developed markets outside the US",
+    "last": 103.96,
+    "change_1m_pct": -2.9,
+    "change_3m_pct": -1.42,
+    "above_200day_avg": true
+   },
+   "EEM": {
+    "name": "Emerging markets",
+    "last": 67.67,
+    "change_1m_pct": 0.77,
+    "change_3m_pct": 0.15,
+    "above_200day_avg": true
+   },
+   "TLT": {
+    "name": "Long-term US Treasury bonds",
+    "last": 77.48,
+    "change_1m_pct": -5.07,
+    "change_3m_pct": -8.24,
+    "above_200day_avg": false
+   },
+   "^VIX": {
+    "name": "Fear index (expected volatility)",
+    "last": 15.31,
+    "change_1m_pct": 6.91,
+    "change_3m_pct": -5.08,
+    "above_200day_avg": false
+   },
+   "^TNX": {
+    "name": "10-year US Treasury yield",
+    "last": 5.28,
+    "change_1m_pct": 10.03,
+    "change_3m_pct": 17.82,
+    "above_200day_avg": true
+   }
+  },
+  "sectors": [
+   {
+    "sector": "Technology",
+    "etf": "XLK",
+    "nasdaq100_members": 48,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 3.16,
+     "3m": 5.16,
+     "6m": 18.86
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 5.78,
+     "3m": -0.11,
+     "6m": 4.45
+    },
+    "score": 4.46,
+    "eligible": true,
+    "rank": 1
+   },
+   {
+    "sector": "Health Care",
+    "etf": "XLV",
+    "nasdaq100_members": 9,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -9.34,
+     "3m": -0.81,
+     "6m": -14.28
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -14.68,
+     "3m": -4.6,
+     "6m": -31.65
+    },
+    "score": -10.25,
+    "eligible": true,
+    "rank": 2
+   },
+   {
+    "sector": "Industrials",
+    "etf": "XLI",
+    "nasdaq100_members": 11,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -7.17,
+     "3m": -11.98,
+     "6m": -24.1
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -8.98,
+     "3m": -8.95,
+     "6m": -17.99
+    },
+    "score": -11.65,
+    "eligible": true,
+    "rank": 3
+   },
+   {
+    "sector": "Consumer Staples",
+    "etf": "XLP",
+    "nasdaq100_members": 6,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -11.02,
+     "3m": -7.43,
+     "6m": -28.74
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -11.98,
+     "3m": -11.16,
+     "6m": -21.75
+    },
+    "score": -13.22,
+    "eligible": true,
+    "rank": 4
+   },
+   {
+    "sector": "Consumer Discretionary",
+    "etf": "XLY",
+    "nasdaq100_members": 17,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -9.78,
+     "3m": -10.36,
+     "6m": -26.24
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -10.09,
+     "3m": -9.61,
+     "6m": -28.25
+    },
+    "score": -13.43,
+    "eligible": true,
+    "rank": 5
+   },
+   {
+    "sector": "Telecommunications",
+    "etf": "XLC",
+    "nasdaq100_members": 3,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -7.34,
+     "3m": -3.38,
+     "6m": -29.06
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -18.43,
+     "3m": -11.55,
+     "6m": -46.25
+    },
+    "score": -16.22,
+    "eligible": true,
+    "rank": 6
+   },
+   {
+    "sector": "Utilities",
+    "etf": "XLU",
+    "nasdaq100_members": 4,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -11.77,
+     "3m": -15.24,
+     "6m": -41.28
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -11.38,
+     "3m": -14.73,
+     "6m": -37.77
+    },
+    "score": -18.76,
+    "eligible": true,
+    "rank": 7
+   },
+   {
+    "sector": "Energy",
+    "etf": "XLE",
+    "nasdaq100_members": 2,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": -8.73,
+     "3m": 15.13,
+     "6m": -20.99
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -17.07,
+     "3m": 2.42,
+     "6m": -33.55
+    },
+    "score": -6.07,
+    "eligible": false,
+    "rank": 8
+   },
+   {
+    "sector": "Financials",
+    "etf": "XLF",
+    "nasdaq100_members": 0,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -12.7,
+     "3m": -8.19,
+     "6m": -19.66
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": null,
+     "3m": null,
+     "6m": null
+    },
+    "score": -11.84,
+    "eligible": false,
+    "rank": 9
+   },
+   {
+    "sector": "Real Estate",
+    "etf": "XLRE",
+    "nasdaq100_members": 0,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -11.69,
+     "3m": -10.89,
+     "6m": -28.64
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": null,
+     "3m": null,
+     "6m": null
+    },
+    "score": -14.68,
+    "eligible": false,
+    "rank": 10
+   },
+   {
+    "sector": "Basic Materials",
+    "etf": "XLB",
+    "nasdaq100_members": 1,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -13.1,
+     "3m": -9.38,
+     "6m": -30.68
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -7.11,
+     "3m": -14.81,
+     "6m": -32.4
+    },
+    "score": -15.51,
+    "eligible": false,
+    "rank": 11
+   }
+  ],
+  "suggested_top_sectors": [
+   "Technology",
+   "Health Care"
+  ]
+ },
+ "technical_scan": {
+  "sectors": {
+   "Technology": {
+    "stocks_checked": 48,
+    "top": [
+     {
+      "ticker": "LITE",
+      "price": 1085.42,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.98
+      },
+      "indicators": {
+       "rsi_14": 66.68,
+       "macd": 37.16,
+       "macd_signal": 24.32,
+       "macd_hist_rising": true,
+       "avg_50day": 879.03,
+       "avg_200day": 745.43,
+       "vs_qqq_3m_pct": 44.62,
+       "change_1m_pct": 24.68
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 1091.61,
+       "swing_low": 594.84,
+       "retracements": {
+        "0.236": 974.37,
+        "0.382": 901.84,
+        "0.5": 843.23,
+        "0.618": 784.61,
+        "0.786": 701.15
+       },
+       "extensions": {
+        "1.272": 1226.73,
+        "1.618": 1398.61
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 974.37,
+       "entry_high": 1085.42,
+       "target": 1226.73,
+       "stop": 892.83,
+       "reward_risk": 1.44
+      },
+      "company": "Lumentum",
+      "score": 92.1
+     },
+     {
+      "ticker": "MSFT",
+      "price": 517.53,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.89
+      },
+      "indicators": {
+       "rsi_14": 62.7,
+       "macd": 7.88,
+       "macd_signal": 7.55,
+       "macd_hist_rising": true,
+       "avg_50day": 487.39,
+       "avg_200day": 431.46,
+       "vs_qqq_3m_pct": 30.26,
+       "change_1m_pct": 4.17
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 522.85,
+       "swing_low": 348.54,
+       "retracements": {
+        "0.236": 481.71,
+        "0.382": 456.27,
+        "0.5": 435.7,
+        "0.618": 415.13,
+        "0.786": 385.85
+       },
+       "extensions": {
+        "1.272": 570.26,
+        "1.618": 630.57
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 481.71,
+       "entry_high": 517.53,
+       "target": 570.26,
+       "stop": 451.7,
+       "reward_risk": 1.47
+      },
+      "company": "Microsoft",
+      "score": 90.4
+     },
+     {
+      "ticker": "SHOP",
+      "price": 151.39,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.87
+      },
+      "indicators": {
+       "rsi_14": 61.14,
+       "macd": 2.67,
+       "macd_signal": 1.01,
+       "macd_hist_rising": true,
+       "avg_50day": 140.75,
+       "avg_200day": 129.55,
+       "vs_qqq_3m_pct": 22.2,
+       "change_1m_pct": 6.71
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 158.87,
+       "swing_low": 94.0,
+       "retracements": {
+        "0.236": 143.56,
+        "0.382": 134.09,
+        "0.5": 126.43,
+        "0.618": 118.78,
+        "0.786": 107.88
+       },
+       "extensions": {
+        "1.272": 176.51,
+        "1.618": 198.96
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 143.56,
+       "entry_high": 151.39,
+       "target": 158.87,
+       "stop": 132.75,
+       "reward_risk": 0.77
+      },
+      "company": "Shopify",
+      "score": 89.9
+     },
+     {
+      "ticker": "NVDA",
+      "price": 233.95,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.83
+      },
+      "indicators": {
+       "rsi_14": 63.01,
+       "macd": 3.54,
+       "macd_signal": 2.72,
+       "macd_hist_rising": true,
+       "avg_50day": 218.12,
+       "avg_200day": 200.38,
+       "vs_qqq_3m_pct": 15.96,
+       "change_1m_pct": 4.37
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 237.88,
+       "swing_low": 173.26,
+       "retracements": {
+        "0.236": 222.63,
+        "0.382": 213.2,
+        "0.5": 205.57,
+        "0.618": 197.95,
+        "0.786": 187.09
+       },
+       "extensions": {
+        "1.272": 255.46,
+        "1.618": 277.81
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 222.63,
+       "entry_high": 233.95,
+       "target": 255.46,
+       "stop": 211.06,
+       "reward_risk": 1.58
+      },
+      "company": "Nvidia",
+      "score": 89.1
+     },
+     {
+      "ticker": "LRCX",
+      "price": 347.49,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 1.0,
+       "relative_strength": 0.38
+      },
+      "indicators": {
+       "rsi_14": 67.76,
+       "macd": 7.84,
+       "macd_signal": 1.4,
+       "macd_hist_rising": true,
+       "avg_50day": 305.78,
+       "avg_200day": 274.61,
+       "vs_qqq_3m_pct": -4.48,
+       "change_1m_pct": 20.65
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 438.03,
+       "swing_low": 216.12,
+       "retracements": {
+        "0.236": 385.66,
+        "0.382": 353.26,
+        "0.5": 327.08,
+        "0.618": 300.89,
+        "0.786": 263.61
+       },
+       "extensions": {
+        "1.272": 498.4,
+        "1.618": 575.18
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 327.08,
+       "entry_high": 347.49,
+       "target": 385.66,
+       "stop": 297.88,
+       "reward_risk": 1.23
+      },
+      "company": "Lam Research",
+      "score": 87.7
+     }
+    ]
+   },
+   "Health Care": {
+    "stocks_checked": 9,
+    "top": [
+     {
+      "ticker": "AMGN",
+      "price": 403.04,
+      "parts": {
+       "trend": 0.67,
+       "rsi": 0.5,
+       "macd": 0.6,
+       "fib_pullback": 1.0,
+       "relative_strength": 0.62
+      },
+      "indicators": {
+       "rsi_14": 47.84,
+       "macd": 1.2,
+       "macd_signal": -0.34,
+       "macd_hist_rising": false,
+       "avg_50day": 408.54,
+       "avg_200day": 360.98,
+       "vs_qqq_3m_pct": 6.82,
+       "change_1m_pct": -8.99
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 447.03,
+       "swing_low": 316.27,
+       "retracements": {
+        "0.236": 416.17,
+        "0.382": 397.08,
+        "0.5": 381.65,
+        "0.618": 366.22,
+        "0.786": 344.25
+       },
+       "extensions": {
+        "1.272": 482.6,
+        "1.618": 527.84
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 397.08,
+       "entry_high": 403.04,
+       "target": 416.17,
+       "stop": 377.83,
+       "reward_risk": 0.72
+      },
+      "company": "Amgen",
+      "score": 66.2
+     },
+     {
+      "ticker": "GILD",
+      "price": 144.74,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 0.5,
+       "macd": 0.0,
+       "fib_pullback": 1.0,
+       "relative_strength": 0.75
+      },
+      "indicators": {
+       "rsi_14": 44.48,
+       "macd": 1.47,
+       "macd_signal": 2.31,
+       "macd_hist_rising": false,
+       "avg_50day": 142.63,
+       "avg_200day": 135.22,
+       "vs_qqq_3m_pct": 8.49,
+       "change_1m_pct": -2.71
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 154.2,
+       "swing_low": 119.92,
+       "retracements": {
+        "0.236": 146.11,
+        "0.382": 141.11,
+        "0.5": 137.06,
+        "0.618": 133.02,
+        "0.786": 127.26
+       },
+       "extensions": {
+        "1.272": 163.52,
+        "1.618": 175.38
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 141.11,
+       "entry_high": 144.74,
+       "target": 154.2,
+       "stop": 135.69,
+       "reward_risk": 1.56
+      },
+      "company": "Gilead Sciences",
+      "score": 65.0
+     },
+     {
+      "ticker": "DXCM",
+      "price": 85.36,
+      "parts": {
+       "trend": 0.67,
+       "rsi": 0.5,
+       "macd": 0.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 1.0
+      },
+      "indicators": {
+       "rsi_14": 43.7,
+       "macd": -0.04,
+       "macd_signal": 0.32,
+       "macd_hist_rising": false,
+       "avg_50day": 86.38,
+       "avg_200day": 73.05,
+       "vs_qqq_3m_pct": 14.12,
+       "change_1m_pct": -4.83
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 92.59,
+       "swing_low": 56.72,
+       "retracements": {
+        "0.236": 84.12,
+        "0.382": 78.89,
+        "0.5": 74.65,
+        "0.618": 70.42,
+        "0.786": 64.4
+       },
+       "extensions": {
+        "1.272": 102.35,
+        "1.618": 114.76
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 84.12,
+       "entry_high": 85.36,
+       "target": 92.59,
+       "stop": 78.1,
+       "reward_risk": 1.18
+      },
+      "company": "DexCom",
+      "score": 54.2
+     },
+     {
+      "ticker": "REGN",
+      "price": 735.2,
+      "parts": {
+       "trend": 0.67,
+       "rsi": 0.0,
+       "macd": 0.0,
+       "fib_pullback": 1.0,
+       "relative_strength": 0.88
+      },
+      "indicators": {
+       "rsi_14": 34.91,
+       "macd": -11.59,
+       "macd_signal": -3.49,
+       "macd_hist_rising": false,
+       "avg_50day": 784.56,
+       "avg_200day": 734.54,
+       "vs_qqq_3m_pct": 9.46,
+       "change_1m_pct": -13.71
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 859.34,
+       "swing_low": 590.83,
+       "retracements": {
+        "0.236": 795.97,
+        "0.382": 756.77,
+        "0.5": 725.09,
+        "0.618": 693.4,
+        "0.786": 648.29
+       },
+       "extensions": {
+        "1.272": 932.37,
+        "1.618": 1025.28
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 725.09,
+       "entry_high": 735.2,
+       "target": 795.97,
+       "stop": 686.47,
+       "reward_risk": 1.51
+      },
+      "company": "Regeneron Pharmaceuticals",
+      "score": 49.2
+     },
+     {
+      "ticker": "ISRG",
+      "price": 391.95,
+      "parts": {
+       "trend": 0.33,
+       "rsi": 1.0,
+       "macd": 0.6,
+       "fib_pullback": 0.0,
+       "relative_strength": 0.12
+      },
+      "indicators": {
+       "rsi_14": 51.21,
+       "macd": 7.45,
+       "macd_signal": 6.59,
+       "macd_hist_rising": false,
+       "avg_50day": 380.04,
+       "avg_200day": 447.22,
+       "vs_qqq_3m_pct": -13.26,
+       "change_1m_pct": 5.4
+      },
+      "fibonacci": {
+       "trend": "down",
+       "swing_high": 491.15,
+       "swing_low": 328.57,
+       "retracements": {
+        "0.236": 366.94,
+        "0.382": 390.68,
+        "0.5": 409.86,
+        "0.618": 429.04,
+        "0.786": 456.36
+       },
+       "extensions": {
+        "1.272": 284.35,
+        "1.618": 228.1
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 390.68,
+       "entry_high": 391.95,
+       "target": 409.86,
+       "stop": 363.27,
+       "reward_risk": 0.66
+      },
+      "company": "Intuitive Surgical",
+      "score": 42.8
+     }
+    ]
+   }
+  },
+  "all_stocks": {
+   "ADBE": {
+    "price": 237.69
+   },
+   "AMD": {
+    "price": 633.91
+   },
+   "GOOGL": {
+    "price": 343.5
+   },
+   "GOOG": {
+    "price": 340.35
+   },
+   "ADI": {
+    "price": 417.15
+   },
+   "AAPL": {
+    "price": 333.69
+   },
+   "AMAT": {
+    "price": 540.04
+   },
+   "APP": {
+    "price": 268.22
+   },
+   "ARM": {
+    "price": 307.49
+   },
+   "ASML": {
+    "price": 1867.31
+   },
+   "ALAB": {
+    "price": 350.33
+   },
+   "ADSK": {
+    "price": 212.0
+   },
+   "AVGO": {
+    "price": 355.14
+   },
+   "CDNS": {
+    "price": 351.35
+   },
+   "CRWV": {
+    "price": 89.62
+   },
+   "CRWD": {
+    "price": 270.04
+   },
+   "DDOG": {
+    "price": 277.22
+   },
+   "DASH": {
+    "price": 189.15
+   },
+   "FTNT": {
+    "price": 180.95
+   },
+   "INTC": {
+    "price": 119.33
+   },
+   "INTU": {
+    "price": 281.08
+   },
+   "KLAC": {
+    "price": 206.89
+   },
+   "LRCX": {
+    "price": 347.49
+   },
+   "LITE": {
+    "price": 1085.42
+   },
+   "MRVL": {
+    "price": 272.29
+   },
+   "META": {
+    "price": 728.08
+   },
+   "MCHP": {
+    "price": 81.32
+   },
+   "MU": {
+    "price": 1074.89
+   },
+   "MSFT": {
+    "price": 517.53
+   },
+   "MSTR": {
+    "price": 160.01
+   },
+   "MPWR": {
+    "price": 1439.73
+   },
+   "NBIS": {
+    "price": 242.81
+   },
+   "NVDA": {
+    "price": 233.95
+   },
+   "NXPI": {
+    "price": 243.66
+   },
+   "PLTR": {
+    "price": 188.75
+   },
+   "PANW": {
+    "price": 403.24
+   },
+   "PDD": {
+    "price": 75.38
+   },
+   "QCOM": {
+    "price": 184.87
+   },
+   "ROP": {
+    "price": 354.32
+   },
+   "SNDK": {
+    "price": 1719.99
+   },
+   "STX": {
+    "price": 848.99
+   },
+   "SHOP": {
+    "price": 151.39
+   },
+   "SNPS": {
+    "price": 489.9
+   },
+   "TER": {
+    "price": 449.04
+   },
+   "TXN": {
+    "price": 293.8
+   },
+   "TRI": {
+    "price": 97.62
+   },
+   "WDC": {
+    "price": 415.29
+   },
+   "WDAY": {
+    "price": 186.14
+   },
+   "ALNY": {
+    "price": 219.72
+   },
+   "AMGN": {
+    "price": 403.04
+   },
+   "DXCM": {
+    "price": 85.36
+   },
+   "GEHC": {
+    "price": 64.29
+   },
+   "GILD": {
+    "price": 144.74
+   },
+   "IDXX": {
+    "price": 518.39
+   },
+   "ISRG": {
+    "price": 391.95
+   },
+   "REGN": {
+    "price": 735.2
+   },
+   "VRTX": {
+    "price": 504.73
+   }
+  }
+ },
+ "qualitative_data": {
+  "sectors": {
+   "Technology": {
+    "ranked": [
+     {
+      "marketCap": 89759965184,
+      "revenueGrowth": 0.528,
+      "earningsGrowth": 0.57,
+      "profitMargins": 0.64575994,
+      "forwardPE": 12.784076,
+      "trailingPE": 20.61645,
+      "pegRatio": 0.58,
+      "targetMeanPrice": 497.04547,
+      "recommendationMean": 1.57576,
+      "numberOfAnalystOpinions": 31,
+      "currentPrice": 268.22,
+      "analyst_upside_pct": 85.31,
+      "next_earnings": "2026-11-04",
+      "ticker": "APP",
+      "company": "AppLovin",
+      "numbers_score": 100.0,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 1695307005952,
+      "revenueGrowth": 0.855,
+      "earningsGrowth": 2.153,
+      "profitMargins": 0.42944,
+      "forwardPE": 18.31202,
+      "trailingPE": 45.24077,
+      "pegRatio": 0.35,
+      "targetMeanPrice": 531.3149,
+      "recommendationMean": 1.26,
+      "numberOfAnalystOpinions": 47,
+      "currentPrice": 355.14,
+      "analyst_upside_pct": 49.61,
+      "next_earnings": "2026-12-09",
+      "ticker": "AVGO",
+      "company": "Broadcom",
+      "numbers_score": 100.0,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 49428709376,
+      "revenueGrowth": 1.125,
+      "earningsGrowth": null,
+      "profitMargins": -0.25402,
+      "forwardPE": -49.556526,
+      "trailingPE": null,
+      "pegRatio": null,
+      "targetMeanPrice": 141.57895,
+      "recommendationMean": 1.83333,
+      "numberOfAnalystOpinions": 38,
+      "currentPrice": 89.62,
+      "analyst_upside_pct": 57.98,
+      "next_earnings": "2026-11-11",
+      "ticker": "CRWV",
+      "company": "CoreWeave",
+      "numbers_score": 100.0,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 44157468672,
+      "revenueGrowth": 0.38,
+      "earningsGrowth": null,
+      "profitMargins": 0.0934,
+      "forwardPE": 17.741707,
+      "trailingPE": 119.588234,
+      "pegRatio": 0.24,
+      "targetMeanPrice": 107.84,
+      "recommendationMean": 1.53846,
+      "numberOfAnalystOpinions": 25,
+      "currentPrice": 81.32,
+      "analyst_upside_pct": 32.61,
+      "next_earnings": "2026-11-05",
+      "ticker": "MCHP",
+      "company": "Microchip Technology",
+      "numbers_score": 100.0,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 1213973397504,
+      "revenueGrowth": 3.793,
+      "earningsGrowth": 10.605,
+      "profitMargins": 0.63796,
+      "forwardPE": 5.219066,
+      "trailingPE": 14.451332,
+      "pegRatio": 0.16,
+      "targetMeanPrice": 1520.0217,
+      "recommendationMean": 1.36735,
+      "numberOfAnalystOpinions": 46,
+      "currentPrice": 1074.89,
+      "analyst_upside_pct": 41.41,
+      "next_earnings": "2026-12-23",
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "numbers_score": 100.0,
+      "earnings_within_avoid_window": false
+     }
+    ]
+   },
+   "Health Care": {
+    "ranked": [
+     {
+      "marketCap": 29400539136,
+      "revenueGrowth": 0.669,
+      "earningsGrowth": null,
+      "profitMargins": 0.16126,
+      "forwardPE": 17.617796,
+      "trailingPE": 38.34555,
+      "pegRatio": 0.28,
+      "targetMeanPrice": 371.12308,
+      "recommendationMean": 1.68966,
+      "numberOfAnalystOpinions": 26,
+      "currentPrice": 219.72,
+      "analyst_upside_pct": 68.91,
+      "next_earnings": "2026-10-29",
+      "ticker": "ALNY",
+      "company": "Alnylam Pharmaceuticals",
+      "numbers_score": 100.0,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 138467328000,
+      "revenueGrowth": 0.185,
+      "earningsGrowth": 0.265,
+      "profitMargins": 0.28445998,
+      "forwardPE": 32.416138,
+      "trailingPE": 45.051727,
+      "pegRatio": 1.82,
+      "targetMeanPrice": 476.34482,
+      "recommendationMean": 1.78125,
+      "numberOfAnalystOpinions": 29,
+      "currentPrice": 391.95,
+      "analyst_upside_pct": 21.53,
+      "next_earnings": "2026-10-20",
+      "ticker": "ISRG",
+      "company": "Intuitive Surgical",
+      "numbers_score": 69.5,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 32211515392,
+      "revenueGrowth": 0.131,
+      "earningsGrowth": 0.436,
+      "profitMargins": 0.20118,
+      "forwardPE": 27.344425,
+      "trailingPE": 33.739132,
+      "pegRatio": 1.31,
+      "targetMeanPrice": 95.08,
+      "recommendationMean": 1.32143,
+      "numberOfAnalystOpinions": 25,
+      "currentPrice": 85.36,
+      "analyst_upside_pct": 11.39,
+      "next_earnings": "2026-10-29",
+      "ticker": "DXCM",
+      "company": "DexCom",
+      "numbers_score": 65.3,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 40892157952,
+      "revenueGrowth": 0.097,
+      "earningsGrowth": 0.176,
+      "profitMargins": 0.25030002,
+      "forwardPE": 30.9677,
+      "trailingPE": 36.352734,
+      "pegRatio": 2.84,
+      "targetMeanPrice": 701.3333,
+      "recommendationMean": 2.15385,
+      "numberOfAnalystOpinions": 12,
+      "currentPrice": 518.39,
+      "analyst_upside_pct": 35.29,
+      "next_earnings": "2026-11-02",
+      "ticker": "IDXX",
+      "company": "Idexx Laboratories",
+      "numbers_score": 53.6,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 217896321024,
+      "revenueGrowth": 0.095,
+      "earningsGrowth": 0.649,
+      "profitMargins": 0.22951001,
+      "forwardPE": 16.484947,
+      "trailingPE": 25.064678,
+      "pegRatio": 2.43,
+      "targetMeanPrice": 390.9438,
+      "recommendationMean": 2.64706,
+      "numberOfAnalystOpinions": 29,
+      "currentPrice": 403.04,
+      "analyst_upside_pct": -3.0,
+      "next_earnings": "2026-11-03",
+      "ticker": "AMGN",
+      "company": "Amgen",
+      "numbers_score": 49.4,
+      "earnings_within_avoid_window": false
+     }
+    ]
+   }
+  }
+ }
+}
