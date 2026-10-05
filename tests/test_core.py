@@ -107,9 +107,39 @@ def test_alert_windows():
     cfg = load_strategy()["alerts"]
     at = lambda h, m: dt.datetime(2026, 10, 5, h, m, tzinfo=NY)
     assert price_alert.which_session(at(9, 45), cfg) == "open"
-    assert price_alert.which_session(at(10, 45), cfg) is None
+    assert price_alert.which_session(at(11, 55), cfg) == "open"
+    assert price_alert.which_session(at(12, 30), cfg) is None
     assert price_alert.which_session(at(15, 30), cfg) == "close"
-    assert price_alert.which_session(at(16, 30), cfg) is None
+    assert price_alert.which_session(at(17, 25), cfg) == "close"
+    assert price_alert.which_session(at(17, 45), cfg) is None
+
+
+def test_schedule_tries_land_inside_windows():
+    """Every cron try in the workflow must fall inside a window, in summer and winter time."""
+    import re
+    from zoneinfo import ZoneInfo
+
+    cfg = load_strategy()["alerts"]
+    wf = (Path(__file__).resolve().parent.parent / ".github/workflows/daily-alerts.yml").read_text()
+    crons = re.findall(r'cron: "(\d+) (\d+) \* \* 1-5"', wf)
+    assert len(crons) == 6
+    for day in (dt.date(2026, 7, 6), dt.date(2026, 12, 7)):  # summer, winter
+        sessions = []
+        for minute, hour in crons:
+            utc = dt.datetime(day.year, day.month, day.day, int(hour), int(minute), tzinfo=ZoneInfo("UTC"))
+            sessions.append(price_alert.which_session(utc.astimezone(NY), cfg))
+        assert sessions.count("open") == 3 and sessions.count("close") == 3, (day, sessions)
+
+
+def test_gate_skips_after_a_successful_try():
+    from alert_gate import should_run
+
+    cfg = load_strategy()["alerts"]
+    now = dt.datetime(2026, 10, 6, 10, 40, tzinfo=NY)
+    assert should_run(now, cfg, {})[0] is True
+    assert should_run(now, cfg, {"last_run": {"open": "2026-10-05"}})[0] is True   # yesterday
+    assert should_run(now, cfg, {"last_run": {"open": "2026-10-06"}})[0] is False  # done today
+    assert should_run(dt.datetime(2026, 10, 6, 13, 0, tzinfo=NY), cfg, {})[0] is False  # between windows
 
 
 def _bars(rows):

@@ -1,8 +1,8 @@
 {
-  "version": 1,
-  "last_changed": "2026-10-04",
+  "version": 2,
+  "last_changed": "2026-10-05",
   "change_log": [
-    {"date": "2026-10-04", "version": 1, "change": "Starting settings", "reason": "Initial setup", "approved_by": "Top"}
+    {"date": "2026-10-04", "version": 2, "change": "Starting settings", "reason": "Initial setup", "approved_by": "Top"}
   ],
   "sector_rotation": {
     "lookback_days": {"1m": 21, "3m": 63, "6m": 126},
@@ -32,8 +32,8 @@
     "max_stop_distance_pct": 10
   },
   "alerts": {
-    "open_window_et": ["09:35", "10:30"],
-    "close_window_et": ["15:00", "15:59"],
+    "open_window_et": ["09:35", "12:00"],
+    "close_window_et": ["15:00", "17:30"],
     "send_close_summary": true
   },
   "performance": {

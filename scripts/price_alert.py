@@ -1,4 +1,4 @@
-"""Price Alert (runs twice each trading day, no AI needed).
+"""Price Alert (one check near the open, one near the close, each trading day; no AI needed).
 
 Checks this week's picks against the live price and sends a push/email when:
   - the price is inside the buy zone            -> "BUY ZONE"
@@ -15,20 +15,12 @@ import csv
 import datetime as dt
 import sys
 
+from alert_gate import which_session
 from common import DATA, load_json, load_strategy, now_ny, save_json
 from notify import send
 
 STATE = DATA / "alert_state.json"
 LOG = DATA / "alert_log.csv"
-
-
-def which_session(now: dt.datetime, cfg: dict) -> str | None:
-    t = now.strftime("%H:%M")
-    if cfg["open_window_et"][0] <= t <= cfg["open_window_et"][1]:
-        return "open"
-    if cfg["close_window_et"][0] <= t <= cfg["close_window_et"][1]:
-        return "close"
-    return None
 
 
 def evaluate_pick(p: dict, price: float, already: set) -> list[tuple[str, str, bool]]:
@@ -81,6 +73,9 @@ def main() -> int:
     active = [p for p in picks.get("picks", []) if picks.get("valid_until", "9999") >= f"{now:%Y-%m-%d}"]
     if not active:
         print("No active picks this week.")
+        if session in ("open", "close"):  # nothing to watch, so later tries can skip
+            state["last_run"][session] = f"{now:%Y-%m-%d}"
+            save_json(STATE, state)
         return 0
 
     prices = latest_prices([p["ticker"] for p in active], now.date())

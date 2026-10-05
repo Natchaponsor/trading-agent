@@ -1,12 +1,12 @@
 {
  "week_of": "2026-10-05",
  "strategy": {
-  "version": 1,
-  "last_changed": "2026-10-04",
+  "version": 2,
+  "last_changed": "2026-10-05",
   "change_log": [
    {
     "date": "2026-10-04",
-    "version": 1,
+    "version": 2,
     "change": "Starting settings",
     "reason": "Initial setup",
     "approved_by": "Top"
@@ -67,11 +67,11 @@
   "alerts": {
    "open_window_et": [
     "09:35",
-    "10:30"
+    "12:00"
    ],
    "close_window_et": [
     "15:00",
-    "15:59"
+    "17:30"
    ],
    "send_close_summary": true
   },

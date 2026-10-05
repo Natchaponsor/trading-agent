@@ -10,7 +10,7 @@ Finds Nasdaq-100 stocks in the 2 strongest sectors each week, then alerts your p
 | 2. Technical Finder | Claude agent (Sonnet) + script | Weekly | 1 stock per sector from RSI, MACD, trend, Fibonacci |
 | 3. Qualitative Finder | Claude agent (Sonnet) + script + web search | Weekly | 1 stock per sector from growth, earnings, news |
 | 4. Stock Picker | Claude agent (Opus) | Weekly | Final picks with buy zone, target, stop |
-| 5. Price Alert | Script only, runs on GitHub | Twice each trading day | Push and email alerts |
+| 5. Price Alert | Script only, runs on GitHub | Once near the open, once near the close (3 tries each) | Push and email alerts |
 | 6. Feedback | Claude agent (Opus) + script | Weekly | Suggested changes you approve |
 
 Scripts do all math. Agents read the numbers, add judgment and news, and explain.
@@ -45,7 +45,7 @@ In the folder, run `claude`, then:
 2. `/weekly-run`  Claude runs the whole chain and shows you the picks.
 3. Say yes to push, so the daily alerts watch the new picks.
 
-On trading days you get alerts at about 6:45 AM and 12:30 PM Pacific. After you trade, add a row to `data/my_trades.csv` so the feedback agent can compare your real results with the picks.
+On trading days the open check runs between 9:35 AM and 12:00 PM New York time, and the close check between 3:00 and 5:30 PM (GitHub can start runs late, so each gets 3 tries). After you trade, add a row to `data/my_trades.csv` so the feedback agent can compare your real results with the picks.
 
 ## Honest limits
 

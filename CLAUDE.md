@@ -9,7 +9,7 @@ Weekly (Sunday, `/weekly-review` then `/weekly-run`):
 3. stock-picker agent -> data/picks.json -> scripts/validate_picks.py
 4. feedback agent (in /weekly-review) -> data/feedback/<date>.md, proposals only
 
-Daily (GitHub Actions, no AI): scripts/price_alert.py at ~9:45 AM and ~3:30 PM New York time sends push/email alerts and logs to data/alert_log.csv.
+Daily (GitHub Actions, no AI): scripts/price_alert.py checks once in the open window (9:35 AM-12:00 PM New York) and once in the close window (3:00-5:30 PM). Each window gets 3 scheduled tries because GitHub runs late; scripts/alert_gate.py skips the tries after the first one finishes. It sends push/email alerts and logs to data/alert_log.csv.
 
 ## Rules for every agent and session
 - Code calculates, agents judge. Every price, indicator or return in a report must come from a script output file or a linked source. Never estimate or invent a number.
