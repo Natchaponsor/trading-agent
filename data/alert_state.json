@@ -1,6 +1,10 @@
 {
-  "alerted": {},
+  "alerted": {
+    "2026-10-05:NVDA": [
+      "buy_zone"
+    ]
+  },
   "last_run": {
-    "close": "2026-10-07"
+    "close": "2026-10-08"
   }
 }
