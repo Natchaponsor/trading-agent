@@ -1,239 +1,239 @@
 {
-  "created": "2026-10-04T16:41-04:00",
-  "strategy_version": 1,
+  "created": "2026-10-12T02:05-04:00",
+  "strategy_version": 2,
   "sectors": {
     "Technology": {
       "stocks_checked": 48,
       "top": [
         {
-          "ticker": "LITE",
-          "price": 1085.42,
-          "parts": {
-            "trend": 1.0,
-            "rsi": 1.0,
-            "macd": 1.0,
-            "fib_pullback": 0.5,
-            "relative_strength": 0.98
-          },
-          "indicators": {
-            "rsi_14": 66.68,
-            "macd": 37.16,
-            "macd_signal": 24.32,
-            "macd_hist_rising": true,
-            "avg_50day": 879.03,
-            "avg_200day": 745.43,
-            "vs_qqq_3m_pct": 44.62,
-            "change_1m_pct": 24.68
-          },
-          "fibonacci": {
-            "trend": "up",
-            "swing_high": 1091.61,
-            "swing_low": 594.84,
-            "retracements": {
-              "0.236": 974.37,
-              "0.382": 901.84,
-              "0.5": 843.23,
-              "0.618": 784.61,
-              "0.786": 701.15
-            },
-            "extensions": {
-              "1.272": 1226.73,
-              "1.618": 1398.61
-            }
-          },
-          "suggested_levels": {
-            "entry_low": 974.37,
-            "entry_high": 1085.42,
-            "target": 1226.73,
-            "stop": 892.83,
-            "reward_risk": 1.44
-          },
-          "company": "Lumentum",
-          "score": 92.1
-        },
-        {
           "ticker": "MSFT",
-          "price": 517.53,
+          "price": 535.07,
           "parts": {
             "trend": 1.0,
             "rsi": 1.0,
             "macd": 1.0,
             "fib_pullback": 0.5,
-            "relative_strength": 0.89
+            "relative_strength": 0.91
           },
           "indicators": {
-            "rsi_14": 62.7,
-            "macd": 7.88,
-            "macd_signal": 7.55,
+            "rsi_14": 67.52,
+            "macd": 10.69,
+            "macd_signal": 9.2,
             "macd_hist_rising": true,
-            "avg_50day": 487.39,
-            "avg_200day": 431.46,
-            "vs_qqq_3m_pct": 30.26,
-            "change_1m_pct": 4.17
+            "avg_50day": 500.19,
+            "avg_200day": 432.7,
+            "vs_qqq_3m_pct": 31.44,
+            "change_1m_pct": 8.66
           },
           "fibonacci": {
             "trend": "up",
-            "swing_high": 522.85,
+            "swing_high": 537.22,
             "swing_low": 348.54,
             "retracements": {
-              "0.236": 481.71,
-              "0.382": 456.27,
-              "0.5": 435.7,
-              "0.618": 415.13,
-              "0.786": 385.85
+              "0.236": 492.69,
+              "0.382": 465.15,
+              "0.5": 442.88,
+              "0.618": 420.62,
+              "0.786": 388.92
             },
             "extensions": {
-              "1.272": 570.26,
-              "1.618": 630.57
+              "1.272": 588.54,
+              "1.618": 653.82
             }
           },
           "suggested_levels": {
-            "entry_low": 481.71,
-            "entry_high": 517.53,
-            "target": 570.26,
-            "stop": 451.7,
-            "reward_risk": 1.47
+            "entry_low": 492.69,
+            "entry_high": 535.07,
+            "target": 588.54,
+            "stop": 460.49,
+            "reward_risk": 1.4
           },
           "company": "Microsoft",
-          "score": 90.4
+          "score": 90.8
         },
         {
-          "ticker": "SHOP",
-          "price": 151.39,
-          "parts": {
-            "trend": 1.0,
-            "rsi": 1.0,
-            "macd": 1.0,
-            "fib_pullback": 0.5,
-            "relative_strength": 0.87
-          },
-          "indicators": {
-            "rsi_14": 61.14,
-            "macd": 2.67,
-            "macd_signal": 1.01,
-            "macd_hist_rising": true,
-            "avg_50day": 140.75,
-            "avg_200day": 129.55,
-            "vs_qqq_3m_pct": 22.2,
-            "change_1m_pct": 6.71
-          },
-          "fibonacci": {
-            "trend": "up",
-            "swing_high": 158.87,
-            "swing_low": 94.0,
-            "retracements": {
-              "0.236": 143.56,
-              "0.382": 134.09,
-              "0.5": 126.43,
-              "0.618": 118.78,
-              "0.786": 107.88
-            },
-            "extensions": {
-              "1.272": 176.51,
-              "1.618": 198.96
-            }
-          },
-          "suggested_levels": {
-            "entry_low": 143.56,
-            "entry_high": 151.39,
-            "target": 158.87,
-            "stop": 132.75,
-            "reward_risk": 0.77
-          },
-          "company": "Shopify",
-          "score": 89.9
-        },
-        {
-          "ticker": "NVDA",
-          "price": 233.95,
-          "parts": {
-            "trend": 1.0,
-            "rsi": 1.0,
-            "macd": 1.0,
-            "fib_pullback": 0.5,
-            "relative_strength": 0.83
-          },
-          "indicators": {
-            "rsi_14": 63.01,
-            "macd": 3.54,
-            "macd_signal": 2.72,
-            "macd_hist_rising": true,
-            "avg_50day": 218.12,
-            "avg_200day": 200.38,
-            "vs_qqq_3m_pct": 15.96,
-            "change_1m_pct": 4.37
-          },
-          "fibonacci": {
-            "trend": "up",
-            "swing_high": 237.88,
-            "swing_low": 173.26,
-            "retracements": {
-              "0.236": 222.63,
-              "0.382": 213.2,
-              "0.5": 205.57,
-              "0.618": 197.95,
-              "0.786": 187.09
-            },
-            "extensions": {
-              "1.272": 255.46,
-              "1.618": 277.81
-            }
-          },
-          "suggested_levels": {
-            "entry_low": 222.63,
-            "entry_high": 233.95,
-            "target": 255.46,
-            "stop": 211.06,
-            "reward_risk": 1.58
-          },
-          "company": "Nvidia",
-          "score": 89.1
-        },
-        {
-          "ticker": "LRCX",
-          "price": 347.49,
+          "ticker": "GOOG",
+          "price": 347.86,
           "parts": {
             "trend": 1.0,
             "rsi": 1.0,
             "macd": 1.0,
             "fib_pullback": 1.0,
-            "relative_strength": 0.38
+            "relative_strength": 0.36
           },
           "indicators": {
-            "rsi_14": 67.76,
-            "macd": 7.84,
-            "macd_signal": 1.4,
+            "rsi_14": 55.97,
+            "macd": 1.19,
+            "macd_signal": 0.24,
             "macd_hist_rising": true,
-            "avg_50day": 305.78,
-            "avg_200day": 274.61,
-            "vs_qqq_3m_pct": -4.48,
-            "change_1m_pct": 20.65
+            "avg_50day": 343.28,
+            "avg_200day": 338.02,
+            "vs_qqq_3m_pct": -6.4,
+            "change_1m_pct": 5.29
           },
           "fibonacci": {
             "trend": "up",
-            "swing_high": 438.03,
-            "swing_low": 216.12,
+            "swing_high": 403.96,
+            "swing_low": 313.3,
             "retracements": {
-              "0.236": 385.66,
-              "0.382": 353.26,
-              "0.5": 327.08,
-              "0.618": 300.89,
-              "0.786": 263.61
+              "0.236": 382.57,
+              "0.382": 369.33,
+              "0.5": 358.63,
+              "0.618": 347.93,
+              "0.786": 332.7
             },
             "extensions": {
-              "1.272": 498.4,
-              "1.618": 575.18
+              "1.272": 428.63,
+              "1.618": 460.0
             }
           },
           "suggested_levels": {
-            "entry_low": 327.08,
-            "entry_high": 347.49,
-            "target": 385.66,
-            "stop": 297.88,
-            "reward_risk": 1.23
+            "entry_low": 332.7,
+            "entry_high": 347.86,
+            "target": 358.63,
+            "stop": 310.16,
+            "reward_risk": 0.61
           },
-          "company": "Lam Research",
-          "score": 87.7
+          "company": "Alphabet Inc. (Class C)",
+          "score": 87.2
+        },
+        {
+          "ticker": "TRI",
+          "price": 103.21,
+          "parts": {
+            "trend": 1.0,
+            "rsi": 1.0,
+            "macd": 1.0,
+            "fib_pullback": 0.5,
+            "relative_strength": 0.66
+          },
+          "indicators": {
+            "rsi_14": 56.85,
+            "macd": -0.1,
+            "macd_signal": -0.68,
+            "macd_hist_rising": true,
+            "avg_50day": 101.41,
+            "avg_200day": 96.0,
+            "vs_qqq_3m_pct": 4.51,
+            "change_1m_pct": 7.84
+          },
+          "fibonacci": {
+            "trend": "up",
+            "swing_high": 112.77,
+            "swing_low": 75.78,
+            "retracements": {
+              "0.236": 104.04,
+              "0.382": 98.64,
+              "0.5": 94.28,
+              "0.618": 89.91,
+              "0.786": 83.7
+            },
+            "extensions": {
+              "1.272": 122.83,
+              "1.618": 135.63
+            }
+          },
+          "suggested_levels": {
+            "entry_low": 98.64,
+            "entry_high": 103.21,
+            "target": 112.77,
+            "stop": 93.33,
+            "reward_risk": 1.56
+          },
+          "company": "Thomson Reuters",
+          "score": 85.7
+        },
+        {
+          "ticker": "LITE",
+          "price": 1103.35,
+          "parts": {
+            "trend": 1.0,
+            "rsi": 1.0,
+            "macd": 0.6,
+            "fib_pullback": 0.5,
+            "relative_strength": 0.94
+          },
+          "indicators": {
+            "rsi_14": 62.6,
+            "macd": 54.91,
+            "macd_signal": 43.48,
+            "macd_hist_rising": false,
+            "avg_50day": 920.34,
+            "avg_200day": 764.19,
+            "vs_qqq_3m_pct": 37.97,
+            "change_1m_pct": 17.92
+          },
+          "fibonacci": {
+            "trend": "up",
+            "swing_high": 1143.0,
+            "swing_low": 594.84,
+            "retracements": {
+              "0.236": 1013.63,
+              "0.382": 933.6,
+              "0.5": 868.92,
+              "0.618": 804.24,
+              "0.786": 712.15
+            },
+            "extensions": {
+              "1.272": 1292.1,
+              "1.618": 1481.76
+            }
+          },
+          "suggested_levels": {
+            "entry_low": 1013.63,
+            "entry_high": 1103.35,
+            "target": 1143.0,
+            "stop": 924.27,
+            "reward_risk": 0.63
+          },
+          "company": "Lumentum",
+          "score": 83.2
+        },
+        {
+          "ticker": "ADI",
+          "price": 406.19,
+          "parts": {
+            "trend": 1.0,
+            "rsi": 1.0,
+            "macd": 0.6,
+            "fib_pullback": 1.0,
+            "relative_strength": 0.55
+          },
+          "indicators": {
+            "rsi_14": 60.54,
+            "macd": 10.67,
+            "macd_signal": 9.21,
+            "macd_hist_rising": false,
+            "avg_50day": 379.62,
+            "avg_200day": 361.3,
+            "vs_qqq_3m_pct": -0.12,
+            "change_1m_pct": 12.44
+          },
+          "fibonacci": {
+            "trend": "up",
+            "swing_high": 444.56,
+            "swing_low": 339.35,
+            "retracements": {
+              "0.236": 419.73,
+              "0.382": 404.37,
+              "0.5": 391.95,
+              "0.618": 379.54,
+              "0.786": 361.87
+            },
+            "extensions": {
+              "1.272": 473.17,
+              "1.618": 509.57
+            }
+          },
+          "suggested_levels": {
+            "entry_low": 404.37,
+            "entry_high": 406.19,
+            "target": 419.73,
+            "stop": 388.04,
+            "reward_risk": 0.84
+          },
+          "company": "Analog Devices",
+          "score": 83.1
         }
       ]
     },
@@ -242,23 +242,23 @@
       "top": [
         {
           "ticker": "AMGN",
-          "price": 403.04,
+          "price": 414.87,
           "parts": {
-            "trend": 0.67,
-            "rsi": 0.5,
-            "macd": 0.6,
-            "fib_pullback": 1.0,
-            "relative_strength": 0.62
+            "trend": 1.0,
+            "rsi": 1.0,
+            "macd": 1.0,
+            "fib_pullback": 0.5,
+            "relative_strength": 1.0
           },
           "indicators": {
-            "rsi_14": 47.84,
-            "macd": 1.2,
-            "macd_signal": -0.34,
-            "macd_hist_rising": false,
-            "avg_50day": 408.54,
-            "avg_200day": 360.98,
-            "vs_qqq_3m_pct": 6.82,
-            "change_1m_pct": -8.99
+            "rsi_14": 54.86,
+            "macd": 1.26,
+            "macd_signal": 0.45,
+            "macd_hist_rising": true,
+            "avg_50day": 411.17,
+            "avg_200day": 363.17,
+            "vs_qqq_3m_pct": 10.11,
+            "change_1m_pct": 8.47
           },
           "fibonacci": {
             "trend": "up",
@@ -278,33 +278,33 @@
           },
           "suggested_levels": {
             "entry_low": 397.08,
-            "entry_high": 403.04,
-            "target": 416.17,
+            "entry_high": 414.87,
+            "target": 447.03,
             "stop": 377.83,
-            "reward_risk": 0.72
+            "reward_risk": 1.46
           },
           "company": "Amgen",
-          "score": 66.2
+          "score": 92.5
         },
         {
           "ticker": "GILD",
-          "price": 144.74,
+          "price": 151.17,
           "parts": {
             "trend": 1.0,
-            "rsi": 0.5,
-            "macd": 0.0,
-            "fib_pullback": 1.0,
-            "relative_strength": 0.75
+            "rsi": 1.0,
+            "macd": 0.4,
+            "fib_pullback": 0.5,
+            "relative_strength": 0.88
           },
           "indicators": {
-            "rsi_14": 44.48,
-            "macd": 1.47,
-            "macd_signal": 2.31,
-            "macd_hist_rising": false,
-            "avg_50day": 142.63,
-            "avg_200day": 135.22,
-            "vs_qqq_3m_pct": 8.49,
-            "change_1m_pct": -2.71
+            "rsi_14": 59.42,
+            "macd": 0.74,
+            "macd_signal": 1.2,
+            "macd_hist_rising": true,
+            "avg_50day": 144.22,
+            "avg_200day": 135.9,
+            "vs_qqq_3m_pct": 10.03,
+            "change_1m_pct": 4.98
           },
           "fibonacci": {
             "trend": "up",
@@ -323,80 +323,34 @@
             }
           },
           "suggested_levels": {
-            "entry_low": 141.11,
-            "entry_high": 144.74,
-            "target": 154.2,
-            "stop": 135.69,
-            "reward_risk": 1.56
+            "entry_low": 146.11,
+            "entry_high": 151.17,
+            "target": 163.52,
+            "stop": 139.69,
+            "reward_risk": 1.66
           },
           "company": "Gilead Sciences",
-          "score": 65.0
-        },
-        {
-          "ticker": "DXCM",
-          "price": 85.36,
-          "parts": {
-            "trend": 0.67,
-            "rsi": 0.5,
-            "macd": 0.0,
-            "fib_pullback": 0.5,
-            "relative_strength": 1.0
-          },
-          "indicators": {
-            "rsi_14": 43.7,
-            "macd": -0.04,
-            "macd_signal": 0.32,
-            "macd_hist_rising": false,
-            "avg_50day": 86.38,
-            "avg_200day": 73.05,
-            "vs_qqq_3m_pct": 14.12,
-            "change_1m_pct": -4.83
-          },
-          "fibonacci": {
-            "trend": "up",
-            "swing_high": 92.59,
-            "swing_low": 56.72,
-            "retracements": {
-              "0.236": 84.12,
-              "0.382": 78.89,
-              "0.5": 74.65,
-              "0.618": 70.42,
-              "0.786": 64.4
-            },
-            "extensions": {
-              "1.272": 102.35,
-              "1.618": 114.76
-            }
-          },
-          "suggested_levels": {
-            "entry_low": 84.12,
-            "entry_high": 85.36,
-            "target": 92.59,
-            "stop": 78.1,
-            "reward_risk": 1.18
-          },
-          "company": "DexCom",
-          "score": 54.2
+          "score": 78.0
         },
         {
           "ticker": "REGN",
-          "price": 735.2,
+          "price": 746.54,
           "parts": {
             "trend": 0.67,
-            "rsi": 0.0,
-            "macd": 0.0,
+            "rsi": 0.5,
+            "macd": 0.4,
             "fib_pullback": 1.0,
-            "relative_strength": 0.88
+            "relative_strength": 0.75
           },
           "indicators": {
-            "rsi_14": 34.91,
-            "macd": -11.59,
-            "macd_signal": -3.49,
-            "macd_hist_rising": false,
-            "avg_50day": 784.56,
-            "avg_200day": 734.54,
-            "vs_qqq_3m_pct": 9.46,
-            "change_1m_pct": -13.71
+            "rsi_14": 42.13,
+            "macd": -14.26,
+            "macd_signal": -10.91,
+            "macd_hist_rising": true,
+            "avg_50day": 789.47,
+            "avg_200day": 734.12,
+            "vs_qqq_3m_pct": 7.05,
+            "change_1m_pct": -5.89
           },
           "fibonacci": {
             "trend": "up",
@@ -416,33 +370,79 @@
           },
           "suggested_levels": {
             "entry_low": 725.09,
-            "entry_high": 735.2,
+            "entry_high": 746.54,
             "target": 795.97,
             "stop": 686.47,
-            "reward_risk": 1.51
+            "reward_risk": 1.22
           },
           "company": "Regeneron Pharmaceuticals",
-          "score": 49.2
+          "score": 64.7
+        },
+        {
+          "ticker": "VRTX",
+          "price": 510.08,
+          "parts": {
+            "trend": 0.67,
+            "rsi": 0.5,
+            "macd": 0.4,
+            "fib_pullback": 1.0,
+            "relative_strength": 0.5
+          },
+          "indicators": {
+            "rsi_14": 45.61,
+            "macd": -4.58,
+            "macd_signal": -3.23,
+            "macd_hist_rising": true,
+            "avg_50day": 520.46,
+            "avg_200day": 474.9,
+            "vs_qqq_3m_pct": 0.55,
+            "change_1m_pct": -0.87
+          },
+          "fibonacci": {
+            "trend": "up",
+            "swing_high": 560.25,
+            "swing_low": 412.27,
+            "retracements": {
+              "0.236": 525.33,
+              "0.382": 503.72,
+              "0.5": 486.26,
+              "0.618": 468.8,
+              "0.786": 443.94
+            },
+            "extensions": {
+              "1.272": 600.5,
+              "1.618": 651.7
+            }
+          },
+          "suggested_levels": {
+            "entry_low": 503.72,
+            "entry_high": 510.08,
+            "target": 560.25,
+            "stop": 481.4,
+            "reward_risk": 2.09
+          },
+          "company": "Vertex Pharmaceuticals",
+          "score": 59.7
         },
         {
           "ticker": "ISRG",
-          "price": 391.95,
+          "price": 423.96,
           "parts": {
             "trend": 0.33,
             "rsi": 1.0,
-            "macd": 0.6,
+            "macd": 1.0,
             "fib_pullback": 0.0,
-            "relative_strength": 0.12
+            "relative_strength": 0.38
           },
           "indicators": {
-            "rsi_14": 51.21,
-            "macd": 7.45,
-            "macd_signal": 6.59,
-            "macd_hist_rising": false,
-            "avg_50day": 380.04,
-            "avg_200day": 447.22,
-            "vs_qqq_3m_pct": -13.26,
-            "change_1m_pct": 5.4
+            "rsi_14": 66.74,
+            "macd": 9.45,
+            "macd_signal": 7.83,
+            "macd_hist_rising": true,
+            "avg_50day": 386.1,
+            "avg_200day": 443.41,
+            "vs_qqq_3m_pct": -1.53,
+            "change_1m_pct": 17.62
           },
           "fibonacci": {
             "trend": "down",
@@ -461,14 +461,14 @@
             }
           },
           "suggested_levels": {
-            "entry_low": 390.68,
-            "entry_high": 391.95,
-            "target": 409.86,
-            "stop": 363.27,
-            "reward_risk": 0.66
+            "entry_low": 409.86,
+            "entry_high": 423.96,
+            "target": 456.36,
+            "stop": 386.77,
+            "reward_risk": 1.31
           },
           "company": "Intuitive Surgical",
-          "score": 42.8
+          "score": 55.8
         }
       ]
     }
@@ -476,8 +476,8 @@
   "all_stocks": {
     "ADBE": {
       "sector": "Technology",
-      "price": 237.69,
-      "score": 45.3,
+      "price": 242.27,
+      "score": 64.0,
       "fibonacci": {
         "trend": "up",
         "swing_high": 294.53,
@@ -496,184 +496,184 @@
       },
       "suggested_levels": {
         "entry_low": 230.0,
-        "entry_high": 237.69,
+        "entry_high": 242.27,
         "target": 254.65,
         "stop": 210.34,
-        "reward_risk": 0.88
+        "reward_risk": 0.72
       }
     },
     "AMD": {
       "sector": "Technology",
-      "price": 633.91,
-      "score": 70.2,
+      "price": 608.1,
+      "score": 67.4,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 645.46,
-        "swing_low": 215.38,
+        "swing_high": 658.52,
+        "swing_low": 242.03,
         "retracements": {
-          "0.236": 543.96,
-          "0.382": 481.17,
-          "0.5": 430.42,
-          "0.618": 379.67,
-          "0.786": 307.42
+          "0.236": 560.23,
+          "0.382": 499.42,
+          "0.5": 450.28,
+          "0.618": 401.13,
+          "0.786": 331.16
         },
         "extensions": {
-          "1.272": 762.44,
-          "1.618": 911.25
+          "1.272": 771.81,
+          "1.618": 915.91
         }
       },
       "suggested_levels": {
-        "entry_low": 543.96,
-        "entry_high": 633.91,
-        "target": 762.44,
-        "stop": 476.36,
-        "reward_risk": 1.54
+        "entry_low": 560.23,
+        "entry_high": 608.1,
+        "target": 658.52,
+        "stop": 494.43,
+        "reward_risk": 0.83
       }
     },
     "GOOGL": {
       "sector": "Technology",
-      "price": 343.5,
-      "score": 55.9,
+      "price": 351.66,
+      "score": 72.7,
       "fibonacci": {
-        "trend": "up",
+        "trend": "down",
         "swing_high": 408.1,
-        "swing_low": 294.81,
+        "swing_low": 314.7,
         "retracements": {
-          "0.236": 381.37,
-          "0.382": 364.83,
-          "0.5": 351.46,
-          "0.618": 338.09,
-          "0.786": 319.06
+          "0.236": 336.74,
+          "0.382": 350.38,
+          "0.5": 361.4,
+          "0.618": 372.42,
+          "0.786": 388.11
         },
         "extensions": {
-          "1.272": 438.92,
-          "1.618": 478.12
+          "1.272": 289.29,
+          "1.618": 256.97
         }
       },
       "suggested_levels": {
-        "entry_low": 338.09,
-        "entry_high": 343.5,
-        "target": 364.83,
-        "stop": 315.87,
-        "reward_risk": 0.96
+        "entry_low": 350.38,
+        "entry_high": 351.66,
+        "target": 372.42,
+        "stop": 333.37,
+        "reward_risk": 1.21
       }
     },
     "GOOG": {
       "sector": "Technology",
-      "price": 340.35,
-      "score": 54.6,
+      "price": 347.86,
+      "score": 87.2,
       "fibonacci": {
         "trend": "up",
         "swing_high": 403.96,
-        "swing_low": 293.42,
+        "swing_low": 313.3,
         "retracements": {
-          "0.236": 377.88,
-          "0.382": 361.74,
-          "0.5": 348.69,
-          "0.618": 335.65,
-          "0.786": 317.08
+          "0.236": 382.57,
+          "0.382": 369.33,
+          "0.5": 358.63,
+          "0.618": 347.93,
+          "0.786": 332.7
         },
         "extensions": {
-          "1.272": 434.03,
-          "1.618": 472.28
+          "1.272": 428.63,
+          "1.618": 460.0
         }
       },
       "suggested_levels": {
-        "entry_low": 335.65,
-        "entry_high": 340.35,
-        "target": 361.74,
-        "stop": 313.91,
-        "reward_risk": 0.99
+        "entry_low": 332.7,
+        "entry_high": 347.86,
+        "target": 358.63,
+        "stop": 310.16,
+        "reward_risk": 0.61
       }
     },
     "ADI": {
       "sector": "Technology",
-      "price": 417.15,
-      "score": 74.0,
+      "price": 406.19,
+      "score": 83.1,
       "fibonacci": {
         "trend": "up",
         "swing_high": 444.56,
-        "swing_low": 316.91,
+        "swing_low": 339.35,
         "retracements": {
-          "0.236": 414.43,
-          "0.382": 395.8,
-          "0.5": 380.73,
-          "0.618": 365.67,
-          "0.786": 344.23
+          "0.236": 419.73,
+          "0.382": 404.37,
+          "0.5": 391.95,
+          "0.618": 379.54,
+          "0.786": 361.87
         },
         "extensions": {
-          "1.272": 479.27,
-          "1.618": 523.44
+          "1.272": 473.17,
+          "1.618": 509.57
         }
       },
       "suggested_levels": {
-        "entry_low": 414.43,
-        "entry_high": 417.15,
-        "target": 444.56,
-        "stop": 391.84,
-        "reward_risk": 1.2
+        "entry_low": 404.37,
+        "entry_high": 406.19,
+        "target": 419.73,
+        "stop": 388.04,
+        "reward_risk": 0.84
       }
     },
     "AAPL": {
       "sector": "Technology",
-      "price": 333.69,
-      "score": 63.1,
+      "price": 336.64,
+      "score": 72.0,
       "fibonacci": {
         "trend": "up",
         "swing_high": 345.34,
-        "swing_low": 245.26,
+        "swing_low": 256.2,
         "retracements": {
-          "0.236": 321.72,
-          "0.382": 307.11,
-          "0.5": 295.3,
-          "0.618": 283.49,
-          "0.786": 266.68
+          "0.236": 324.3,
+          "0.382": 311.29,
+          "0.5": 300.77,
+          "0.618": 290.25,
+          "0.786": 275.28
         },
         "extensions": {
-          "1.272": 372.56,
-          "1.618": 407.19
+          "1.272": 369.59,
+          "1.618": 400.43
         }
       },
       "suggested_levels": {
-        "entry_low": 321.72,
-        "entry_high": 333.69,
-        "target": 345.34,
-        "stop": 304.04,
-        "reward_risk": 0.75
+        "entry_low": 324.3,
+        "entry_high": 336.64,
+        "target": 369.59,
+        "stop": 308.18,
+        "reward_risk": 1.75
       }
     },
     "AMAT": {
       "sector": "Technology",
-      "price": 540.04,
-      "score": 82.6,
+      "price": 507.03,
+      "score": 73.7,
       "fibonacci": {
         "trend": "up",
         "swing_high": 738.88,
-        "swing_low": 344.7,
+        "swing_low": 376.2,
         "retracements": {
-          "0.236": 645.85,
-          "0.382": 588.3,
-          "0.5": 541.79,
-          "0.618": 495.28,
-          "0.786": 429.06
+          "0.236": 653.29,
+          "0.382": 600.34,
+          "0.5": 557.54,
+          "0.618": 514.74,
+          "0.786": 453.81
         },
         "extensions": {
-          "1.272": 846.1,
-          "1.618": 982.48
+          "1.272": 837.53,
+          "1.618": 963.02
         }
       },
       "suggested_levels": {
-        "entry_low": 495.28,
-        "entry_high": 540.04,
-        "target": 588.3,
-        "stop": 424.77,
-        "reward_risk": 0.76
+        "entry_low": 453.81,
+        "entry_high": 507.03,
+        "target": 557.54,
+        "stop": 372.44,
+        "reward_risk": 0.71
       }
     },
     "APP": {
       "sector": "Technology",
-      "price": 268.22,
-      "score": 0.0,
+      "price": 277.04,
+      "score": 8.0,
       "fibonacci": {
         "trend": "down",
         "swing_high": 622.0,
@@ -691,101 +691,101 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 260.17,
-        "entry_high": 268.22,
+        "entry_low": 268.73,
+        "entry_high": 277.04,
         "target": 350.66,
-        "stop": 244.69,
-        "reward_risk": 4.43
+        "stop": 252.74,
+        "reward_risk": 3.86
       }
     },
     "ARM": {
       "sector": "Technology",
-      "price": 307.49,
-      "score": 69.6,
+      "price": 266.28,
+      "score": 43.8,
       "fibonacci": {
         "trend": "up",
         "swing_high": 452.7,
-        "swing_low": 137.58,
+        "swing_low": 147.5,
         "retracements": {
-          "0.236": 378.33,
-          "0.382": 332.32,
-          "0.5": 295.14,
-          "0.618": 257.96,
-          "0.786": 205.02
+          "0.236": 380.67,
+          "0.382": 336.11,
+          "0.5": 300.1,
+          "0.618": 264.09,
+          "0.786": 212.81
         },
         "extensions": {
-          "1.272": 538.41,
-          "1.618": 647.44
+          "1.272": 535.71,
+          "1.618": 641.31
         }
       },
       "suggested_levels": {
-        "entry_low": 295.14,
-        "entry_high": 307.49,
-        "target": 332.32,
-        "stop": 255.38,
-        "reward_risk": 0.68
+        "entry_low": 264.09,
+        "entry_high": 266.28,
+        "target": 300.1,
+        "stop": 210.68,
+        "reward_risk": 0.64
       }
     },
     "ASML": {
       "sector": "Technology",
-      "price": 1867.31,
-      "score": 81.9,
+      "price": 1780.34,
+      "score": 80.9,
       "fibonacci": {
         "trend": "up",
         "swing_high": 1997.38,
-        "swing_low": 1267.8,
+        "swing_low": 1363.05,
         "retracements": {
-          "0.236": 1825.2,
-          "0.382": 1718.68,
-          "0.5": 1632.59,
-          "0.618": 1546.5,
-          "0.786": 1423.93
+          "0.236": 1847.68,
+          "0.382": 1755.06,
+          "0.5": 1680.21,
+          "0.618": 1605.36,
+          "0.786": 1498.79
         },
         "extensions": {
-          "1.272": 2195.82,
-          "1.618": 2448.26
+          "1.272": 2169.91,
+          "1.618": 2389.39
         }
       },
       "suggested_levels": {
-        "entry_low": 1825.2,
-        "entry_high": 1867.31,
-        "target": 1997.38,
-        "stop": 1701.49,
-        "reward_risk": 1.04
+        "entry_low": 1755.06,
+        "entry_high": 1780.34,
+        "target": 1847.68,
+        "stop": 1663.41,
+        "reward_risk": 0.77
       }
     },
     "ALAB": {
       "sector": "Technology",
-      "price": 350.33,
-      "score": 72.9,
+      "price": 342.21,
+      "score": 57.2,
       "fibonacci": {
         "trend": "up",
         "swing_high": 499.48,
-        "swing_low": 114.84,
+        "swing_low": 150.3,
         "retracements": {
-          "0.236": 408.7,
-          "0.382": 352.54,
-          "0.5": 307.16,
-          "0.618": 261.77,
-          "0.786": 197.15
+          "0.236": 417.07,
+          "0.382": 366.09,
+          "0.5": 324.89,
+          "0.618": 283.69,
+          "0.786": 225.02
         },
         "extensions": {
-          "1.272": 604.1,
-          "1.618": 737.18
+          "1.272": 594.45,
+          "1.618": 715.27
         }
       },
       "suggested_levels": {
-        "entry_low": 307.16,
-        "entry_high": 350.33,
-        "target": 408.7,
-        "stop": 259.15,
-        "reward_risk": 1.15
+        "entry_low": 324.89,
+        "entry_high": 342.21,
+        "target": 366.09,
+        "stop": 280.85,
+        "reward_risk": 0.62
       }
     },
     "ADSK": {
       "sector": "Technology",
-      "price": 212.0,
-      "score": 41.9,
+      "price": 235.35,
+      "score": 77.0,
       "fibonacci": {
         "trend": "up",
         "swing_high": 271.72,
@@ -803,73 +803,73 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 203.95,
-        "entry_high": 212.0,
-        "target": 218.44,
-        "stop": 183.65,
-        "reward_risk": 0.43
+        "entry_low": 228.61,
+        "entry_high": 235.35,
+        "target": 251.37,
+        "stop": 216.25,
+        "reward_risk": 1.23
       }
     },
     "AVGO": {
       "sector": "Technology",
-      "price": 355.14,
-      "score": 42.5,
+      "price": 361.54,
+      "score": 44.2,
       "fibonacci": {
-        "trend": "up",
+        "trend": "down",
         "swing_high": 493.32,
-        "swing_low": 309.23,
+        "swing_low": 335.2,
         "retracements": {
-          "0.236": 449.87,
-          "0.382": 423.0,
-          "0.5": 401.27,
-          "0.618": 379.55,
-          "0.786": 348.62
+          "0.236": 372.52,
+          "0.382": 395.6,
+          "0.5": 414.26,
+          "0.618": 432.92,
+          "0.786": 459.48
         },
         "extensions": {
-          "1.272": 543.39,
-          "1.618": 607.09
+          "1.272": 292.19,
+          "1.618": 237.48
         }
       },
       "suggested_levels": {
-        "entry_low": 348.62,
-        "entry_high": 355.14,
-        "target": 379.55,
-        "stop": 306.13,
-        "reward_risk": 0.6
+        "entry_low": 350.69,
+        "entry_high": 361.54,
+        "target": 372.52,
+        "stop": 331.85,
+        "reward_risk": 0.68
       }
     },
     "CDNS": {
       "sector": "Technology",
-      "price": 351.35,
-      "score": 65.5,
+      "price": 352.84,
+      "score": 67.1,
       "fibonacci": {
         "trend": "up",
         "swing_high": 416.69,
-        "swing_low": 263.38,
+        "swing_low": 265.22,
         "retracements": {
-          "0.236": 380.51,
-          "0.382": 358.13,
-          "0.5": 340.04,
-          "0.618": 321.94,
-          "0.786": 296.19
+          "0.236": 380.94,
+          "0.382": 358.83,
+          "0.5": 340.96,
+          "0.618": 323.08,
+          "0.786": 297.63
         },
         "extensions": {
-          "1.272": 458.39,
-          "1.618": 511.44
+          "1.272": 457.89,
+          "1.618": 510.3
         }
       },
       "suggested_levels": {
-        "entry_low": 340.04,
-        "entry_high": 351.35,
-        "target": 380.51,
-        "stop": 318.72,
-        "reward_risk": 1.29
+        "entry_low": 340.96,
+        "entry_high": 352.84,
+        "target": 380.94,
+        "stop": 319.85,
+        "reward_risk": 1.26
       }
     },
     "CRWV": {
       "sector": "Technology",
-      "price": 89.62,
-      "score": 58.1,
+      "price": 82.08,
+      "score": 16.8,
       "fibonacci": {
         "trend": "down",
         "swing_high": 138.25,
@@ -888,72 +888,72 @@
       },
       "suggested_levels": {
         "entry_low": 78.89,
-        "entry_high": 89.62,
-        "target": 99.4,
+        "entry_high": 82.08,
+        "target": 90.23,
         "stop": 59.94,
-        "reward_risk": 0.62
+        "reward_risk": 0.47
       }
     },
     "CRWD": {
       "sector": "Technology",
-      "price": 270.04,
-      "score": 83.2,
+      "price": 275.04,
+      "score": 71.6,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 273.54,
-        "swing_low": 91.12,
+        "swing_high": 286.99,
+        "swing_low": 94.56,
         "retracements": {
-          "0.236": 230.48,
-          "0.382": 203.85,
-          "0.5": 182.33,
-          "0.618": 160.8,
-          "0.786": 130.15
+          "0.236": 241.58,
+          "0.382": 213.48,
+          "0.5": 190.78,
+          "0.618": 168.07,
+          "0.786": 135.74
         },
         "extensions": {
-          "1.272": 323.15,
-          "1.618": 386.27
+          "1.272": 339.33,
+          "1.618": 405.91
         }
       },
       "suggested_levels": {
-        "entry_low": 230.48,
-        "entry_high": 270.04,
-        "target": 323.15,
-        "stop": 201.81,
-        "reward_risk": 1.5
+        "entry_low": 241.58,
+        "entry_high": 275.04,
+        "target": 286.99,
+        "stop": 211.35,
+        "reward_risk": 0.61
       }
     },
     "DDOG": {
       "sector": "Technology",
-      "price": 277.22,
-      "score": 66.4,
+      "price": 293.26,
+      "score": 68.5,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 292.72,
-        "swing_low": 100.79,
+        "swing_high": 294.0,
+        "swing_low": 103.3,
         "retracements": {
-          "0.236": 247.43,
-          "0.382": 219.4,
-          "0.5": 196.76,
-          "0.618": 174.11,
-          "0.786": 141.87
+          "0.236": 248.99,
+          "0.382": 221.15,
+          "0.5": 198.65,
+          "0.618": 176.15,
+          "0.786": 144.11
         },
         "extensions": {
-          "1.272": 344.92,
-          "1.618": 411.33
+          "1.272": 345.87,
+          "1.618": 411.85
         }
       },
       "suggested_levels": {
-        "entry_low": 247.43,
-        "entry_high": 277.22,
-        "target": 292.72,
-        "stop": 217.21,
-        "reward_risk": 0.67
+        "entry_low": 248.99,
+        "entry_high": 293.26,
+        "target": 345.87,
+        "stop": 218.94,
+        "reward_risk": 1.43
       }
     },
     "DASH": {
       "sector": "Technology",
-      "price": 189.15,
-      "score": 58.2,
+      "price": 196.5,
+      "score": 81.0,
       "fibonacci": {
         "trend": "up",
         "swing_high": 238.83,
@@ -971,213 +971,213 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 181.53,
-        "entry_high": 189.15,
+        "entry_low": 192.47,
+        "entry_high": 196.5,
         "target": 203.41,
-        "stop": 164.29,
-        "reward_risk": 0.86
+        "stop": 179.71,
+        "reward_risk": 0.6
       }
     },
     "FTNT": {
       "sector": "Technology",
-      "price": 180.95,
-      "score": 78.5,
+      "price": 194.75,
+      "score": 78.7,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 183.09,
-        "swing_low": 76.01,
+        "swing_high": 194.95,
+        "swing_low": 76.1,
         "retracements": {
-          "0.236": 157.82,
-          "0.382": 142.19,
-          "0.5": 129.55,
-          "0.618": 116.91,
-          "0.786": 98.93
+          "0.236": 166.9,
+          "0.382": 149.55,
+          "0.5": 135.52,
+          "0.618": 121.5,
+          "0.786": 101.53
         },
         "extensions": {
-          "1.272": 212.22,
-          "1.618": 249.27
+          "1.272": 227.28,
+          "1.618": 268.4
         }
       },
       "suggested_levels": {
-        "entry_low": 157.82,
-        "entry_high": 180.95,
-        "target": 212.22,
-        "stop": 140.76,
-        "reward_risk": 1.5
+        "entry_low": 166.9,
+        "entry_high": 194.75,
+        "target": 227.28,
+        "stop": 148.05,
+        "reward_risk": 1.42
       }
     },
     "INTC": {
       "sector": "Technology",
-      "price": 119.33,
-      "score": 70.5,
+      "price": 104.7,
+      "score": 58.5,
       "fibonacci": {
         "trend": "up",
         "swing_high": 142.35,
-        "swing_low": 49.87,
+        "swing_low": 62.09,
         "retracements": {
-          "0.236": 120.52,
-          "0.382": 107.02,
-          "0.5": 96.11,
-          "0.618": 85.2,
-          "0.786": 69.66
+          "0.236": 123.41,
+          "0.382": 111.69,
+          "0.5": 102.22,
+          "0.618": 92.75,
+          "0.786": 79.27
         },
         "extensions": {
-          "1.272": 167.5,
-          "1.618": 199.5
+          "1.272": 164.18,
+          "1.618": 191.95
         }
       },
       "suggested_levels": {
-        "entry_low": 107.02,
-        "entry_high": 119.33,
-        "target": 142.35,
-        "stop": 95.15,
-        "reward_risk": 1.62
+        "entry_low": 102.22,
+        "entry_high": 104.7,
+        "target": 111.69,
+        "stop": 91.82,
+        "reward_risk": 0.71
       }
     },
     "INTU": {
       "sector": "Technology",
-      "price": 281.08,
-      "score": 18.2,
+      "price": 302.75,
+      "score": 49.8,
       "fibonacci": {
         "trend": "down",
-        "swing_high": 422.12,
-        "swing_low": 251.72,
+        "swing_high": 420.16,
+        "swing_low": 250.56,
         "retracements": {
-          "0.236": 291.94,
-          "0.382": 316.82,
-          "0.5": 336.92,
-          "0.618": 357.03,
-          "0.786": 385.66
+          "0.236": 290.58,
+          "0.382": 315.35,
+          "0.5": 335.36,
+          "0.618": 355.37,
+          "0.786": 383.87
         },
         "extensions": {
-          "1.272": 205.38,
-          "1.618": 146.42
+          "1.272": 204.42,
+          "1.618": 145.74
         }
       },
       "suggested_levels": {
-        "entry_low": 272.65,
-        "entry_high": 281.08,
-        "target": 291.94,
-        "stop": 249.21,
-        "reward_risk": 0.55
+        "entry_low": 290.58,
+        "entry_high": 302.75,
+        "target": 315.35,
+        "stop": 248.05,
+        "reward_risk": 0.38
       }
     },
     "KLAC": {
       "sector": "Technology",
-      "price": 206.89,
-      "score": 81.7,
+      "price": 195.57,
+      "score": 65.8,
       "fibonacci": {
         "trend": "up",
         "swing_high": 307.02,
-        "swing_low": 150.37,
+        "swing_low": 164.2,
         "retracements": {
-          "0.236": 270.05,
-          "0.382": 247.18,
-          "0.5": 228.69,
-          "0.618": 210.21,
-          "0.786": 183.89
+          "0.236": 273.32,
+          "0.382": 252.47,
+          "0.5": 235.61,
+          "0.618": 218.76,
+          "0.786": 194.77
         },
         "extensions": {
-          "1.272": 349.63,
-          "1.618": 403.84
+          "1.272": 345.87,
+          "1.618": 395.28
         }
       },
       "suggested_levels": {
-        "entry_low": 183.89,
-        "entry_high": 206.89,
-        "target": 228.69,
-        "stop": 148.86,
+        "entry_low": 194.77,
+        "entry_high": 195.57,
+        "target": 218.76,
+        "stop": 162.56,
         "reward_risk": 0.72
       }
     },
     "LRCX": {
       "sector": "Technology",
-      "price": 347.49,
-      "score": 87.7,
+      "price": 318.84,
+      "score": 78.4,
       "fibonacci": {
         "trend": "up",
         "swing_high": 438.03,
-        "swing_low": 216.12,
+        "swing_low": 241.17,
         "retracements": {
-          "0.236": 385.66,
-          "0.382": 353.26,
-          "0.5": 327.08,
-          "0.618": 300.89,
-          "0.786": 263.61
+          "0.236": 391.58,
+          "0.382": 362.83,
+          "0.5": 339.6,
+          "0.618": 316.37,
+          "0.786": 283.3
         },
         "extensions": {
-          "1.272": 498.4,
-          "1.618": 575.18
+          "1.272": 491.58,
+          "1.618": 559.69
         }
       },
       "suggested_levels": {
-        "entry_low": 327.08,
-        "entry_high": 347.49,
-        "target": 385.66,
-        "stop": 297.88,
-        "reward_risk": 1.23
+        "entry_low": 316.37,
+        "entry_high": 318.84,
+        "target": 339.6,
+        "stop": 280.47,
+        "reward_risk": 0.59
       }
     },
     "LITE": {
       "sector": "Technology",
-      "price": 1085.42,
-      "score": 92.1,
+      "price": 1103.35,
+      "score": 83.2,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 1091.61,
+        "swing_high": 1143.0,
         "swing_low": 594.84,
         "retracements": {
-          "0.236": 974.37,
-          "0.382": 901.84,
-          "0.5": 843.23,
-          "0.618": 784.61,
-          "0.786": 701.15
+          "0.236": 1013.63,
+          "0.382": 933.6,
+          "0.5": 868.92,
+          "0.618": 804.24,
+          "0.786": 712.15
         },
         "extensions": {
-          "1.272": 1226.73,
-          "1.618": 1398.61
+          "1.272": 1292.1,
+          "1.618": 1481.76
         }
       },
       "suggested_levels": {
-        "entry_low": 974.37,
-        "entry_high": 1085.42,
-        "target": 1226.73,
-        "stop": 892.83,
-        "reward_risk": 1.44
+        "entry_low": 1013.63,
+        "entry_high": 1103.35,
+        "target": 1143.0,
+        "stop": 924.27,
+        "reward_risk": 0.63
       }
     },
     "MRVL": {
       "sector": "Technology",
-      "price": 272.29,
-      "score": 77.7,
+      "price": 275.28,
+      "score": 81.1,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 329.8,
-        "swing_low": 105.92,
+        "swing_high": 329.73,
+        "swing_low": 128.36,
         "retracements": {
-          "0.236": 276.96,
-          "0.382": 244.28,
-          "0.5": 217.86,
-          "0.618": 191.44,
-          "0.786": 153.83
+          "0.236": 282.2,
+          "0.382": 252.8,
+          "0.5": 229.04,
+          "0.618": 205.28,
+          "0.786": 171.45
         },
         "extensions": {
-          "1.272": 390.69,
-          "1.618": 468.16
+          "1.272": 384.5,
+          "1.618": 454.17
         }
       },
       "suggested_levels": {
-        "entry_low": 244.28,
-        "entry_high": 272.29,
-        "target": 329.8,
-        "stop": 215.68,
-        "reward_risk": 1.68
+        "entry_low": 252.8,
+        "entry_high": 275.28,
+        "target": 329.73,
+        "stop": 226.75,
+        "reward_risk": 1.76
       }
     },
     "META": {
       "sector": "Technology",
-      "price": 728.08,
-      "score": 61.2,
+      "price": 718.67,
+      "score": 64.8,
       "fibonacci": {
         "trend": "up",
         "swing_high": 779.82,
@@ -1195,100 +1195,100 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 719.46,
-        "entry_high": 728.08,
+        "entry_low": 682.13,
+        "entry_high": 718.67,
         "target": 779.82,
-        "stop": 675.3,
-        "reward_risk": 1.16
+        "stop": 645.43,
+        "reward_risk": 1.44
       }
     },
     "MCHP": {
       "sector": "Technology",
-      "price": 81.32,
-      "score": 67.1,
+      "price": 75.55,
+      "score": 12.6,
       "fibonacci": {
-        "trend": "up",
+        "trend": "down",
         "swing_high": 104.75,
-        "swing_low": 65.03,
+        "swing_low": 68.75,
         "retracements": {
-          "0.236": 95.38,
-          "0.382": 89.58,
-          "0.5": 84.89,
-          "0.618": 80.2,
-          "0.786": 73.53
+          "0.236": 77.25,
+          "0.382": 82.5,
+          "0.5": 86.75,
+          "0.618": 91.0,
+          "0.786": 97.05
         },
         "extensions": {
-          "1.272": 115.55,
-          "1.618": 129.3
+          "1.272": 58.96,
+          "1.618": 46.5
         }
       },
       "suggested_levels": {
-        "entry_low": 80.2,
-        "entry_high": 81.32,
-        "target": 84.89,
-        "stop": 72.8,
-        "reward_risk": 0.52
+        "entry_low": 73.28,
+        "entry_high": 75.55,
+        "target": 82.5,
+        "stop": 68.06,
+        "reward_risk": 1.27
       }
     },
     "MU": {
       "sector": "Technology",
-      "price": 1074.89,
-      "score": 77.3,
+      "price": 1029.0,
+      "score": 65.3,
       "fibonacci": {
         "trend": "up",
         "swing_high": 1254.81,
-        "swing_low": 364.04,
+        "swing_low": 408.44,
         "retracements": {
-          "0.236": 1044.59,
-          "0.382": 914.54,
-          "0.5": 809.43,
-          "0.618": 704.32,
-          "0.786": 554.67
+          "0.236": 1055.06,
+          "0.382": 931.49,
+          "0.5": 831.62,
+          "0.618": 731.75,
+          "0.786": 589.56
         },
         "extensions": {
-          "1.272": 1497.09,
-          "1.618": 1805.3
+          "1.272": 1485.02,
+          "1.618": 1777.86
         }
       },
       "suggested_levels": {
-        "entry_low": 1044.59,
-        "entry_high": 1074.89,
+        "entry_low": 931.49,
+        "entry_high": 1029.0,
         "target": 1254.81,
-        "stop": 905.39,
-        "reward_risk": 1.26
+        "stop": 823.31,
+        "reward_risk": 1.75
       }
     },
     "MSFT": {
       "sector": "Technology",
-      "price": 517.53,
-      "score": 90.4,
+      "price": 535.07,
+      "score": 90.8,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 522.85,
+        "swing_high": 537.22,
         "swing_low": 348.54,
         "retracements": {
-          "0.236": 481.71,
-          "0.382": 456.27,
-          "0.5": 435.7,
-          "0.618": 415.13,
-          "0.786": 385.85
+          "0.236": 492.69,
+          "0.382": 465.15,
+          "0.5": 442.88,
+          "0.618": 420.62,
+          "0.786": 388.92
         },
         "extensions": {
-          "1.272": 570.26,
-          "1.618": 630.57
+          "1.272": 588.54,
+          "1.618": 653.82
         }
       },
       "suggested_levels": {
-        "entry_low": 481.71,
-        "entry_high": 517.53,
-        "target": 570.26,
-        "stop": 451.7,
-        "reward_risk": 1.47
+        "entry_low": 492.69,
+        "entry_high": 535.07,
+        "target": 588.54,
+        "stop": 460.49,
+        "reward_risk": 1.4
       }
     },
     "MSTR": {
       "sector": "Technology",
-      "price": 160.01,
+      "price": 154.34,
       "score": 56.7,
       "fibonacci": {
         "trend": "down",
@@ -1308,184 +1308,184 @@
       },
       "suggested_levels": {
         "entry_low": 153.0,
-        "entry_high": 160.01,
+        "entry_high": 154.34,
         "target": 172.35,
         "stop": 138.01,
-        "reward_risk": 0.86
+        "reward_risk": 1.19
       }
     },
     "MPWR": {
       "sector": "Technology",
-      "price": 1439.73,
-      "score": 83.1,
+      "price": 1386.29,
+      "score": 68.9,
       "fibonacci": {
-        "trend": "up",
+        "trend": "down",
         "swing_high": 1708.95,
-        "swing_low": 1124.65,
+        "swing_low": 1132.16,
         "retracements": {
-          "0.236": 1571.06,
-          "0.382": 1485.75,
-          "0.5": 1416.8,
-          "0.618": 1347.85,
-          "0.786": 1249.69
+          "0.236": 1268.28,
+          "0.382": 1352.49,
+          "0.5": 1420.56,
+          "0.618": 1488.62,
+          "0.786": 1585.52
         },
         "extensions": {
-          "1.272": 1867.88,
-          "1.618": 2070.05
+          "1.272": 975.27,
+          "1.618": 775.7
         }
       },
       "suggested_levels": {
-        "entry_low": 1416.8,
-        "entry_high": 1439.73,
-        "target": 1485.75,
-        "stop": 1334.38,
-        "reward_risk": 0.61
+        "entry_low": 1352.49,
+        "entry_high": 1386.29,
+        "target": 1488.62,
+        "stop": 1255.6,
+        "reward_risk": 1.05
       }
     },
     "NBIS": {
       "sector": "Technology",
-      "price": 242.81,
-      "score": 79.8,
+      "price": 221.07,
+      "score": 51.9,
       "fibonacci": {
         "trend": "up",
         "swing_high": 299.86,
-        "swing_low": 107.45,
+        "swing_low": 132.7,
         "retracements": {
-          "0.236": 254.45,
-          "0.382": 226.36,
-          "0.5": 203.65,
-          "0.618": 180.95,
-          "0.786": 148.63
+          "0.236": 260.41,
+          "0.382": 236.0,
+          "0.5": 216.28,
+          "0.618": 196.56,
+          "0.786": 168.47
         },
         "extensions": {
-          "1.272": 352.2,
-          "1.618": 418.77
+          "1.272": 345.33,
+          "1.618": 403.16
         }
       },
       "suggested_levels": {
-        "entry_low": 226.36,
-        "entry_high": 242.81,
-        "target": 254.45,
-        "stop": 201.62,
-        "reward_risk": 0.6
+        "entry_low": 216.28,
+        "entry_high": 221.07,
+        "target": 236.0,
+        "stop": 194.59,
+        "reward_risk": 0.72
       }
     },
     "NVDA": {
       "sector": "Technology",
-      "price": 233.95,
-      "score": 89.1,
+      "price": 229.28,
+      "score": 79.0,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 237.88,
-        "swing_low": 173.26,
+        "swing_high": 243.37,
+        "swing_low": 185.32,
         "retracements": {
-          "0.236": 222.63,
-          "0.382": 213.2,
-          "0.5": 205.57,
-          "0.618": 197.95,
-          "0.786": 187.09
+          "0.236": 229.67,
+          "0.382": 221.19,
+          "0.5": 214.34,
+          "0.618": 207.49,
+          "0.786": 197.74
         },
         "extensions": {
-          "1.272": 255.46,
-          "1.618": 277.81
+          "1.272": 259.16,
+          "1.618": 279.25
         }
       },
       "suggested_levels": {
-        "entry_low": 222.63,
-        "entry_high": 233.95,
-        "target": 255.46,
-        "stop": 211.06,
-        "reward_risk": 1.58
+        "entry_low": 221.19,
+        "entry_high": 229.28,
+        "target": 243.37,
+        "stop": 212.2,
+        "reward_risk": 1.39
       }
     },
     "NXPI": {
       "sector": "Technology",
-      "price": 243.66,
-      "score": 56.6,
+      "price": 227.52,
+      "score": 18.4,
       "fibonacci": {
         "trend": "up",
         "swing_high": 337.28,
-        "swing_low": 190.45,
+        "swing_low": 197.45,
         "retracements": {
-          "0.236": 302.63,
-          "0.382": 281.19,
-          "0.5": 263.87,
-          "0.618": 246.54,
-          "0.786": 221.88
+          "0.236": 304.28,
+          "0.382": 283.87,
+          "0.5": 267.37,
+          "0.618": 250.87,
+          "0.786": 227.37
         },
         "extensions": {
-          "1.272": 377.22,
-          "1.618": 428.02
+          "1.272": 375.32,
+          "1.618": 423.7
         }
       },
       "suggested_levels": {
-        "entry_low": 221.88,
-        "entry_high": 243.66,
-        "target": 263.87,
-        "stop": 188.55,
-        "reward_risk": 0.7
+        "entry_low": 227.37,
+        "entry_high": 227.52,
+        "target": 250.87,
+        "stop": 195.47,
+        "reward_risk": 0.73
       }
     },
     "PLTR": {
       "sector": "Technology",
-      "price": 188.75,
-      "score": 83.6,
+      "price": 209.05,
+      "score": 72.1,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 194.78,
+        "swing_high": 209.58,
         "swing_low": 106.37,
         "retracements": {
-          "0.236": 173.92,
-          "0.382": 161.01,
-          "0.5": 150.58,
-          "0.618": 140.14,
-          "0.786": 125.29
+          "0.236": 185.22,
+          "0.382": 170.15,
+          "0.5": 157.98,
+          "0.618": 145.8,
+          "0.786": 128.46
         },
         "extensions": {
-          "1.272": 218.83,
-          "1.618": 249.42
+          "1.272": 237.65,
+          "1.618": 273.36
         }
       },
       "suggested_levels": {
-        "entry_low": 173.92,
-        "entry_high": 188.75,
-        "target": 194.78,
-        "stop": 159.4,
-        "reward_risk": 0.61
+        "entry_low": 185.22,
+        "entry_high": 209.05,
+        "target": 237.65,
+        "stop": 168.45,
+        "reward_risk": 1.41
       }
     },
     "PANW": {
       "sector": "Technology",
-      "price": 403.24,
-      "score": 87.4,
+      "price": 418.78,
+      "score": 81.5,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 409.5,
-        "swing_low": 151.28,
+        "swing_high": 432.33,
+        "swing_low": 154.84,
         "retracements": {
-          "0.236": 348.56,
-          "0.382": 310.86,
-          "0.5": 280.39,
-          "0.618": 249.92,
-          "0.786": 206.54
+          "0.236": 366.84,
+          "0.382": 326.33,
+          "0.5": 293.58,
+          "0.618": 260.84,
+          "0.786": 214.22
         },
         "extensions": {
-          "1.272": 479.74,
-          "1.618": 569.08
+          "1.272": 507.81,
+          "1.618": 603.82
         }
       },
       "suggested_levels": {
-        "entry_low": 348.56,
-        "entry_high": 403.24,
-        "target": 479.74,
-        "stop": 307.75,
-        "reward_risk": 1.52
+        "entry_low": 366.84,
+        "entry_high": 418.78,
+        "target": 432.33,
+        "stop": 323.07,
+        "reward_risk": 0.57
       }
     },
     "PDD": {
       "sector": "Technology",
-      "price": 75.38,
-      "score": 2.1,
+      "price": 81.35,
+      "score": 46.0,
       "fibonacci": {
         "trend": "down",
         "swing_high": 108.23,
@@ -1503,45 +1503,45 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 73.12,
-        "entry_high": 75.38,
-        "target": 80.5,
+        "entry_low": 80.5,
+        "entry_high": 81.35,
+        "target": 85.8,
         "stop": 71.22,
-        "reward_risk": 2.07
+        "reward_risk": 0.5
       }
     },
     "QCOM": {
       "sector": "Technology",
-      "price": 184.87,
-      "score": 68.1,
+      "price": 175.5,
+      "score": 55.5,
       "fibonacci": {
         "trend": "up",
         "swing_high": 257.56,
-        "swing_low": 120.88,
+        "swing_low": 125.31,
         "retracements": {
-          "0.236": 225.31,
-          "0.382": 205.35,
-          "0.5": 189.22,
-          "0.618": 173.09,
-          "0.786": 150.13
+          "0.236": 226.35,
+          "0.382": 207.04,
+          "0.5": 191.44,
+          "0.618": 175.83,
+          "0.786": 153.61
         },
         "extensions": {
-          "1.272": 294.74,
-          "1.618": 342.03
+          "1.272": 293.53,
+          "1.618": 339.29
         }
       },
       "suggested_levels": {
-        "entry_low": 173.09,
-        "entry_high": 184.87,
-        "target": 205.35,
-        "stop": 148.63,
-        "reward_risk": 0.87
+        "entry_low": 153.61,
+        "entry_high": 175.5,
+        "target": 191.44,
+        "stop": 124.06,
+        "reward_risk": 0.66
       }
     },
     "ROP": {
       "sector": "Technology",
-      "price": 354.32,
-      "score": 37.7,
+      "price": 364.09,
+      "score": 61.4,
       "fibonacci": {
         "trend": "up",
         "swing_high": 428.52,
@@ -1560,100 +1560,100 @@
       },
       "suggested_levels": {
         "entry_low": 351.83,
-        "entry_high": 354.32,
-        "target": 366.48,
+        "entry_high": 364.09,
+        "target": 381.12,
         "stop": 327.67,
-        "reward_risk": 0.53
+        "reward_risk": 0.76
       }
     },
     "SNDK": {
       "sector": "Technology",
-      "price": 1719.99,
-      "score": 67.2,
+      "price": 1581.82,
+      "score": 45.9,
       "fibonacci": {
         "trend": "up",
         "swing_high": 2354.39,
-        "swing_low": 687.68,
+        "swing_low": 866.95,
         "retracements": {
-          "0.236": 1961.05,
-          "0.382": 1717.71,
-          "0.5": 1521.03,
-          "0.618": 1324.36,
-          "0.786": 1044.36
+          "0.236": 2003.35,
+          "0.382": 1786.19,
+          "0.5": 1610.67,
+          "0.618": 1435.15,
+          "0.786": 1185.26
         },
         "extensions": {
-          "1.272": 2807.74,
-          "1.618": 3384.42
+          "1.272": 2758.97,
+          "1.618": 3273.63
         }
       },
       "suggested_levels": {
-        "entry_low": 1717.71,
-        "entry_high": 1719.99,
-        "target": 1961.05,
-        "stop": 1505.82,
-        "reward_risk": 1.14
+        "entry_low": 1435.15,
+        "entry_high": 1581.82,
+        "target": 1786.19,
+        "stop": 1173.41,
+        "reward_risk": 0.83
       }
     },
     "STX": {
       "sector": "Technology",
-      "price": 848.99,
-      "score": 53.0,
+      "price": 783.0,
+      "score": 37.1,
       "fibonacci": {
         "trend": "up",
         "swing_high": 1143.27,
-        "swing_low": 444.33,
+        "swing_low": 494.9,
         "retracements": {
-          "0.236": 978.32,
-          "0.382": 876.27,
-          "0.5": 793.8,
-          "0.618": 711.32,
-          "0.786": 593.9
+          "0.236": 990.25,
+          "0.382": 895.59,
+          "0.5": 819.08,
+          "0.618": 742.58,
+          "0.786": 633.65
         },
         "extensions": {
-          "1.272": 1333.38,
-          "1.618": 1575.21
+          "1.272": 1319.62,
+          "1.618": 1543.96
         }
       },
       "suggested_levels": {
-        "entry_low": 793.8,
-        "entry_high": 848.99,
-        "target": 876.27,
-        "stop": 704.21,
-        "reward_risk": 0.47
+        "entry_low": 742.58,
+        "entry_high": 783.0,
+        "target": 819.08,
+        "stop": 627.31,
+        "reward_risk": 0.42
       }
     },
     "SHOP": {
       "sector": "Technology",
-      "price": 151.39,
-      "score": 89.9,
+      "price": 170.85,
+      "score": 80.4,
       "fibonacci": {
         "trend": "up",
-        "swing_high": 158.87,
+        "swing_high": 171.04,
         "swing_low": 94.0,
         "retracements": {
-          "0.236": 143.56,
-          "0.382": 134.09,
-          "0.5": 126.43,
-          "0.618": 118.78,
-          "0.786": 107.88
+          "0.236": 152.86,
+          "0.382": 141.61,
+          "0.5": 132.52,
+          "0.618": 123.43,
+          "0.786": 110.49
         },
         "extensions": {
-          "1.272": 176.51,
-          "1.618": 198.96
+          "1.272": 192.0,
+          "1.618": 218.66
         }
       },
       "suggested_levels": {
-        "entry_low": 143.56,
-        "entry_high": 151.39,
-        "target": 158.87,
-        "stop": 132.75,
-        "reward_risk": 0.77
+        "entry_low": 152.86,
+        "entry_high": 170.85,
+        "target": 192.0,
+        "stop": 140.2,
+        "reward_risk": 1.39
       }
     },
     "SNPS": {
       "sector": "Technology",
-      "price": 489.9,
-      "score": 60.3,
+      "price": 509.99,
+      "score": 54.0,
       "fibonacci": {
         "trend": "down",
         "swing_high": 539.48,
@@ -1671,17 +1671,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 471.89,
-        "entry_high": 489.9,
+        "entry_low": 501.62,
+        "entry_high": 509.99,
         "target": 539.48,
-        "stop": 446.5,
-        "reward_risk": 1.7
+        "stop": 467.17,
+        "reward_risk": 0.87
       }
     },
     "TER": {
       "sector": "Technology",
-      "price": 449.04,
-      "score": 81.2,
+      "price": 402.68,
+      "score": 72.7,
       "fibonacci": {
         "trend": "down",
         "swing_high": 487.72,
@@ -1699,45 +1699,45 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 446.85,
-        "entry_high": 449.04,
-        "target": 487.72,
-        "stop": 410.61,
-        "reward_risk": 1.07
+        "entry_low": 392.21,
+        "entry_high": 402.68,
+        "target": 446.85,
+        "stop": 365.98,
+        "reward_risk": 1.57
       }
     },
     "TXN": {
       "sector": "Technology",
-      "price": 293.8,
-      "score": 68.0,
+      "price": 283.74,
+      "score": 77.1,
       "fibonacci": {
         "trend": "up",
         "swing_high": 332.33,
-        "swing_low": 193.48,
+        "swing_low": 209.56,
         "retracements": {
-          "0.236": 299.56,
-          "0.382": 279.29,
-          "0.5": 262.9,
-          "0.618": 246.52,
-          "0.786": 223.19
+          "0.236": 303.35,
+          "0.382": 285.43,
+          "0.5": 270.94,
+          "0.618": 256.46,
+          "0.786": 235.83
         },
         "extensions": {
-          "1.272": 370.09,
-          "1.618": 418.14
+          "1.272": 365.72,
+          "1.618": 408.2
         }
       },
       "suggested_levels": {
-        "entry_low": 279.29,
-        "entry_high": 293.8,
-        "target": 332.33,
-        "stop": 260.28,
-        "reward_risk": 1.74
+        "entry_low": 270.94,
+        "entry_high": 283.74,
+        "target": 303.35,
+        "stop": 253.89,
+        "reward_risk": 1.11
       }
     },
     "TRI": {
       "sector": "Technology",
-      "price": 97.62,
-      "score": 64.1,
+      "price": 103.21,
+      "score": 85.7,
       "fibonacci": {
         "trend": "up",
         "swing_high": 112.77,
@@ -1755,73 +1755,73 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 94.28,
-        "entry_high": 97.62,
-        "target": 104.04,
-        "stop": 89.01,
-        "reward_risk": 1.17
+        "entry_low": 98.64,
+        "entry_high": 103.21,
+        "target": 112.77,
+        "stop": 93.33,
+        "reward_risk": 1.56
       }
     },
     "WDC": {
       "sector": "Technology",
-      "price": 415.29,
-      "score": 36.6,
+      "price": 397.28,
+      "score": 16.3,
       "fibonacci": {
         "trend": "up",
         "swing_high": 799.61,
-        "swing_low": 295.56,
+        "swing_low": 339.3,
         "retracements": {
-          "0.236": 680.66,
-          "0.382": 607.06,
-          "0.5": 547.59,
-          "0.618": 488.11,
-          "0.786": 403.43
+          "0.236": 690.98,
+          "0.382": 623.77,
+          "0.5": 569.46,
+          "0.618": 515.14,
+          "0.786": 437.81
         },
         "extensions": {
-          "1.272": 936.72,
-          "1.618": 1111.12
+          "1.272": 924.82,
+          "1.618": 1084.09
         }
       },
       "suggested_levels": {
-        "entry_low": 403.43,
-        "entry_high": 415.29,
-        "target": 488.11,
-        "stop": 292.6,
-        "reward_risk": 0.67
+        "entry_low": 385.36,
+        "entry_high": 397.28,
+        "target": 437.81,
+        "stop": 335.91,
+        "reward_risk": 0.84
       }
     },
     "WDAY": {
       "sector": "Technology",
-      "price": 186.14,
-      "score": 76.3,
+      "price": 186.59,
+      "score": 67.1,
       "fibonacci": {
         "trend": "up",
         "swing_high": 227.49,
-        "swing_low": 110.36,
+        "swing_low": 111.5,
         "retracements": {
-          "0.236": 199.85,
-          "0.382": 182.75,
-          "0.5": 168.93,
-          "0.618": 155.1,
-          "0.786": 135.43
+          "0.236": 200.12,
+          "0.382": 183.18,
+          "0.5": 169.5,
+          "0.618": 155.81,
+          "0.786": 136.32
         },
         "extensions": {
-          "1.272": 259.35,
-          "1.618": 299.88
+          "1.272": 259.04,
+          "1.618": 299.17
         }
       },
       "suggested_levels": {
-        "entry_low": 182.75,
-        "entry_high": 186.14,
-        "target": 199.85,
-        "stop": 167.24,
-        "reward_risk": 0.9
+        "entry_low": 183.18,
+        "entry_high": 186.59,
+        "target": 200.12,
+        "stop": 167.8,
+        "reward_risk": 0.89
       }
     },
     "ALNY": {
       "sector": "Health Care",
-      "price": 219.72,
-      "score": 0.0,
+      "price": 232.68,
+      "score": 18.0,
       "fibonacci": {
         "trend": "down",
         "swing_high": 380.0,
@@ -1839,17 +1839,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 213.13,
-        "entry_high": 219.72,
+        "entry_low": 225.7,
+        "entry_high": 232.68,
         "target": 240.81,
         "stop": 195.83,
-        "reward_risk": 1.18
+        "reward_risk": 0.35
       }
     },
     "AMGN": {
       "sector": "Health Care",
-      "price": 403.04,
-      "score": 66.2,
+      "price": 414.87,
+      "score": 92.5,
       "fibonacci": {
         "trend": "up",
         "swing_high": 447.03,
@@ -1868,16 +1868,16 @@
       },
       "suggested_levels": {
         "entry_low": 397.08,
-        "entry_high": 403.04,
-        "target": 416.17,
+        "entry_high": 414.87,
+        "target": 447.03,
         "stop": 377.83,
-        "reward_risk": 0.72
+        "reward_risk": 1.46
       }
     },
     "DXCM": {
       "sector": "Health Care",
-      "price": 85.36,
-      "score": 54.2,
+      "price": 84.11,
+      "score": 54.7,
       "fibonacci": {
         "trend": "up",
         "swing_high": 92.59,
@@ -1895,17 +1895,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 84.12,
-        "entry_high": 85.36,
+        "entry_low": 78.89,
+        "entry_high": 84.11,
         "target": 92.59,
-        "stop": 78.1,
-        "reward_risk": 1.18
+        "stop": 73.91,
+        "reward_risk": 1.46
       }
     },
     "GEHC": {
       "sector": "Health Care",
-      "price": 64.29,
-      "score": 22.0,
+      "price": 65.74,
+      "score": 35.0,
       "fibonacci": {
         "trend": "down",
         "swing_high": 75.91,
@@ -1923,17 +1923,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 62.77,
-        "entry_high": 64.29,
-        "target": 67.31,
-        "stop": 58.13,
-        "reward_risk": 0.7
+        "entry_low": 65.28,
+        "entry_high": 65.74,
+        "target": 69.34,
+        "stop": 62.15,
+        "reward_risk": 1.14
       }
     },
     "GILD": {
       "sector": "Health Care",
-      "price": 144.74,
-      "score": 65.0,
+      "price": 151.17,
+      "score": 78.0,
       "fibonacci": {
         "trend": "up",
         "swing_high": 154.2,
@@ -1951,17 +1951,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 141.11,
-        "entry_high": 144.74,
-        "target": 154.2,
-        "stop": 135.69,
-        "reward_risk": 1.56
+        "entry_low": 146.11,
+        "entry_high": 151.17,
+        "target": 163.52,
+        "stop": 139.69,
+        "reward_risk": 1.66
       }
     },
     "IDXX": {
       "sector": "Health Care",
-      "price": 518.39,
-      "score": 27.0,
+      "price": 518.0,
+      "score": 24.5,
       "fibonacci": {
         "trend": "down",
         "swing_high": 624.15,
@@ -1979,17 +1979,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 502.84,
-        "entry_high": 518.39,
+        "entry_low": 502.46,
+        "entry_high": 518.0,
         "target": 547.8,
-        "stop": 472.92,
-        "reward_risk": 0.99
+        "stop": 472.56,
+        "reward_risk": 1.0
       }
     },
     "ISRG": {
       "sector": "Health Care",
-      "price": 391.95,
-      "score": 42.8,
+      "price": 423.96,
+      "score": 55.8,
       "fibonacci": {
         "trend": "down",
         "swing_high": 491.15,
@@ -2007,17 +2007,17 @@
         }
       },
       "suggested_levels": {
-        "entry_low": 390.68,
-        "entry_high": 391.95,
-        "target": 409.86,
-        "stop": 363.27,
-        "reward_risk": 0.66
+        "entry_low": 409.86,
+        "entry_high": 423.96,
+        "target": 456.36,
+        "stop": 386.77,
+        "reward_risk": 1.31
       }
     },
     "REGN": {
       "sector": "Health Care",
-      "price": 735.2,
-      "score": 49.2,
+      "price": 746.54,
+      "score": 64.7,
       "fibonacci": {
         "trend": "up",
         "swing_high": 859.34,
@@ -2036,16 +2036,16 @@
       },
       "suggested_levels": {
         "entry_low": 725.09,
-        "entry_high": 735.2,
+        "entry_high": 746.54,
         "target": 795.97,
         "stop": 686.47,
-        "reward_risk": 1.51
+        "reward_risk": 1.22
       }
     },
     "VRTX": {
       "sector": "Health Care",
-      "price": 504.73,
-      "score": 39.2,
+      "price": 510.08,
+      "score": 59.7,
       "fibonacci": {
         "trend": "up",
         "swing_high": 560.25,
@@ -2064,10 +2064,10 @@
       },
       "suggested_levels": {
         "entry_low": 503.72,
-        "entry_high": 504.73,
-        "target": 525.33,
+        "entry_high": 510.08,
+        "target": 560.25,
         "stop": 481.4,
-        "reward_risk": 0.92
+        "reward_risk": 2.09
       }
     }
   }

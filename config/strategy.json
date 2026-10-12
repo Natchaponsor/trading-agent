@@ -2,7 +2,8 @@
   "version": 2,
   "last_changed": "2026-10-05",
   "change_log": [
-    {"date": "2026-10-04", "version": 2, "change": "Starting settings", "reason": "Initial setup", "approved_by": "Top"}
+    {"date": "2026-10-04", "version": 1, "change": "Starting settings", "reason": "Initial setup", "approved_by": "Top"},
+    {"date": "2026-10-05", "version": 2, "change": "Alert windows widened: open 09:35-10:30 -> 09:35-12:00, close 15:00-15:59 -> 15:00-17:30 (New York time)", "reason": "GitHub started the 2026-10-05 runs up to ~2 hours late, so both checks fell outside the old windows and no alert or summary was sent", "approved_by": "Top"}
   ],
   "sector_rotation": {
     "lookback_days": {"1m": 21, "3m": 63, "6m": 126},

@@ -1,62 +1,62 @@
 {
-  "created": "2026-10-04T16:39-04:00",
-  "strategy_version": 1,
+  "created": "2026-10-12T02:04-04:00",
+  "strategy_version": 2,
   "how_to_read": "Positive numbers mean the sector beat the Nasdaq-100 (QQQ) by that many percentage points.",
   "market_context": {
     "QQQ": {
       "name": "Nasdaq-100",
-      "last": 749.58,
-      "change_1m_pct": 5.8,
-      "change_3m_pct": 3.81,
+      "last": 751.27,
+      "change_1m_pct": 6.12,
+      "change_3m_pct": 5.66,
       "above_200day_avg": true
     },
     "SPY": {
       "name": "S&P 500 (US large caps)",
-      "last": 769.64,
-      "change_1m_pct": 0.84,
-      "change_3m_pct": 2.7,
+      "last": 778.57,
+      "change_1m_pct": 2.99,
+      "change_3m_pct": 4.18,
       "above_200day_avg": true
     },
     "IWM": {
       "name": "Russell 2000 (US small caps)",
-      "last": 281.52,
-      "change_1m_pct": -4.0,
-      "change_3m_pct": -5.57,
+      "last": 278.94,
+      "change_1m_pct": -2.79,
+      "change_3m_pct": -4.71,
       "above_200day_avg": true
     },
     "EFA": {
       "name": "Developed markets outside the US",
-      "last": 103.96,
-      "change_1m_pct": -2.9,
-      "change_3m_pct": -1.42,
+      "last": 103.4,
+      "change_1m_pct": -2.14,
+      "change_3m_pct": 0.15,
       "above_200day_avg": true
     },
     "EEM": {
       "name": "Emerging markets",
-      "last": 67.67,
-      "change_1m_pct": 0.77,
-      "change_3m_pct": 0.15,
+      "last": 66.8,
+      "change_1m_pct": -0.3,
+      "change_3m_pct": 3.57,
       "above_200day_avg": true
     },
     "TLT": {
       "name": "Long-term US Treasury bonds",
-      "last": 77.48,
-      "change_1m_pct": -5.07,
-      "change_3m_pct": -8.24,
+      "last": 77.98,
+      "change_1m_pct": -3.08,
+      "change_3m_pct": -6.03,
       "above_200day_avg": false
     },
     "^VIX": {
       "name": "Fear index (expected volatility)",
-      "last": 15.31,
-      "change_1m_pct": 6.91,
-      "change_3m_pct": -5.08,
+      "last": 14.84,
+      "change_1m_pct": -16.82,
+      "change_3m_pct": -10.06,
       "above_200day_avg": false
     },
     "^TNX": {
       "name": "10-year US Treasury yield",
-      "last": 5.28,
-      "change_1m_pct": 10.03,
-      "change_3m_pct": 17.82,
+      "last": 5.24,
+      "change_1m_pct": 6.07,
+      "change_3m_pct": 13.78,
       "above_200day_avg": true
     }
   },
@@ -67,16 +67,16 @@
       "nasdaq100_members": 48,
       "etf_above_50day_avg": true,
       "etf_vs_qqq_pct": {
-        "1m": 3.16,
-        "3m": 5.16,
-        "6m": 18.86
+        "1m": 1.33,
+        "3m": 4.12,
+        "6m": 16.5
       },
       "members_median_vs_qqq_pct": {
-        "1m": 5.78,
-        "3m": -0.11,
-        "6m": 4.45
+        "1m": 0.3,
+        "3m": -0.67,
+        "6m": 4.22
       },
-      "score": 4.46,
+      "score": 2.66,
       "eligible": true,
       "rank": 1
     },
@@ -84,39 +84,20 @@
       "sector": "Health Care",
       "etf": "XLV",
       "nasdaq100_members": 9,
-      "etf_above_50day_avg": false,
+      "etf_above_50day_avg": true,
       "etf_vs_qqq_pct": {
-        "1m": -9.34,
-        "3m": -0.81,
-        "6m": -14.28
+        "1m": -2.62,
+        "3m": 0.56,
+        "6m": -6.3
       },
       "members_median_vs_qqq_pct": {
-        "1m": -14.68,
-        "3m": -4.6,
-        "6m": -31.65
+        "1m": -3.85,
+        "3m": 0.55,
+        "6m": -23.25
       },
-      "score": -10.25,
+      "score": -4.02,
       "eligible": true,
       "rank": 2
-    },
-    {
-      "sector": "Industrials",
-      "etf": "XLI",
-      "nasdaq100_members": 11,
-      "etf_above_50day_avg": false,
-      "etf_vs_qqq_pct": {
-        "1m": -7.17,
-        "3m": -11.98,
-        "6m": -24.1
-      },
-      "members_median_vs_qqq_pct": {
-        "1m": -8.98,
-        "3m": -8.95,
-        "6m": -17.99
-      },
-      "score": -11.65,
-      "eligible": true,
-      "rank": 3
     },
     {
       "sector": "Consumer Staples",
@@ -124,16 +105,35 @@
       "nasdaq100_members": 6,
       "etf_above_50day_avg": false,
       "etf_vs_qqq_pct": {
-        "1m": -11.02,
-        "3m": -7.43,
-        "6m": -28.74
+        "1m": -5.05,
+        "3m": -6.39,
+        "6m": -20.55
       },
       "members_median_vs_qqq_pct": {
-        "1m": -11.98,
-        "3m": -11.16,
-        "6m": -21.75
+        "1m": -6.7,
+        "3m": -10.52,
+        "6m": -17.05
       },
-      "score": -13.22,
+      "score": -9.94,
+      "eligible": true,
+      "rank": 3
+    },
+    {
+      "sector": "Industrials",
+      "etf": "XLI",
+      "nasdaq100_members": 11,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -6.61,
+        "3m": -11.58,
+        "6m": -24.02
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -4.14,
+        "3m": -10.8,
+        "6m": -10.67
+      },
+      "score": -10.3,
       "eligible": true,
       "rank": 4
     },
@@ -143,37 +143,18 @@
       "nasdaq100_members": 17,
       "etf_above_50day_avg": false,
       "etf_vs_qqq_pct": {
-        "1m": -9.78,
-        "3m": -10.36,
-        "6m": -26.24
+        "1m": -5.1,
+        "3m": -8.2,
+        "6m": -22.82
       },
       "members_median_vs_qqq_pct": {
-        "1m": -10.09,
-        "3m": -9.61,
-        "6m": -28.25
+        "1m": -7.18,
+        "3m": -6.61,
+        "6m": -28.08
       },
-      "score": -13.43,
+      "score": -10.72,
       "eligible": true,
       "rank": 5
-    },
-    {
-      "sector": "Telecommunications",
-      "etf": "XLC",
-      "nasdaq100_members": 3,
-      "etf_above_50day_avg": false,
-      "etf_vs_qqq_pct": {
-        "1m": -7.34,
-        "3m": -3.38,
-        "6m": -29.06
-      },
-      "members_median_vs_qqq_pct": {
-        "1m": -18.43,
-        "3m": -11.55,
-        "6m": -46.25
-      },
-      "score": -16.22,
-      "eligible": true,
-      "rank": 6
     },
     {
       "sector": "Utilities",
@@ -181,16 +162,35 @@
       "nasdaq100_members": 4,
       "etf_above_50day_avg": false,
       "etf_vs_qqq_pct": {
-        "1m": -11.77,
-        "3m": -15.24,
-        "6m": -41.28
+        "1m": -8.01,
+        "3m": -14.42,
+        "6m": -33.81
       },
       "members_median_vs_qqq_pct": {
-        "1m": -11.38,
-        "3m": -14.73,
-        "6m": -37.77
+        "1m": -7.07,
+        "3m": -13.84,
+        "6m": -32.0
       },
-      "score": -18.76,
+      "score": -15.82,
+      "eligible": true,
+      "rank": 6
+    },
+    {
+      "sector": "Telecommunications",
+      "etf": "XLC",
+      "nasdaq100_members": 3,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -6.8,
+        "3m": -6.42,
+        "6m": -25.77
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": -22.25,
+        "3m": -18.13,
+        "6m": -46.44
+      },
+      "score": -19.18,
       "eligible": true,
       "rank": 7
     },
@@ -200,16 +200,16 @@
       "nasdaq100_members": 2,
       "etf_above_50day_avg": true,
       "etf_vs_qqq_pct": {
-        "1m": -8.73,
-        "3m": 15.13,
-        "6m": -20.99
+        "1m": -5.29,
+        "3m": 9.72,
+        "6m": -7.4
       },
       "members_median_vs_qqq_pct": {
-        "1m": -17.07,
-        "3m": 2.42,
-        "6m": -33.55
+        "1m": -11.62,
+        "3m": -5.9,
+        "6m": -26.16
       },
-      "score": -6.07,
+      "score": -6.29,
       "eligible": false,
       "rank": 8
     },
@@ -219,37 +219,18 @@
       "nasdaq100_members": 0,
       "etf_above_50day_avg": false,
       "etf_vs_qqq_pct": {
-        "1m": -12.7,
-        "3m": -8.19,
-        "6m": -19.66
+        "1m": -9.54,
+        "3m": -7.71,
+        "6m": -14.65
       },
       "members_median_vs_qqq_pct": {
         "1m": null,
         "3m": null,
         "6m": null
       },
-      "score": -11.84,
+      "score": -9.65,
       "eligible": false,
       "rank": 9
-    },
-    {
-      "sector": "Real Estate",
-      "etf": "XLRE",
-      "nasdaq100_members": 0,
-      "etf_above_50day_avg": false,
-      "etf_vs_qqq_pct": {
-        "1m": -11.69,
-        "3m": -10.89,
-        "6m": -28.64
-      },
-      "members_median_vs_qqq_pct": {
-        "1m": null,
-        "3m": null,
-        "6m": null
-      },
-      "score": -14.68,
-      "eligible": false,
-      "rank": 10
     },
     {
       "sector": "Basic Materials",
@@ -257,16 +238,35 @@
       "nasdaq100_members": 1,
       "etf_above_50day_avg": false,
       "etf_vs_qqq_pct": {
-        "1m": -13.1,
-        "3m": -9.38,
-        "6m": -30.68
+        "1m": -8.29,
+        "3m": -7.49,
+        "6m": -27.28
       },
       "members_median_vs_qqq_pct": {
-        "1m": -7.11,
-        "3m": -14.81,
-        "6m": -32.4
+        "1m": -1.33,
+        "3m": -13.06,
+        "6m": -26.44
       },
-      "score": -15.51,
+      "score": -12.0,
+      "eligible": false,
+      "rank": 10
+    },
+    {
+      "sector": "Real Estate",
+      "etf": "XLRE",
+      "nasdaq100_members": 0,
+      "etf_above_50day_avg": false,
+      "etf_vs_qqq_pct": {
+        "1m": -8.65,
+        "3m": -11.79,
+        "6m": -24.36
+      },
+      "members_median_vs_qqq_pct": {
+        "1m": null,
+        "3m": null,
+        "6m": null
+      },
+      "score": -13.36,
       "eligible": false,
       "rank": 11
     }

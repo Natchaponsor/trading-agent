@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading Agent: week of 2026-10-12</title><style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1b1d1f;--muted:#6b7075;--line:#e3e3df;--accent:#2f5bd3;
+--pos:#147a3d;--neg:#b42318;--hl:#eef3ff;--warn-bg:#fff4e0;--warn:#8a5300;--badge:#eef0f2}
+@media (prefers-color-scheme:dark){:root{--bg:#121416;--card:#1a1d20;--ink:#e8eaec;--muted:#9aa1a8;--line:#2c3136;
+--accent:#8fb0ff;--pos:#5fd38d;--neg:#ff8a80;--hl:#1e2a44;--warn-bg:#3a2a10;--warn:#ffc46b;--badge:#262b30}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:19px;margin:40px 0 12px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}h4{font-size:13px;margin:8px 0;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+a{color:var(--accent)}.muted{color:var(--muted)}.small{font-size:13px}.lead{font-size:16px;max-width:75ch}
+.pos{color:var(--pos)}.neg{color:var(--neg)}.r{text-align:right;white-space:nowrap}
+.top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px}
+.weeks{display:flex;align-items:center;gap:10px;font-size:14px}.weeks select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}.past{margin:16px 0 0;padding:10px 14px;border-radius:10px;background:var(--warn-bg);color:var(--warn);font-size:14px}.past a{color:inherit;font-weight:600}
+.empty{padding:16px;background:var(--card);border:1px dashed var(--line);border-radius:10px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.pick header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.ticker{font-size:24px;font-weight:700}
+.levels{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.levels div{display:flex;flex-direction:column}.lbl{font-size:12px;color:var(--muted)}.val{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;background:var(--badge);margin-right:6px}
+.badge.warn{background:var(--warn-bg);color:var(--warn)}
+.res-win{color:var(--pos)}.res-loss{color:var(--neg)}
+.scroll{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}tr.hl td{background:var(--hl)}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.grid2>div{min-width:0}
+@media (min-width:1000px){.grid2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.reports a{margin-right:16px}
+footer{margin-top:48px;font-size:13px;color:var(--muted)}
+</style></head>
+<body><main>
+<div class="top">
+  <div><h1>Trading Agent</h1>
+  <div class="muted">Week of 2026-10-12 to 2026-10-16 · strategy v2 · picks made 2026-10-11T23:07 New York</div></div>
+  <nav class="weeks" aria-label="Choose a week"><a href="../weeks/2026-10-05.html">&larr; Older</a>
+<select aria-label="Week" onchange="location.href=this.value"><option value="../weeks/2026-10-12.html" selected>Week of 2026-10-12</option><option value="../weeks/2026-10-05.html">Week of 2026-10-05</option></select><span class="muted">Newer &rarr;</span></nav>
+</div>
+
+
+<h2>Final picks</h2>
+<div class="cards">
+<article class="pick">
+  <header>
+    <div><span class="ticker">VRTX</span> <span class="muted">Vertex Pharmaceuticals</span></div>
+    <div class="muted">Health Care</div>
+  </header>
+  <div class="levels">
+    <div><span class="lbl">Buy zone</span><span class="val">503.72 to 510.08</span></div>
+    <div><span class="lbl">Target</span><span class="val pos">560.25</span></div>
+    <div><span class="lbl">Stop</span><span class="val neg">481.40</span></div>
+    <div><span class="lbl">Reward to risk</span><span class="val">2.09</span></div>
+  </div>
+  <p class="muted small">Last scan price 510.08, inside the buy zone.</p>
+  <p>Only Health Care name in an uptrend with reward to risk of at least 2 (2.09 on the scan&#x27;s levels), sitting on the 0.382 pullback with a stop about 5.6% below the top of the zone. Business is solid but not exciting (revenue +12.5%, 35% margin, earnings Nov 2 after this window); momentum is weak, so buy toward 503.72.</p>
+  <div><span class="badge">technical</span></div>
+</article></div>
+
+<h2>Sectors: Technology, Health Care</h2>
+
+<p class="lead">Technology is the only eligible sector with a positive score and is ahead of the Nasdaq-100 on every ETF timeframe, and Health Care is the next-best eligible score, now back above its 50-day average, while the news gave no clear reason to swap in Consumer Staples.</p>
+<div class="scroll"><table>
+<thead><tr><th>#</th><th>Sector</th><th>Fund</th><th class="r">Score</th><th class="r">vs QQQ 1m</th><th class="r">3m</th><th class="r">6m</th><th class="r">Members</th></tr></thead>
+<tbody><tr class="hl"><td>1</td><td>Technology</td><td>XLK</td>
+<td class="r pos">2.66</td>
+<td class="r pos">+1.33</td>
+<td class="r pos">+4.12</td>
+<td class="r pos">+16.50</td>
+<td class="r">48</td></tr><tr class="hl"><td>2</td><td>Health Care</td><td>XLV</td>
+<td class="r neg">-4.02</td>
+<td class="r neg">-2.62</td>
+<td class="r pos">+0.56</td>
+<td class="r neg">-6.30</td>
+<td class="r">9</td></tr><tr><td>3</td><td>Consumer Staples</td><td>XLP</td>
+<td class="r neg">-9.94</td>
+<td class="r neg">-5.05</td>
+<td class="r neg">-6.39</td>
+<td class="r neg">-20.55</td>
+<td class="r">6</td></tr><tr><td>4</td><td>Industrials</td><td>XLI</td>
+<td class="r neg">-10.30</td>
+<td class="r neg">-6.61</td>
+<td class="r neg">-11.58</td>
+<td class="r neg">-24.02</td>
+<td class="r">11</td></tr><tr><td>5</td><td>Consumer Discretionary</td><td>XLY</td>
+<td class="r neg">-10.72</td>
+<td class="r neg">-5.10</td>
+<td class="r neg">-8.20</td>
+<td class="r neg">-22.82</td>
+<td class="r">17</td></tr><tr><td>6</td><td>Utilities</td><td>XLU</td>
+<td class="r neg">-15.82</td>
+<td class="r neg">-8.01</td>
+<td class="r neg">-14.42</td>
+<td class="r neg">-33.81</td>
+<td class="r">4</td></tr><tr><td>7</td><td>Telecommunications</td><td>XLC</td>
+<td class="r neg">-19.18</td>
+<td class="r neg">-6.80</td>
+<td class="r neg">-6.42</td>
+<td class="r neg">-25.77</td>
+<td class="r">3</td></tr><tr><td>8</td><td>Energy <span class="muted small">(too few members)</span></td><td>XLE</td>
+<td class="r neg">-6.29</td>
+<td class="r neg">-5.29</td>
+<td class="r pos">+9.72</td>
+<td class="r neg">-7.40</td>
+<td class="r">2</td></tr><tr><td>9</td><td>Financials <span class="muted small">(too few members)</span></td><td>XLF</td>
+<td class="r neg">-9.65</td>
+<td class="r neg">-9.54</td>
+<td class="r neg">-7.71</td>
+<td class="r neg">-14.65</td>
+<td class="r">0</td></tr><tr><td>10</td><td>Basic Materials <span class="muted small">(too few members)</span></td><td>XLB</td>
+<td class="r neg">-12.00</td>
+<td class="r neg">-8.29</td>
+<td class="r neg">-7.49</td>
+<td class="r neg">-27.28</td>
+<td class="r">1</td></tr><tr><td>11</td><td>Real Estate <span class="muted small">(too few members)</span></td><td>XLRE</td>
+<td class="r neg">-13.36</td>
+<td class="r neg">-8.65</td>
+<td class="r neg">-11.79</td>
+<td class="r neg">-24.36</td>
+<td class="r">0</td></tr></tbody></table></div>
+<p class="muted small">Positive numbers mean the sector beat the Nasdaq-100 (QQQ) by that many percentage points. Highlighted rows are this week's sectors.</p>
+
+<h2>Candidates by factor</h2>
+<p class="muted small">Top 5 per sector from each scan. Final picks are highlighted. R/R is on the scan's own levels; the rule was at least 2.</p>
+
+<h3>Technology</h3>
+<div class="grid2">
+<div><h4>By chart (technical score)</h4><div class="scroll"><table>
+<thead><tr><th>Stock</th><th class="r">Score</th><th class="r">RSI</th><th>Trend</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th class="r">R/R</th></tr></thead>
+<tbody><tr><td><b>MSFT</b> <span class="muted small">Microsoft</span></td>
+<td class="r">90.8</td><td class="r">67.5</td>
+<td>up</td>
+<td class="r">492.69 to 535.07</td>
+<td class="r">588.54</td><td class="r">460.49</td>
+<td class="r neg">1.40</td></tr><tr><td><b>GOOG</b> <span class="muted small">Alphabet Inc. (Class C)</span></td>
+<td class="r">87.2</td><td class="r">56.0</td>
+<td>up</td>
+<td class="r">332.70 to 347.86</td>
+<td class="r">358.63</td><td class="r">310.16</td>
+<td class="r neg">0.61</td></tr><tr><td><b>TRI</b> <span class="muted small">Thomson Reuters</span></td>
+<td class="r">85.7</td><td class="r">56.9</td>
+<td>up</td>
+<td class="r">98.64 to 103.21</td>
+<td class="r">112.77</td><td class="r">93.33</td>
+<td class="r neg">1.56</td></tr><tr><td><b>LITE</b> <span class="muted small">Lumentum</span></td>
+<td class="r">83.2</td><td class="r">62.6</td>
+<td>up</td>
+<td class="r">1,013.63 to 1,103.35</td>
+<td class="r">1,143.00</td><td class="r">924.27</td>
+<td class="r neg">0.63</td></tr><tr><td><b>ADI</b> <span class="muted small">Analog Devices</span></td>
+<td class="r">83.1</td><td class="r">60.5</td>
+<td>up</td>
+<td class="r">404.37 to 406.19</td>
+<td class="r">419.73</td><td class="r">388.04</td>
+<td class="r neg">0.84</td></tr></tbody></table></div></div>
+<div><h4>By business (numbers score, before news)</h4><div class="scroll"><table>
+<thead><tr><th>Stock</th><th class="r">Score</th><th class="r">Revenue</th><th class="r">Earnings</th><th class="r">Analyst upside</th><th class="r">Fwd P/E</th><th>Next earnings</th></tr></thead>
+<tbody><tr><td><b>APP</b> <span class="muted small">AppLovin</span></td>
+<td class="r">100.0</td>
+<td class="r"><span class="pos">+52.8%</span></td><td class="r"><span class="pos">+57.0%</span></td>
+<td class="r pos">+78.9%</td>
+<td class="r">13.3</td><td>2026-11-04</td></tr><tr><td><b>AVGO</b> <span class="muted small">Broadcom</span></td>
+<td class="r">100.0</td>
+<td class="r"><span class="pos">+85.5%</span></td><td class="r"><span class="pos">+215.3%</span></td>
+<td class="r pos">+47.0%</td>
+<td class="r">18.6</td><td>2026-12-09</td></tr><tr><td><b>CRWV</b> <span class="muted small">CoreWeave</span></td>
+<td class="r">100.0</td>
+<td class="r"><span class="pos">+112.5%</span></td><td class="r"><span class="muted">-</span></td>
+<td class="r pos">+72.4%</td>
+<td class="r">-45.3</td><td>2026-11-11</td></tr><tr><td><b>MCHP</b> <span class="muted small">Microchip Technology</span></td>
+<td class="r">100.0</td>
+<td class="r"><span class="pos">+38.0%</span></td><td class="r"><span class="muted">-</span></td>
+<td class="r pos">+42.7%</td>
+<td class="r">16.5</td><td>2026-11-05</td></tr><tr><td><b>MU</b> <span class="muted small">Micron Technology</span></td>
+<td class="r">100.0</td>
+<td class="r"><span class="pos">+379.3%</span></td><td class="r"><span class="pos">+1060.1%</span></td>
+<td class="r pos">+51.1%</td>
+<td class="r">5.0</td><td>2026-12-23</td></tr></tbody></table></div></div>
+</div>
+<h3>Health Care</h3>
+<div class="grid2">
+<div><h4>By chart (technical score)</h4><div class="scroll"><table>
+<thead><tr><th>Stock</th><th class="r">Score</th><th class="r">RSI</th><th>Trend</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th class="r">R/R</th></tr></thead>
+<tbody><tr><td><b>AMGN</b> <span class="muted small">Amgen</span></td>
+<td class="r">92.5</td><td class="r">54.9</td>
+<td>up</td>
+<td class="r">397.08 to 414.87</td>
+<td class="r">447.03</td><td class="r">377.83</td>
+<td class="r neg">1.46</td></tr><tr><td><b>GILD</b> <span class="muted small">Gilead Sciences</span></td>
+<td class="r">78.0</td><td class="r">59.4</td>
+<td>up</td>
+<td class="r">146.11 to 151.17</td>
+<td class="r">163.52</td><td class="r">139.69</td>
+<td class="r neg">1.66</td></tr><tr><td><b>REGN</b> <span class="muted small">Regeneron Pharmaceuticals</span></td>
+<td class="r">64.7</td><td class="r">42.1</td>
+<td>up</td>
+<td class="r">725.09 to 746.54</td>
+<td class="r">795.97</td><td class="r">686.47</td>
+<td class="r neg">1.22</td></tr><tr class="hl"><td><b>VRTX</b> <span class="muted small">Vertex Pharmaceuticals</span></td>
+<td class="r">59.7</td><td class="r">45.6</td>
+<td>up</td>
+<td class="r">503.72 to 510.08</td>
+<td class="r">560.25</td><td class="r">481.40</td>
+<td class="r pos">2.09</td></tr><tr><td><b>ISRG</b> <span class="muted small">Intuitive Surgical</span></td>
+<td class="r">55.8</td><td class="r">66.7</td>
+<td>down</td>
+<td class="r">409.86 to 423.96</td>
+<td class="r">456.36</td><td class="r">386.77</td>
+<td class="r neg">1.31</td></tr></tbody></table></div></div>
+<div><h4>By business (numbers score, before news)</h4><div class="scroll"><table>
+<thead><tr><th>Stock</th><th class="r">Score</th><th class="r">Revenue</th><th class="r">Earnings</th><th class="r">Analyst upside</th><th class="r">Fwd P/E</th><th>Next earnings</th></tr></thead>
+<tbody><tr><td><b>ALNY</b> <span class="muted small">Alnylam Pharmaceuticals</span></td>
+<td class="r">100.0</td>
+<td class="r"><span class="pos">+66.9%</span></td><td class="r"><span class="muted">-</span></td>
+<td class="r pos">+59.4%</td>
+<td class="r">18.7</td><td>2026-10-29</td></tr><tr><td><b>DXCM</b> <span class="muted small">DexCom</span></td>
+<td class="r">68.3</td>
+<td class="r"><span class="pos">+13.1%</span></td><td class="r"><span class="pos">+43.6%</span></td>
+<td class="r pos">+14.4%</td>
+<td class="r">26.9</td><td>2026-10-29</td></tr><tr><td><b>ISRG</b> <span class="muted small">Intuitive Surgical</span></td>
+<td class="r">60.6</td>
+<td class="r"><span class="pos">+18.5%</span></td><td class="r"><span class="pos">+26.5%</span></td>
+<td class="r pos">+12.6%</td>
+<td class="r">35.0</td><td>2026-10-20</td></tr><tr><td><b>IDXX</b> <span class="muted small">Idexx Laboratories</span></td>
+<td class="r">53.6</td>
+<td class="r"><span class="pos">+9.7%</span></td><td class="r"><span class="pos">+17.6%</span></td>
+<td class="r pos">+35.4%</td>
+<td class="r">30.9</td><td>2026-11-02</td></tr><tr><td><b>AMGN</b> <span class="muted small">Amgen</span></td>
+<td class="r">49.4</td>
+<td class="r"><span class="pos">+9.5%</span></td><td class="r"><span class="pos">+64.9%</span></td>
+<td class="r neg">-5.4%</td>
+<td class="r">16.9</td><td>2026-11-03</td></tr></tbody></table></div></div>
+</div>
+
+<h2>Market backdrop</h2>
+<div class="scroll"><table>
+<thead><tr><th>Market</th><th class="r">Last</th><th class="r">1 month</th><th class="r">3 months</th><th class="r">Above 200-day avg</th></tr></thead>
+<tbody><tr><td>Nasdaq-100 <span class="muted small">QQQ</span></td>
+<td class="r">751.27</td>
+<td class="r pos">+6.12%</td>
+<td class="r pos">+5.66%</td>
+<td class="r">yes</td></tr><tr><td>S&amp;P 500 (US large caps) <span class="muted small">SPY</span></td>
+<td class="r">778.57</td>
+<td class="r pos">+2.99%</td>
+<td class="r pos">+4.18%</td>
+<td class="r">yes</td></tr><tr><td>Russell 2000 (US small caps) <span class="muted small">IWM</span></td>
+<td class="r">278.94</td>
+<td class="r neg">-2.79%</td>
+<td class="r neg">-4.71%</td>
+<td class="r">yes</td></tr><tr><td>Developed markets outside the US <span class="muted small">EFA</span></td>
+<td class="r">103.40</td>
+<td class="r neg">-2.14%</td>
+<td class="r pos">+0.15%</td>
+<td class="r">yes</td></tr><tr><td>Emerging markets <span class="muted small">EEM</span></td>
+<td class="r">66.80</td>
+<td class="r neg">-0.30%</td>
+<td class="r pos">+3.57%</td>
+<td class="r">yes</td></tr><tr><td>Long-term US Treasury bonds <span class="muted small">TLT</span></td>
+<td class="r">77.98</td>
+<td class="r neg">-3.08%</td>
+<td class="r neg">-6.03%</td>
+<td class="r">no</td></tr><tr><td>Fear index (expected volatility) <span class="muted small">^VIX</span></td>
+<td class="r">14.84</td>
+<td class="r neg">-16.82%</td>
+<td class="r neg">-10.06%</td>
+<td class="r">no</td></tr><tr><td>10-year US Treasury yield <span class="muted small">^TNX</span></td>
+<td class="r">5.24</td>
+<td class="r pos">+6.07%</td>
+<td class="r pos">+13.78%</td>
+<td class="r">yes</td></tr></tbody></table></div>
+
+<h2>How this week went</h2>
+<h3>Picks</h3><div class="scroll"><table>
+<thead><tr><th>Week</th><th>Stock</th><th>Sector</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th>Result</th><th class="r">Return</th></tr></thead>
+<tbody><tr><td>2026-10-12</td><td><b>VRTX</b></td><td>Health Care</td>
+<td class="r">503.72 to 510.08</td><td class="r">560.25</td><td class="r">481.40</td>
+<td><span class="badge res-pending">pending</span></td>
+<td class="r "><span class="muted">-</span></td></tr></tbody></table></div>
+
+<h3>Alerts sent that week</h3><p class="empty">No alerts sent yet.</p>
+
+<h2>Track record, all weeks</h2>
+<div class="scroll"><table>
+<thead><tr><th>Week</th><th>Stock</th><th>Sector</th><th class="r">Buy zone</th><th class="r">Target</th><th class="r">Stop</th><th>Result</th><th class="r">Return</th></tr></thead>
+<tbody><tr><td>2026-10-12</td><td><b>VRTX</b></td><td>Health Care</td>
+<td class="r">503.72 to 510.08</td><td class="r">560.25</td><td class="r">481.40</td>
+<td><span class="badge res-pending">pending</span></td>
+<td class="r "><span class="muted">-</span></td></tr><tr><td>2026-10-05</td><td><b>NVDA</b></td><td>Technology</td>
+<td class="r">222.63 to 233.95</td><td class="r">255.46</td><td class="r">211.06</td>
+<td><span class="badge res-open">open</span></td>
+<td class="r pos">+0.43%</td></tr></tbody></table></div>
+<p class="muted small">Results come from scripts/performance.py, which runs in the weekly review.</p>
+
+<h2>Full reports</h2>
+<p class="reports"><a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-12/1_sectors.md">Sectors</a> <a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-12/2_technical.md">Technical</a> <a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-12/3_qualitative.md">Qualitative</a> <a href="https://github.com/Natchaponsor/trading-agent/blob/main/data/weekly/2026-10-12/4_picks.md">Final picks</a></p>
+
+<footer>Personal research for my own decisions, not financial advice. Prices come from script outputs at scan time and may be stale.
+Source: <a href="https://github.com/Natchaponsor/trading-agent">github.com/Natchaponsor/trading-agent</a></footer>
+</main></body></html>

@@ -1,22 +1,21 @@
 {
-  "week_of": "2026-10-05",
-  "valid_until": "2026-10-09",
-  "created": "2026-10-04T13:43",
+  "week_of": "2026-10-12",
+  "valid_until": "2026-10-16",
+  "created": "2026-10-11T23:07",
   "picks": [
     {
-      "ticker": "NVDA",
-      "company": "Nvidia",
-      "sector": "Technology",
+      "ticker": "VRTX",
+      "company": "Vertex Pharmaceuticals",
+      "sector": "Health Care",
       "action": "buy",
-      "entry_low": 222.63,
-      "entry_high": 233.95,
-      "target": 255.46,
-      "stop": 211.06,
+      "entry_low": 503.72,
+      "entry_high": 510.08,
+      "target": 560.25,
+      "stop": 481.4,
       "source": "technical",
-      "technical_score": 89.1,
-      "qualitative_score": 100.0,
-      "reason": "One-week exception approved by Top: R/R 1.58 on scan levels, below the 2.0 rule. Clean uptrend and strong business numbers. Use a smaller position than usual.",
-      "exception": "below_min_reward_risk"
+      "technical_score": 59.7,
+      "qualitative_score": 35.2,
+      "reason": "Only Health Care name in an uptrend with reward to risk of at least 2 (2.09 on the scan's levels), sitting on the 0.382 pullback with a stop about 5.6% below the top of the zone. Business is solid but not exciting (revenue +12.5%, 35% margin, earnings Nov 2 after this window); momentum is weak, so buy toward 503.72."
     }
   ]
 }

@@ -1,0 +1,56 @@
+{
+  "created": "2026-10-12T02:03-04:00",
+  "summary": {
+    "total_picks": 1,
+    "never_entered": 0,
+    "still_open": 1,
+    "overall": {
+      "closed_picks": 0,
+      "win_rate_pct": null,
+      "avg_return_pct": null,
+      "avg_vs_qqq_pct": null
+    },
+    "by_source": {
+      "technical": {
+        "closed_picks": 0,
+        "win_rate_pct": null,
+        "avg_return_pct": null,
+        "avg_vs_qqq_pct": null
+      },
+      "qualitative": {
+        "closed_picks": 0,
+        "win_rate_pct": null,
+        "avg_return_pct": null,
+        "avg_vs_qqq_pct": null
+      },
+      "both": {
+        "closed_picks": 0,
+        "win_rate_pct": null,
+        "avg_return_pct": null,
+        "avg_vs_qqq_pct": null
+      }
+    },
+    "by_sector": {},
+    "enough_data": false,
+    "warning": "Only 0 closed picks. Patterns are not reliable until about 20."
+  },
+  "picks": [
+    {
+      "week_of": "2026-10-05",
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "source": "technical",
+      "strategy_version": 1,
+      "entry_low": 222.63,
+      "entry_high": 233.95,
+      "target": 255.46,
+      "stop": 211.06,
+      "result": "open",
+      "entry_day": "2026-10-08",
+      "exit_day": "2026-10-09",
+      "return_pct": 0.43,
+      "vs_qqq_pct": -0.06
+    }
+  ],
+  "my_trades": []
+}
