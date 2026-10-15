@@ -2,9 +2,12 @@
   "alerted": {
     "2026-10-05:NVDA": [
       "buy_zone"
+    ],
+    "2026-10-12:VRTX": [
+      "buy_zone"
     ]
   },
   "last_run": {
-    "close": "2026-10-14"
+    "close": "2026-10-15"
   }
 }
