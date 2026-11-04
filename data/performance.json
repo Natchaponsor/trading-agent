@@ -1,21 +1,21 @@
 {
-  "created": "2026-10-12T02:03-04:00",
+  "created": "2026-11-03T10:04-05:00",
   "summary": {
-    "total_picks": 1,
+    "total_picks": 2,
     "never_entered": 0,
-    "still_open": 1,
+    "still_open": 0,
     "overall": {
-      "closed_picks": 0,
-      "win_rate_pct": null,
-      "avg_return_pct": null,
-      "avg_vs_qqq_pct": null
+      "closed_picks": 2,
+      "win_rate_pct": 50.0,
+      "avg_return_pct": 1.48,
+      "avg_vs_qqq_pct": 8.1
     },
     "by_source": {
       "technical": {
-        "closed_picks": 0,
-        "win_rate_pct": null,
-        "avg_return_pct": null,
-        "avg_vs_qqq_pct": null
+        "closed_picks": 2,
+        "win_rate_pct": 50.0,
+        "avg_return_pct": 1.48,
+        "avg_vs_qqq_pct": 8.1
       },
       "qualitative": {
         "closed_picks": 0,
@@ -30,9 +30,22 @@
         "avg_vs_qqq_pct": null
       }
     },
-    "by_sector": {},
+    "by_sector": {
+      "Health Care": {
+        "closed_picks": 1,
+        "win_rate_pct": 100.0,
+        "avg_return_pct": 10.52,
+        "avg_vs_qqq_pct": 17.97
+      },
+      "Technology": {
+        "closed_picks": 1,
+        "win_rate_pct": 0.0,
+        "avg_return_pct": -7.55,
+        "avg_vs_qqq_pct": -1.77
+      }
+    },
     "enough_data": false,
-    "warning": "Only 0 closed picks. Patterns are not reliable until about 20."
+    "warning": "Only 2 closed picks. Patterns are not reliable until about 20."
   },
   "picks": [
     {
@@ -45,11 +58,27 @@
       "entry_high": 233.95,
       "target": 255.46,
       "stop": 211.06,
-      "result": "open",
+      "result": "loss",
       "entry_day": "2026-10-08",
-      "exit_day": "2026-10-09",
-      "return_pct": 0.43,
-      "vs_qqq_pct": -0.06
+      "exit_day": "2026-10-23",
+      "return_pct": -7.55,
+      "vs_qqq_pct": -1.77
+    },
+    {
+      "week_of": "2026-10-12",
+      "ticker": "VRTX",
+      "sector": "Health Care",
+      "source": "technical",
+      "strategy_version": 2,
+      "entry_low": 503.72,
+      "entry_high": 510.08,
+      "target": 560.25,
+      "stop": 481.4,
+      "result": "win",
+      "entry_day": "2026-10-12",
+      "exit_day": "2026-10-30",
+      "return_pct": 10.52,
+      "vs_qqq_pct": 17.97
     }
   ],
   "my_trades": []

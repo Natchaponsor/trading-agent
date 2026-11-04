@@ -1,0 +1,27 @@
+{
+  "note": "Stocks I chose to watch outside the weekly picks. Alerts check these every day until removed or past 'until'. Not added to picks history or performance.",
+  "stocks": [
+    {
+      "ticker": "AVGO",
+      "company": "Broadcom",
+      "added": "2026-10-11",
+      "until": "2026-12-31",
+      "entry_low": 350.69,
+      "entry_high": 361.54,
+      "target": 372.52,
+      "stop": 331.85,
+      "reason": "Levels from indicators.suggest_levels on the 2026-10-09 close. Reward to risk only 0.68, so this is a watch, not a buy signal."
+    },
+    {
+      "ticker": "ALAB",
+      "company": "Astera Labs",
+      "added": "2026-10-11",
+      "until": "2026-12-31",
+      "entry_low": 324.89,
+      "entry_high": 342.21,
+      "target": 366.09,
+      "stop": 314.29,
+      "reason": "Buy zone and target from indicators.suggest_levels on the 2026-10-09 close. Script stop (280.85) was 18% below the zone, over the 10% limit, so stop is the 50-day average 317.46 minus 1%."
+    }
+  ]
+}

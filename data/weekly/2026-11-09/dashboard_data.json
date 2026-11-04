@@ -1,0 +1,1104 @@
+{
+ "week_of": "2026-11-09",
+ "strategy": {
+  "version": 2,
+  "last_changed": "2026-10-05",
+  "change_log": [
+   {
+    "date": "2026-10-04",
+    "version": 1,
+    "change": "Starting settings",
+    "reason": "Initial setup",
+    "approved_by": "Top"
+   },
+   {
+    "date": "2026-10-05",
+    "version": 2,
+    "change": "Alert windows widened: open 09:35-10:30 -> 09:35-12:00, close 15:00-15:59 -> 15:00-17:30 (New York time)",
+    "reason": "GitHub started the 2026-10-05 runs up to ~2 hours late, so both checks fell outside the old windows and no alert or summary was sent",
+    "approved_by": "Top"
+   }
+  ],
+  "sector_rotation": {
+   "lookback_days": {
+    "1m": 21,
+    "3m": 63,
+    "6m": 126
+   },
+   "weights": {
+    "1m": 0.3,
+    "3m": 0.5,
+    "6m": 0.2
+   },
+   "etf_vs_members_weight": {
+    "etf": 0.4,
+    "nasdaq_members": 0.6
+   },
+   "min_nasdaq100_members": 3,
+   "num_sectors": 2
+  },
+  "technical": {
+   "weights": {
+    "trend": 0.25,
+    "rsi": 0.2,
+    "macd": 0.2,
+    "relative_strength": 0.2,
+    "fib_pullback": 0.15
+   },
+   "rsi_sweet_spot": [
+    50,
+    70
+   ],
+   "fib_lookback_days": 126,
+   "fib_near_pct": 0.03,
+   "min_reward_risk": 2.0,
+   "top_n_per_sector": 5
+  },
+  "qualitative": {
+   "weights": {
+    "revenue_growth": 0.3,
+    "earnings_growth": 0.3,
+    "analyst_upside": 0.2,
+    "news": 0.2
+   },
+   "avoid_earnings_within_days": 5,
+   "top_n_per_sector": 5
+  },
+  "picker": {
+   "technical_weight": 0.5,
+   "qualitative_weight": 0.5,
+   "picks_per_sector": 1,
+   "pick_valid_trading_days": 5,
+   "max_stop_distance_pct": 10
+  },
+  "alerts": {
+   "open_window_et": [
+    "09:35",
+    "12:00"
+   ],
+   "close_window_et": [
+    "15:00",
+    "17:30"
+   ],
+   "send_close_summary": true
+  },
+  "performance": {
+   "max_holding_trading_days": 20
+  }
+ },
+ "picks": {
+  "week_of": "2026-11-09",
+  "valid_until": "2026-11-13",
+  "created": "2026-11-03T23:03",
+  "picks": []
+ },
+ "sectors_selected": {
+  "week_of": "2026-11-09",
+  "sectors": [
+   "Health Care",
+   "Consumer Staples"
+  ],
+  "why": "Health Care and Consumer Staples have the top two scores and are well ahead of the Nasdaq-100 over 1 and 3 months as money moves out of AI stocks, and the news gave no clear reason to swap in Utilities, which trails over 6 months and is more exposed to the Fed's rate hike plans."
+ },
+ "sector_scan": {
+  "created": "2026-11-03T10:04-05:00",
+  "strategy_version": 2,
+  "how_to_read": "Positive numbers mean the sector beat the Nasdaq-100 (QQQ) by that many percentage points.",
+  "market_context": {
+   "QQQ": {
+    "name": "Nasdaq-100",
+    "last": 685.01,
+    "change_1m_pct": -9.41,
+    "change_3m_pct": -4.4,
+    "above_200day_avg": true
+   },
+   "SPY": {
+    "name": "S&P 500 (US large caps)",
+    "last": 753.49,
+    "change_1m_pct": -2.75,
+    "change_3m_pct": -1.87,
+    "above_200day_avg": true
+   },
+   "IWM": {
+    "name": "Russell 2000 (US small caps)",
+    "last": 280.07,
+    "change_1m_pct": -1.17,
+    "change_3m_pct": -6.33,
+    "above_200day_avg": true
+   },
+   "EFA": {
+    "name": "Developed markets outside the US",
+    "last": 103.62,
+    "change_1m_pct": -0.39,
+    "change_3m_pct": -3.55,
+    "above_200day_avg": true
+   },
+   "EEM": {
+    "name": "Emerging markets",
+    "last": 61.27,
+    "change_1m_pct": -10.85,
+    "change_3m_pct": -6.77,
+    "above_200day_avg": false
+   },
+   "TLT": {
+    "name": "Long-term US Treasury bonds",
+    "last": 81.1,
+    "change_1m_pct": 5.17,
+    "change_3m_pct": -1.52,
+    "above_200day_avg": false
+   },
+   "^VIX": {
+    "name": "Fear index (expected volatility)",
+    "last": 20.87,
+    "change_1m_pct": 34.47,
+    "change_3m_pct": 37.76,
+    "above_200day_avg": true
+   },
+   "^TNX": {
+    "name": "10-year US Treasury yield",
+    "last": 4.94,
+    "change_1m_pct": -7.04,
+    "change_3m_pct": 6.93,
+    "above_200day_avg": true
+   }
+  },
+  "sectors": [
+   {
+    "sector": "Health Care",
+    "etf": "XLV",
+    "nasdaq100_members": 9,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 19.88,
+     "3m": 17.46,
+     "6m": 27.58
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 24.89,
+     "3m": 18.23,
+     "6m": 28.8
+    },
+    "score": 21.49,
+    "eligible": true,
+    "rank": 1
+   },
+   {
+    "sector": "Consumer Staples",
+    "etf": "XLP",
+    "nasdaq100_members": 6,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 19.77,
+     "3m": 9.9,
+     "6m": 7.12
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 20.76,
+     "3m": 6.58,
+     "6m": 16.19
+    },
+    "score": 12.58,
+    "eligible": true,
+    "rank": 2
+   },
+   {
+    "sector": "Utilities",
+    "etf": "XLU",
+    "nasdaq100_members": 4,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 18.0,
+     "3m": 4.54,
+     "6m": -5.83
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 18.32,
+     "3m": 6.33,
+     "6m": -3.88
+    },
+    "score": 7.33,
+    "eligible": true,
+    "rank": 3
+   },
+   {
+    "sector": "Industrials",
+    "etf": "XLI",
+    "nasdaq100_members": 11,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 9.85,
+     "3m": -3.67,
+     "6m": -1.11
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 16.85,
+     "3m": 1.02,
+     "6m": 13.15
+    },
+    "score": 5.27,
+    "eligible": true,
+    "rank": 4
+   },
+   {
+    "sector": "Consumer Discretionary",
+    "etf": "XLY",
+    "nasdaq100_members": 17,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 15.58,
+     "3m": 3.43,
+     "6m": -1.01
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 12.3,
+     "3m": 0.66,
+     "6m": -5.44
+    },
+    "score": 4.23,
+    "eligible": true,
+    "rank": 5
+   },
+   {
+    "sector": "Technology",
+    "etf": "XLK",
+    "nasdaq100_members": 48,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -2.92,
+     "3m": -0.74,
+     "6m": 5.89
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": -4.89,
+     "3m": -2.14,
+     "6m": -6.39
+    },
+    "score": -2.32,
+    "eligible": true,
+    "rank": 6
+   },
+   {
+    "sector": "Telecommunications",
+    "etf": "XLC",
+    "nasdaq100_members": 3,
+    "etf_above_50day_avg": false,
+    "etf_vs_qqq_pct": {
+     "1m": -0.35,
+     "3m": -4.46,
+     "6m": -13.1
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 5.08,
+     "3m": -4.27,
+     "6m": -8.57
+    },
+    "score": -3.38,
+    "eligible": true,
+    "rank": 7
+   },
+   {
+    "sector": "Basic Materials",
+    "etf": "XLB",
+    "nasdaq100_members": 1,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 16.11,
+     "3m": 5.2,
+     "6m": 2.64
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 16.26,
+     "3m": 9.71,
+     "6m": 2.97
+    },
+    "score": 9.38,
+    "eligible": false,
+    "rank": 8
+   },
+   {
+    "sector": "Financials",
+    "etf": "XLF",
+    "nasdaq100_members": 0,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 15.45,
+     "3m": 3.25,
+     "6m": 10.81
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": null,
+     "3m": null,
+     "6m": null
+    },
+    "score": 8.42,
+    "eligible": false,
+    "rank": 9
+   },
+   {
+    "sector": "Energy",
+    "etf": "XLE",
+    "nasdaq100_members": 2,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 14.54,
+     "3m": 21.48,
+     "6m": 12.96
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": 8.66,
+     "3m": 0.26,
+     "6m": -13.6
+    },
+    "score": 7.08,
+    "eligible": false,
+    "rank": 10
+   },
+   {
+    "sector": "Real Estate",
+    "etf": "XLRE",
+    "nasdaq100_members": 0,
+    "etf_above_50day_avg": true,
+    "etf_vs_qqq_pct": {
+     "1m": 16.32,
+     "3m": 1.41,
+     "6m": -0.58
+    },
+    "members_median_vs_qqq_pct": {
+     "1m": null,
+     "3m": null,
+     "6m": null
+    },
+    "score": 5.48,
+    "eligible": false,
+    "rank": 11
+   }
+  ],
+  "suggested_top_sectors": [
+   "Health Care",
+   "Consumer Staples"
+  ]
+ },
+ "technical_scan": {
+  "sectors": {
+   "Health Care": {
+    "stocks_checked": 9,
+    "top": [
+     {
+      "ticker": "GILD",
+      "price": 170.79,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 0.5,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 1.0
+      },
+      "indicators": {
+       "rsi_14": 73.96,
+       "macd": 5.32,
+       "macd_signal": 3.77,
+       "macd_hist_rising": true,
+       "avg_50day": 151.61,
+       "avg_200day": 139.12,
+       "vs_qqq_3m_pct": 34.75,
+       "change_1m_pct": 18.09
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 175.65,
+       "swing_low": 119.92,
+       "retracements": {
+        "0.236": 162.5,
+        "0.382": 154.36,
+        "0.5": 147.79,
+        "0.618": 141.21,
+        "0.786": 131.85
+       },
+       "extensions": {
+        "1.272": 190.81,
+        "1.618": 210.09
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 162.5,
+       "entry_high": 170.79,
+       "target": 190.81,
+       "stop": 152.82,
+       "reward_risk": 1.75
+      },
+      "company": "Gilead Sciences",
+      "score": 82.5
+     },
+     {
+      "ticker": "VRTX",
+      "price": 540.17,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.25
+      },
+      "indicators": {
+       "rsi_14": 57.3,
+       "macd": 8.3,
+       "macd_signal": 3.98,
+       "macd_hist_rising": true,
+       "avg_50day": 523.17,
+       "avg_200day": 480.28,
+       "vs_qqq_3m_pct": 15.82,
+       "change_1m_pct": 7.28
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 568.67,
+       "swing_low": 420.01,
+       "retracements": {
+        "0.236": 533.59,
+        "0.382": 511.88,
+        "0.5": 494.34,
+        "0.618": 476.8,
+        "0.786": 451.82
+       },
+       "extensions": {
+        "1.272": 609.11,
+        "1.618": 660.54
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 533.59,
+       "entry_high": 540.17,
+       "target": 568.67,
+       "stop": 506.76,
+       "reward_risk": 1.06
+      },
+      "company": "Vertex Pharmaceuticals",
+      "score": 77.5
+     },
+     {
+      "ticker": "REGN",
+      "price": 972.45,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 0.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.88
+      },
+      "indicators": {
+       "rsi_14": 82.67,
+       "macd": 38.73,
+       "macd_signal": 18.77,
+       "macd_hist_rising": true,
+       "avg_50day": 798.73,
+       "avg_200day": 738.65,
+       "vs_qqq_3m_pct": 31.08,
+       "change_1m_pct": 33.86
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 974.0,
+       "swing_low": 590.83,
+       "retracements": {
+        "0.236": 883.57,
+        "0.382": 827.63,
+        "0.5": 782.42,
+        "0.618": 737.2,
+        "0.786": 672.83
+       },
+       "extensions": {
+        "1.272": 1078.22,
+        "1.618": 1210.8
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 883.57,
+       "entry_high": 972.45,
+       "target": 1078.22,
+       "stop": 819.35,
+       "reward_risk": 1.38
+      },
+      "company": "Regeneron Pharmaceuticals",
+      "score": 70.0
+     },
+     {
+      "ticker": "AMGN",
+      "price": 465.36,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 0.5,
+       "macd": 0.6,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.62
+      },
+      "indicators": {
+       "rsi_14": 70.87,
+       "macd": 13.89,
+       "macd_signal": 11.09,
+       "macd_hist_rising": false,
+       "avg_50day": 420.92,
+       "avg_200day": 373.3,
+       "vs_qqq_3m_pct": 19.18,
+       "change_1m_pct": 15.48
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 475.65,
+       "swing_low": 319.11,
+       "retracements": {
+        "0.236": 438.71,
+        "0.382": 415.85,
+        "0.5": 397.38,
+        "0.618": 378.91,
+        "0.786": 352.61
+       },
+       "extensions": {
+        "1.272": 518.23,
+        "1.618": 572.39
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 438.71,
+       "entry_high": 465.36,
+       "target": 518.23,
+       "stop": 411.69,
+       "reward_risk": 1.64
+      },
+      "company": "Amgen",
+      "score": 67.0
+     },
+     {
+      "ticker": "DXCM",
+      "price": 84.93,
+      "parts": {
+       "trend": 0.67,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.12
+      },
+      "indicators": {
+       "rsi_14": 55.02,
+       "macd": -0.97,
+       "macd_signal": -1.37,
+       "macd_hist_rising": true,
+       "avg_50day": 85.55,
+       "avg_200day": 74.72,
+       "vs_qqq_3m_pct": 7.15,
+       "change_1m_pct": -2.26
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 92.59,
+       "swing_low": 57.66,
+       "retracements": {
+        "0.236": 84.35,
+        "0.382": 79.25,
+        "0.5": 75.12,
+        "0.618": 71.0,
+        "0.786": 65.14
+       },
+       "extensions": {
+        "1.272": 102.09,
+        "1.618": 114.18
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 84.35,
+       "entry_high": 84.93,
+       "target": 92.59,
+       "stop": 78.45,
+       "reward_risk": 1.28
+      },
+      "company": "DexCom",
+      "score": 66.7
+     }
+    ]
+   },
+   "Consumer Staples": {
+    "stocks_checked": 6,
+    "top": [
+     {
+      "ticker": "MDLZ",
+      "price": 65.41,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.8
+      },
+      "indicators": {
+       "rsi_14": 60.99,
+       "macd": 1.04,
+       "macd_signal": 0.78,
+       "macd_hist_rising": true,
+       "avg_50day": 61.58,
+       "avg_200day": 59.62,
+       "vs_qqq_3m_pct": 9.81,
+       "change_1m_pct": 11.83
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 66.49,
+       "swing_low": 57.27,
+       "retracements": {
+        "0.236": 64.31,
+        "0.382": 62.97,
+        "0.5": 61.88,
+        "0.618": 60.79,
+        "0.786": 59.25
+       },
+       "extensions": {
+        "1.272": 69.0,
+        "1.618": 72.19
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 64.31,
+       "entry_high": 65.41,
+       "target": 69.0,
+       "stop": 62.34,
+       "reward_risk": 1.64
+      },
+      "company": "Mondelez International",
+      "score": 88.5
+     },
+     {
+      "ticker": "KDP",
+      "price": 34.65,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 0.6,
+       "fib_pullback": 0.5,
+       "relative_strength": 1.0
+      },
+      "indicators": {
+       "rsi_14": 55.54,
+       "macd": 1.03,
+       "macd_signal": 0.97,
+       "macd_hist_rising": false,
+       "avg_50day": 32.47,
+       "avg_200day": 29.73,
+       "vs_qqq_3m_pct": 17.89,
+       "change_1m_pct": 12.16
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 36.95,
+       "swing_low": 27.44,
+       "retracements": {
+        "0.236": 34.71,
+        "0.382": 33.32,
+        "0.5": 32.2,
+        "0.618": 31.08,
+        "0.786": 29.48
+       },
+       "extensions": {
+        "1.272": 39.54,
+        "1.618": 42.82
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 33.32,
+       "entry_high": 34.65,
+       "target": 36.95,
+       "stop": 31.88,
+       "reward_risk": 1.41
+      },
+      "company": "Keurig Dr Pepper",
+      "score": 84.5
+     },
+     {
+      "ticker": "CCEP",
+      "price": 112.49,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 0.6,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.6
+      },
+      "indicators": {
+       "rsi_14": 57.57,
+       "macd": 2.34,
+       "macd_signal": 2.14,
+       "macd_hist_rising": false,
+       "avg_50day": 106.25,
+       "avg_200day": 100.49,
+       "vs_qqq_3m_pct": 8.0,
+       "change_1m_pct": 10.86
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 116.01,
+       "swing_low": 89.24,
+       "retracements": {
+        "0.236": 109.69,
+        "0.382": 105.78,
+        "0.5": 102.62,
+        "0.618": 99.47,
+        "0.786": 94.97
+       },
+       "extensions": {
+        "1.272": 123.29,
+        "1.618": 132.55
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 109.69,
+       "entry_high": 112.49,
+       "target": 116.01,
+       "stop": 104.73,
+       "reward_risk": 0.77
+      },
+      "company": "Coca-Cola Europacific Partners",
+      "score": 76.5
+     },
+     {
+      "ticker": "MNST",
+      "price": 47.37,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 1.0,
+       "fib_pullback": 0.5,
+       "relative_strength": 0.2
+      },
+      "indicators": {
+       "rsi_14": 60.95,
+       "macd": 0.82,
+       "macd_signal": 0.63,
+       "macd_hist_rising": true,
+       "avg_50day": 44.73,
+       "avg_200day": 43.17,
+       "vs_qqq_3m_pct": 4.7,
+       "change_1m_pct": 8.87
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 50.17,
+       "swing_low": 37.69,
+       "retracements": {
+        "0.236": 47.22,
+        "0.382": 45.4,
+        "0.5": 43.93,
+        "0.618": 42.46,
+        "0.786": 40.36
+       },
+       "extensions": {
+        "1.272": 53.56,
+        "1.618": 57.88
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 47.22,
+       "entry_high": 47.37,
+       "target": 50.17,
+       "stop": 44.95,
+       "reward_risk": 1.22
+      },
+      "company": "Monster Beverage",
+      "score": 76.5
+     },
+     {
+      "ticker": "KHC",
+      "price": 24.47,
+      "parts": {
+       "trend": 1.0,
+       "rsi": 1.0,
+       "macd": 0.6,
+       "fib_pullback": 1.0,
+       "relative_strength": 0.0
+      },
+      "indicators": {
+       "rsi_14": 55.86,
+       "macd": 0.27,
+       "macd_signal": 0.12,
+       "macd_hist_rising": false,
+       "avg_50day": 23.94,
+       "avg_200day": 23.33,
+       "vs_qqq_3m_pct": 1.01,
+       "change_1m_pct": 12.02
+      },
+      "fibonacci": {
+       "trend": "up",
+       "swing_high": 27.65,
+       "swing_low": 21.62,
+       "retracements": {
+        "0.236": 26.22,
+        "0.382": 25.34,
+        "0.5": 24.63,
+        "0.618": 23.92,
+        "0.786": 22.91
+       },
+       "extensions": {
+        "1.272": 29.29,
+        "1.618": 31.38
+       }
+      },
+      "suggested_levels": {
+       "entry_low": 23.92,
+       "entry_high": 24.47,
+       "target": 25.34,
+       "stop": 22.68,
+       "reward_risk": 0.76
+      },
+      "company": "Kraft Heinz",
+      "score": 72.0
+     }
+    ]
+   }
+  },
+  "all_stocks": {
+   "ALNY": {
+    "price": 158.62
+   },
+   "AMGN": {
+    "price": 465.36
+   },
+   "DXCM": {
+    "price": 84.93
+   },
+   "GEHC": {
+    "price": 79.65
+   },
+   "GILD": {
+    "price": 170.79
+   },
+   "IDXX": {
+    "price": 665.63
+   },
+   "ISRG": {
+    "price": 438.62
+   },
+   "REGN": {
+    "price": 972.45
+   },
+   "VRTX": {
+    "price": 540.17
+   },
+   "CCEP": {
+    "price": 112.49
+   },
+   "KDP": {
+    "price": 34.65
+   },
+   "KHC": {
+    "price": 24.47
+   },
+   "MDLZ": {
+    "price": 65.41
+   },
+   "MNST": {
+    "price": 47.37
+   },
+   "PEP": {
+    "price": 138.36
+   }
+  }
+ },
+ "qualitative_data": {
+  "sectors": {
+   "Health Care": {
+    "ranked": [
+     {
+      "marketCap": 21415278592,
+      "revenueGrowth": 0.167,
+      "earningsGrowth": 6.335,
+      "profitMargins": 0.52847,
+      "forwardPE": 14.338457,
+      "trailingPE": 8.075253,
+      "pegRatio": 0.2,
+      "targetMeanPrice": 302.48148,
+      "recommendationMean": 1.83333,
+      "numberOfAnalystOpinions": 27,
+      "currentPrice": 159.89,
+      "analyst_upside_pct": 89.18,
+      "next_earnings": "2026-10-29",
+      "ticker": "ALNY",
+      "company": "Alnylam Pharmaceuticals",
+      "numbers_score": 83.4,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 100692000768,
+      "revenueGrowth": 0.363,
+      "earningsGrowth": 0.355,
+      "profitMargins": 0.28511998,
+      "forwardPE": 13.763149,
+      "trailingPE": 21.515472,
+      "pegRatio": 1.64,
+      "targetMeanPrice": 976.44446,
+      "recommendationMean": 1.78571,
+      "numberOfAnalystOpinions": 27,
+      "currentPrice": 973.36,
+      "analyst_upside_pct": 0.32,
+      "next_earnings": "2027-01-28",
+      "ticker": "REGN",
+      "company": "Regeneron Pharmaceuticals",
+      "numbers_score": 71.1,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 36469440512,
+      "revenueGrowth": 0.072,
+      "earningsGrowth": 0.39,
+      "profitMargins": 0.09951,
+      "forwardPE": 14.6788,
+      "trailingPE": 17.052855,
+      "pegRatio": 2.13,
+      "targetMeanPrice": 87.85,
+      "recommendationMean": 1.81818,
+      "numberOfAnalystOpinions": 20,
+      "currentPrice": 80.66,
+      "analyst_upside_pct": 8.91,
+      "next_earnings": "2026-10-28",
+      "ticker": "GEHC",
+      "company": "GE HealthCare",
+      "numbers_score": 54.5,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 249371918336,
+      "revenueGrowth": 0.095,
+      "earningsGrowth": 0.649,
+      "profitMargins": 0.22951001,
+      "forwardPE": 18.839981,
+      "trailingPE": 28.649689,
+      "pegRatio": 2.78,
+      "targetMeanPrice": 397.3231,
+      "recommendationMean": 2.64706,
+      "numberOfAnalystOpinions": 29,
+      "currentPrice": 461.26,
+      "analyst_upside_pct": -13.86,
+      "next_earnings": "2026-11-03",
+      "ticker": "AMGN",
+      "company": "Amgen",
+      "numbers_score": 49.4,
+      "earnings_within_avoid_window": true
+     },
+     {
+      "marketCap": 155707293696,
+      "revenueGrowth": 0.217,
+      "earningsGrowth": -0.236,
+      "profitMargins": 0.25542,
+      "forwardPE": 35.348312,
+      "trailingPE": 52.84772,
+      "pegRatio": 2.02,
+      "targetMeanPrice": 482.63333,
+      "recommendationMean": 1.76471,
+      "numberOfAnalystOpinions": 30,
+      "currentPrice": 440.75,
+      "analyst_upside_pct": 9.5,
+      "next_earnings": "2027-01-21",
+      "ticker": "ISRG",
+      "company": "Intuitive Surgical",
+      "numbers_score": 36.6,
+      "earnings_within_avoid_window": false
+     }
+    ]
+   },
+   "Consumer Staples": {
+    "ranked": [
+     {
+      "marketCap": 82431393792,
+      "revenueGrowth": 0.023,
+      "earningsGrowth": 0.789,
+      "profitMargins": 0.10221,
+      "forwardPE": 19.361822,
+      "trailingPE": 20.938908,
+      "pegRatio": 0.98,
+      "targetMeanPrice": 70.45455,
+      "recommendationMean": 1.91304,
+      "numberOfAnalystOpinions": 22,
+      "currentPrice": 65.12,
+      "analyst_upside_pct": 8.19,
+      "next_earnings": "2026-10-29",
+      "ticker": "MDLZ",
+      "company": "Mondelez International",
+      "numbers_score": 48.6,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 92428066816,
+      "revenueGrowth": 0.202,
+      "earningsGrowth": 0.18,
+      "profitMargins": 0.23079,
+      "forwardPE": 35.99933,
+      "trailingPE": 44.509438,
+      "pegRatio": 2.47,
+      "targetMeanPrice": 49.93478,
+      "recommendationMean": 2.04,
+      "numberOfAnalystOpinions": 23,
+      "currentPrice": 47.18,
+      "analyst_upside_pct": 5.84,
+      "next_earnings": "2026-11-05",
+      "ticker": "MNST",
+      "company": "Monster Beverage",
+      "numbers_score": 48.0,
+      "earnings_within_avoid_window": true
+     },
+     {
+      "marketCap": 47275098112,
+      "revenueGrowth": 0.756,
+      "earningsGrowth": -0.9,
+      "profitMargins": 0.07103,
+      "forwardPE": 13.728404,
+      "trailingPE": 35.09091,
+      "pegRatio": 1.14,
+      "targetMeanPrice": 36.38235,
+      "recommendationMean": 1.83333,
+      "numberOfAnalystOpinions": 17,
+      "currentPrice": 34.74,
+      "analyst_upside_pct": 4.73,
+      "next_earnings": "2026-11-03",
+      "ticker": "KDP",
+      "company": "Keurig Dr Pepper",
+      "numbers_score": 42.2,
+      "earnings_within_avoid_window": true
+     },
+     {
+      "marketCap": 187063484416,
+      "revenueGrowth": 0.056,
+      "earningsGrowth": 0.174,
+      "profitMargins": 0.11091,
+      "forwardPE": 15.88992,
+      "trailingPE": 17.266668,
+      "pegRatio": 1.51,
+      "targetMeanPrice": 141.59091,
+      "recommendationMean": 2.66667,
+      "numberOfAnalystOpinions": 22,
+      "currentPrice": 137.27,
+      "analyst_upside_pct": 3.15,
+      "next_earnings": "2026-10-08",
+      "ticker": "PEP",
+      "company": "PepsiCo",
+      "numbers_score": 26.5,
+      "earnings_within_avoid_window": false
+     },
+     {
+      "marketCap": 48964231168,
+      "revenueGrowth": 0.044,
+      "earningsGrowth": 0.09,
+      "profitMargins": 0.09349,
+      "forwardPE": 20.112959,
+      "trailingPE": 22.312,
+      "pegRatio": 3.13,
+      "targetMeanPrice": 109.69095,
+      "recommendationMean": 2.0,
+      "numberOfAnalystOpinions": 12,
+      "currentPrice": 111.56,
+      "analyst_upside_pct": -1.68,
+      "next_earnings": "2026-08-04",
+      "ticker": "CCEP",
+      "company": "Coca-Cola Europacific Partners",
+      "numbers_score": 13.9,
+      "earnings_within_avoid_window": false
+     }
+    ]
+   }
+  }
+ }
+}
