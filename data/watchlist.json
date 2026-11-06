@@ -6,22 +6,22 @@
       "company": "Broadcom",
       "added": "2026-10-11",
       "until": "2026-12-31",
-      "entry_low": 350.69,
-      "entry_high": 361.54,
-      "target": 372.52,
-      "stop": 331.85,
-      "reason": "Levels from indicators.suggest_levels on the 2026-10-09 close. Reward to risk only 0.68, so this is a watch, not a buy signal."
+      "entry_low": 282.78,
+      "entry_high": 291.53,
+      "target": 338.08,
+      "stop": 265.96,
+      "reason": "Re-leveled 2026-11-06 from indicators.suggest_levels on the 2026-11-05 close (old Oct levels were above the price). Downtrend, RSI 31. Reward to risk 2.4 to target (0.236 retrace)."
     },
     {
       "ticker": "ALAB",
       "company": "Astera Labs",
       "added": "2026-10-11",
       "until": "2026-12-31",
-      "entry_low": 324.89,
-      "entry_high": 342.21,
-      "target": 366.09,
-      "stop": 314.29,
-      "reason": "Buy zone and target from indicators.suggest_levels on the 2026-10-09 close. Script stop (280.85) was 18% below the zone, over the 10% limit, so stop is the 50-day average 317.46 minus 1%."
+      "entry_low": 174.09,
+      "entry_high": 179.47,
+      "target": 253.57,
+      "stop": 163.73,
+      "reason": "Re-leveled 2026-11-06 from indicators.suggest_levels on the 2026-11-05 close. Fell about 20% after a Q3 beat and raised guide; down 53% in a month, RSI 25. Target is the 0.236 retrace, far away, so reward to risk 5.88 is optimistic; a nearer exit may be wiser."
     },
     {
       "ticker": "AMZN",
