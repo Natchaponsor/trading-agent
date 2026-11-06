@@ -1,6 +1,6 @@
 """Price Alert (one check near the open, one near the close, each trading day; no AI needed).
 
-Checks this week's picks against the live price and sends a push/email when:
+Checks this week's picks, plus any stocks in data/watchlist.json, against the live price and sends a push/email when:
   - the price is inside the buy zone            -> "BUY ZONE"
   - the price reached the sell target           -> "SELL: target hit"
   - the price fell to the stop loss             -> "SELL: stop hit"
@@ -18,6 +18,7 @@ import sys
 from alert_gate import which_session
 from common import DATA, load_json, load_strategy, now_ny, save_json
 from notify import send
+from validate_picks import check_pick
 
 STATE = DATA / "alert_state.json"
 LOG = DATA / "alert_log.csv"
@@ -34,6 +35,20 @@ def evaluate_pick(p: dict, price: float, already: set) -> list[tuple[str, str, b
     elif p["entry_low"] <= price <= p["entry_high"] and "buy_zone" not in already:
         events.append(("buy_zone", f"BUY ZONE {t}: price {price:.2f} is inside {p['entry_low']}-{p['entry_high']}. Target {p['target']}, stop {p['stop']}.", True))
     return events
+
+
+def watchlist_items(today: str, max_stop_pct: float) -> list[tuple[str, dict]]:
+    """Stocks I added by hand. They stay until removed or past 'until'; bad levels are skipped."""
+    items = []
+    for w in load_json(DATA / "watchlist.json", {}).get("stocks", []):
+        if w.get("until", "9999") < today:
+            continue
+        errs = check_pick({"sector": "watch", "source": "technical", **w}, None, max_stop_pct)
+        if errs:
+            print(f"Watchlist {w.get('ticker')} skipped: {'; '.join(errs)}")
+            continue
+        items.append((f"watch:{w['ticker']}", w))
+    return items
 
 
 def latest_prices(tickers: list[str], today: dt.date) -> dict:
@@ -70,25 +85,26 @@ def main() -> int:
         return 0
 
     picks = load_json(DATA / "picks.json", {})
-    active = [p for p in picks.get("picks", []) if picks.get("valid_until", "9999") >= f"{now:%Y-%m-%d}"]
+    today = f"{now:%Y-%m-%d}"
+    active = [(f"{picks['week_of']}:{p['ticker']}", p) for p in picks.get("picks", []) if picks.get("valid_until", "9999") >= today]
+    active += watchlist_items(today, load_strategy()["picker"]["max_stop_distance_pct"])
     if not active:
-        print("No active picks this week.")
+        print("No active picks or watchlist stocks.")
         if session in ("open", "close"):  # nothing to watch, so later tries can skip
             state["last_run"][session] = f"{now:%Y-%m-%d}"
             save_json(STATE, state)
         return 0
 
-    prices = latest_prices([p["ticker"] for p in active], now.date())
+    prices = latest_prices(sorted({p["ticker"] for _, p in active}), now.date())
     if not prices:
         print("No prices for today. Market is probably closed (holiday).")
         return 0
 
     new_log_rows, summary = [], []
-    for p in active:
+    for key, p in active:
         price = prices.get(p["ticker"])
         if price is None:
             continue
-        key = f"{picks['week_of']}:{p['ticker']}"
         already = set(state["alerted"].get(key, []))
         for name, msg, urgent in evaluate_pick(p, price, already):
             send(f"Trading Agent: {p['ticker']} {name.replace('_', ' ')}", msg, urgent)

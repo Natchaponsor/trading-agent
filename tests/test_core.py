@@ -161,3 +161,16 @@ def test_validate_pick():
     bad = {**PICK, "stop": 99}
     assert any("order" in e for e in check_pick(bad, 98, 10))
     assert any("15%" in e for e in check_pick(PICK, 150, 10))
+
+
+def test_watchlist_items(tmp_path, monkeypatch):
+    import json
+    monkeypatch.setattr(price_alert, "DATA", tmp_path)
+    ok = {"ticker": "AAA", "entry_low": 95, "entry_high": 100, "target": 115, "stop": 92, "reason": "x"}
+    (tmp_path / "watchlist.json").write_text(json.dumps({"stocks": [
+        ok,
+        {**ok, "ticker": "OLD", "until": "2026-01-01"},
+        {**ok, "ticker": "BAD", "stop": 50},
+    ]}))
+    items = price_alert.watchlist_items("2026-10-12", 10)
+    assert [k for k, _ in items] == ["watch:AAA"]
