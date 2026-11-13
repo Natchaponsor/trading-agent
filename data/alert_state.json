@@ -8,9 +8,12 @@
     ],
     "watch:AVGO": [
       "target"
+    ],
+    "watch:NVDA": [
+      "stop"
     ]
   },
   "last_run": {
-    "close": "2026-11-12"
+    "close": "2026-11-13"
   }
 }
