@@ -11,9 +11,12 @@
     ],
     "watch:NVDA": [
       "stop"
+    ],
+    "watch:GOOGL": [
+      "buy_zone"
     ]
   },
   "last_run": {
-    "close": "2026-11-13"
+    "close": "2026-11-18"
   }
 }
