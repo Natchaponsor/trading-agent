@@ -14,9 +14,12 @@
     ],
     "watch:GOOGL": [
       "buy_zone"
+    ],
+    "watch:AMZN": [
+      "buy_zone"
     ]
   },
   "last_run": {
-    "close": "2026-11-18"
+    "close": "2026-11-19"
   }
 }
